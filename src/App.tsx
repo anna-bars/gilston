@@ -5,6 +5,7 @@ import './App.css'
 import { Header } from './components/Layout/Header/Header';
 import Toolbar from './components/Layout/Header/Toolbar';
 import topAngle from './assets/top-angle.png';
+import Footer from './components/Layout/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Toolbar />
+      <Footer />
     </>
   )
 }

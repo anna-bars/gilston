@@ -66,7 +66,17 @@
 *, ::after, ::before {
     box-sizing: border-box
 }
-
+.footer-1 ul {
+    margin-bottom: 0;
+    padding: 0;
+}
+input.form-control.newsletter-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.sprite-img img {
+    width: 100%;
+}
 html {
     font-family: sans-serif;
     line-height: 1.15;
@@ -3516,9 +3526,8 @@ footer {
     .footer-1 ul {
         display: flex;
         align-items: center;
-        flex-wrap: wrap
+        flex-wrap: wrap;
     }
-
     .footer-1 {
         padding: 15px 15px;
         border-bottom: 1px solid #e5e8ea
