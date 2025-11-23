@@ -11,6 +11,8 @@ import FooterBanner from './components/Layout/Footer/FooterBanner';
 import Banner from './components/Layout/Banner';
 import Category from './components/Layout/Category';
 import BestSeller from './components/Layout/BestSeller';
+import WhoArea from './components/Layout/WhoArea';
+import GilsonInsights from './components/Layout/GilsonInsights';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +23,9 @@ function App() {
       <Banner />
       <Category />
       <BestSeller />
+      <WhoArea />
+      <GilsonInsights />
+
 
       <FooterBanner />
       <FooterSupport />
