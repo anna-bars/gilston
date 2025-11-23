@@ -10,6 +10,7 @@ import FooterSupport from './components/Layout/Footer/FooterSupport';
 import FooterBanner from './components/Layout/Footer/FooterBanner';
 import Banner from './components/Layout/Banner';
 import Category from './components/Layout/Category';
+import BestSeller from './components/Layout/BestSeller';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
       <Toolbar />
       <Banner />
       <Category />
+      <BestSeller />
 
       <FooterBanner />
       <FooterSupport />
