@@ -77,6 +77,9 @@ input.form-control.newsletter-input {
 .sprite-img img {
     width: 100%;
 }
+.support-text ul {
+    margin-bottom: 0 !important;
+}
 html {
     font-family: sans-serif;
     line-height: 1.15;
