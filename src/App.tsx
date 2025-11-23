@@ -8,6 +8,7 @@ import topAngle from './assets/top-angle.png';
 import Footer from './components/Layout/Footer/Footer'
 import FooterSupport from './components/Layout/Footer/FooterSupport';
 import FooterBanner from './components/Layout/Footer/FooterBanner';
+import Banner from './components/Layout/Banner';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,9 @@ function App() {
   return (
     <>
       <Toolbar />
+      <Banner />
+
+
       <FooterBanner />
       <FooterSupport />
       <Footer />
