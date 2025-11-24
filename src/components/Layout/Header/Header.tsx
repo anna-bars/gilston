@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './header.css'; // Այստեղ պետք է լինեն ձեր օրիգինալ CSS ստայլերը
 // Ներմուծեք MobileMenu-ն, եթե այն առանձին է, կամ կարող եք դնել նույն ֆայլում
 import { MobileMenu } from './MobileMenu'; 

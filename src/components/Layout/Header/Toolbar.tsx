@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import topAngle from '../../../assets/top-angle.png';
 import liveChat from '../../../assets/live-chat.png';
 import cartItem from '../../../assets/cart-item-img.png';

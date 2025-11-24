@@ -19,12 +19,12 @@ import linkedin from '../../../assets/linkedin.png';
 import youtube from '../../../assets/utube.png'
 import social from '../../../assets/social.png';
 
-// --- Types & Data (Modularity) ---
-interface LinkItem {
-  label: string;
-  url: string;
-  iconClass?: string; // Սոցիալական կայքերի համար
-}
+// // --- Types & Data (Modularity) ---
+// interface LinkItem {
+//   label: string;
+//   url: string;
+//   iconClass?: string; // Սոցիալական կայքերի համար
+// }
 
 const footerData = {
   information: [
