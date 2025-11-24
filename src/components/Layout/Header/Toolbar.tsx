@@ -11,6 +11,8 @@ import cartIcon from '../../../assets/grocery-store.png';
 import toolsIcon from '../../../assets/settings.png';
 import searchIcon from '../../../assets/loupe.png';
 import { useState } from 'react';
+
+import './toolbar.css'
 // Interfaces for props if needed in the future, keeping it simple for now
 // Images path assumption: /images/ (Make sure to move your assets to the public folder)
 
