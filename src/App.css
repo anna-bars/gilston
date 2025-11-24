@@ -957,14 +957,6 @@ footer {
     display: flex
 }
 
-    .newsletter-area ul li {
-        margin-right: 10px
-    }
-
-        .newsletter-area ul li a {
-            font-size: 0
-        }
-
 .newsletter-area .form-group {
     position: relative
 }
@@ -1531,10 +1523,7 @@ footer {
     margin-bottom: 0
 }
 
-.support-text ul {
-    display: flex;
-    justify-content: space-around
-}
+
 
 .support-text {
     height: 100%;
@@ -2787,9 +2776,7 @@ footer {
     font-size: 0
 }
 
-.sprite-img {
-    background: url(../images/sprit-img1.png)
-}
+
 
 .tool-icon {
     width: 20px;
@@ -2804,48 +2791,6 @@ footer {
     display: inline-block;
     background-position: -42px 0;
         margin-bottom: 4px;
-}
-
-.fb-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: 0 -40px
-}
-
-.insta-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: -40px -40px
-}
-
-.twitter-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: -81px -40px
-}
-
-.linkedin-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: -121px -39px
-}
-
-.youtube-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: -161px -39px
-}
-
-.social-icon {
-    width: 26px;
-    height: 26px;
-    display: inline-block;
-    background-position: -201px -39px
 }
 
 .google-rate {
@@ -2911,53 +2856,7 @@ footer {
     background-position: -314px -168px
 }
 
-.call-back {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-position: -121px 0
-}
 
-.support-ticket {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-position: -157px -2px
-}
-
-.fax-icon {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    background-position: -80px 0;
-    margin-right: 5px
-}
-
-.menu-contact-img {
-    width: 275px;
-    height: 92px;
-    display: inline-block;
-    background-position: 0 92px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 25px
-}
-
-.support-text ul li {
-    position: relative
-}
-
-    .support-text ul li a {
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        font-size: 0
-    }
 
 @media only screen and (max-width:1024px) {
     .call-text-top p {
@@ -3741,9 +3640,6 @@ footer {
         height: 400px
     }
 
-    .support-icon i {
-        padding: 10px 12px
-    }
 
 
     .close-btn {
@@ -4744,15 +4640,7 @@ footer {
             text-transform: uppercase
         }
 
-    .call-text1 p {
-        color: #424445;
-        text-align: center;
-        position: relative;
-        padding: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #424445
-    }
+   
 
     .support-text h4 {
         font-size: 16px;
@@ -5833,210 +5721,10 @@ footer {
         padding-right: 15px !important
     }
 
-    .mobile-menu-area {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 0;
-        height: 100%;
-        z-index: 999999;
-        transition: all .5s ease-in-out;
-        overflow-x: hidden;
-        background: rgba(0,0,0,0.7)
-    }
 
-    .mobile-menu1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 80%;
-        height: auto;
-        background: #fff;
-        padding: 50px 0 100px 0
-    }
+    
 
-    .mobile-menu-open {
-        width: 100%
-    }
-
-    .close-btn {
-        margin-top: 25px;
-        margin-left: 25px
-    }
-
-    .mobile-menu1 h3 {
-        font-size: 15px;
-        color: #535353;
-        text-transform: uppercase;
-        font-weight: bold;
-        padding: 15px 15px;
-        border-bottom: 1px solid #ececec;
-        margin-bottom: 0
-    }
-
-    .mobile-menu1 > ul {
-        margin-bottom: 0
-    }
-
-        .mobile-menu1 > ul li {
-            padding: 13px 15px;
-            border-bottom: 1px solid #ececec;
-            position: relative
-        }
-
-            .mobile-menu1 > ul li a {
-                display: flex;
-                align-items: center
-            }
-
-                .mobile-menu1 > ul li a img {
-                    width: 50px;
-                    height: 50px;
-                    object-fit: contain;
-                    margin-right: 15px
-                }
-
-                .mobile-menu1 > ul li a p {
-                    font-size: 17px;
-                    color: #002d58;
-                    font-weight: bold;
-                    margin-bottom: 0
-                }
-
-                .mobile-menu1 > ul li a i {
-                    font-size: 20px;
-                    font-weight: bold;
-                    position: absolute;
-                    right: 20px
-                }
-
-    .mob-account-list {
-        margin-top: 30px
-    }
-
-        .mob-account-list > ul {
-            margin-bottom: 0
-        }
-
-            .mob-account-list > ul li {
-                padding: 13px 15px;
-                border-bottom: 1px solid #ececec;
-                position: relative
-            }
-
-                .mob-account-list > ul li a {
-                    display: flex;
-                    align-items: center
-                }
-
-                    .mob-account-list > ul li a img {
-                        width: 18px;
-                        height: 18px;
-                        object-fit: contain;
-                        margin-right: 10px
-                    }
-
-                    .mob-account-list > ul li a p {
-                        font-size: 15px;
-                        color: #597baa;
-                        font-weight: 500;
-                        margin-bottom: 0
-                    }
-
-                    .mob-account-list > ul li a i {
-                        font-size: 20px;
-                        font-weight: bold;
-                        position: absolute;
-                        right: 20px
-                    }
-
-    .part-btn a {
-        font-size: 15px;
-        color: #fff;
-        font-weight: bold;
-        background: #88c633;
-        padding: 15px;
-        border-radius: 5px;
-        display: block;
-        text-align: center;
-        margin: 20px 15px
-    }
-
-    .mob-menu-contact {
-        padding: 5px 15px 20px
-    }
-
-        .mob-menu-contact img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            margin-bottom: 25px
-        }
-
-    .mob-contact-text {
-        text-align: center
-    }
-
-        .mob-contact-text h4 {
-            font-size: 16px;
-            font-weight: bold;
-            color: #002d5c;
-            margin-bottom: 10px
-        }
-
-        .mob-contact-text p {
-            font-size: 14px;
-            color: #424445
-        }
-
-    .mob-call-btn {
-        position: relative;
-        text-align: center
-    }
-
-        .mob-call-btn a {
-            border: 1px solid #ececec;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 14px;
-            color: #002d58;
-            background: #fff;
-            position: relative;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center
-        }
-
-        .mob-call-btn:before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 1px;
-            background: #ececec;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            right: 0
-        }
-
-        .mob-call-btn a i {
-            font-size: 25px;
-            font-weight: bold;
-            color: #002d58;
-            margin-right: 10px
-        }
-
-    .mob-menu-contact .support-text {
-        position: relative;
-        width: auto;
-        height: auto;
-        top: auto;
-        left: auto;
-        bottom: 0;
-        right: auto;
-        padding: 25px 20px
-    }
-
+    
         .mob-menu-contact .support-text .call-text1 p {
             font-size: 13px
         }
@@ -6047,71 +5735,7 @@ footer {
                 line-height: 30px
             }
 
-    .mob-call-back ul {
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-
-    .mob-call-back ul {
-        position: relative
-    }
-
-        .mob-call-back ul:after {
-            position: absolute;
-            content: '';
-            width: 30%;
-            height: 1px;
-            background: #ececec;
-            left: 35%;
-            transform: rotate(90deg) translateY(-50%)
-        }
-
-        .mob-call-back ul li a {
-            text-align: center;
-            display: inline-block;
-            padding: 15px 10px;
-            border: 1px solid transparent;
-            border-radius: 5px;
-            margin: 0 15px
-        }
-
-            .mob-call-back ul li a:hover {
-                border: 1px solid #ececec
-            }
-
-            .mob-call-back ul li a img {
-                width: 20px;
-                height: 20px;
-                object-fit: contain;
-                margin: 0 auto;
-                margin-bottom: 10px
-            }
-
-            .mob-call-back ul li a p {
-                font-size: 14px;
-                color: #002d58;
-                font-weight: bold;
-                margin-bottom: 3px;
-                line-height: 1.2
-            }
-
-            .mob-call-back ul li a i {
-                font-size: 18px
-            }
-
-    .mobile-menu-area .newsletter-area {
-        margin-top: 30px
-    }
-
-    .mob-call-btn img {
-        width: 25px;
-        height: 25px;
-        object-fit: contain;
-        margin-bottom: 0;
-        margin-right: 10px
-    }
-
+  
     .see-all {
         background: #e8e9e9;
         background: linear-gradient(0deg,rgba(232,233,233,1) 0,rgba(251,251,252,1) 100%);
