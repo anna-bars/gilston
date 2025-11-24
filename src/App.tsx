@@ -13,6 +13,7 @@ import Category from './components/Layout/Category';
 import BestSeller from './components/Layout/BestSeller';
 import WhoArea from './components/Layout/WhoArea';
 import GilsonInsights from './components/Layout/GilsonInsights';
+import Video from './components/Layout/Video';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       <BestSeller />
       <WhoArea />
       <GilsonInsights />
+      <Video />
 
 
       <FooterBanner />
