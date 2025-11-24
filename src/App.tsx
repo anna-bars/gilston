@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Toolbar from './components/Layout/Header/Toolbar';
 import Footer from './components/Layout/Footer/Footer'

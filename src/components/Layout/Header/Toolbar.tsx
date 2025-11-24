@@ -10,6 +10,7 @@ import logOutIcon from '../../../assets/logout-icon.png';
 import cartIcon from '../../../assets/grocery-store.png';
 import toolsIcon from '../../../assets/settings.png';
 import searchIcon from '../../../assets/loupe.png';
+import { useState } from 'react';
 // Interfaces for props if needed in the future, keeping it simple for now
 // Images path assumption: /images/ (Make sure to move your assets to the public folder)
 
