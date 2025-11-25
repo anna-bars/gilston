@@ -46,7 +46,7 @@ const MegaMenu = ({ data }: { data: any }) => {
             <div className="tab-content">
                 <div className="row">
                     {/* Categories Section - 5 items per row */}
-                    <div className="col-md-9" style={{ padding: '0 12px' }}>
+                    <div className="col-md-9" style={{ padding: '0 0 0 12px' }}>
                         <div className="categories-grid">
                             {currentContent?.categories.map((cat: any, idx: number) => (
                                 <div className="category-item" key={idx}>
@@ -70,18 +70,19 @@ const MegaMenu = ({ data }: { data: any }) => {
                     </div>
 
                     {/* Resources Section */}
-                    <div className="col-md-3 border-start">
-                        <h6>Resources</h6>
+                    <div className="col-md-3 border-start" style={{ padding: '20px' }}>
+                        <h6 style={{ color: '#002d58', marginBottom: '15px' }}>Resources</h6>
                         <ul className="list-unstyled">
                             {currentContent?.resources.map((res: any, idx: number) => (
                                 <li key={idx} className="mb-3">
-                                    <a href={res.link} className="d-block text-decoration-none">
+                                    <a href={res.link} className="resource-item d-flex align-items-start text-decoration-none">
                                         <img 
                                             src={res.img} 
                                             alt={res.title} 
                                             className="resource-image"
+                                            style={{ width: '60px', height: '60px', objectFit: 'contain', marginRight: '10px' }}
                                         />
-                                        <span style={{ fontSize: '13px', color: '#002d58', fontWeight: 'bold' }}>
+                                        <span style={{ fontSize: '13px', color: '#002d58', fontWeight: 'bold', lineHeight: '1.3' }}>
                                             {res.title}
                                         </span>
                                     </a>
