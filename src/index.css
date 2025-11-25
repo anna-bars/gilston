@@ -2,17 +2,12 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 @import 'bootstrap/dist/css/bootstrap.min.css';
-/* @import 'bootstrap/dist/js/bootstrap.bundle.min.js'; */
 .nav-link-mega-menu {
-    transition: all .3s ease-in-out;
-    /* ... Բազային ոճեր ... */
+  transition: all .3s ease-in-out;
 }
-
 .nav-link-mega-menu:hover {
-    color: #658dbc; /* lightBlue-ի գույնը */
+    color: #658dbc;
 }
-
-/* Ընթացիկ (active) վիճակի ոճերը կարող են մնալ React-ում կամ տեղափոխվել այստեղ */
 .nav-link-mega-menu.active {
     border-bottom: 3px solid #658dbc;
     background-color: #f4f5f6;
@@ -29,10 +24,7 @@
   background: #fff;
   display: block;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-top: 1px solid #e8e8e8;
 }
-
-/* Tab Navigation */
 .mega-dropdown .nav-tabs {
   display: flex;
   justify-content: flex-start;
@@ -52,20 +44,21 @@
   background: #446798;
   font-size: 14px;
   border: none;
+  border-radius: 0 !important;
   border-right: 1px solid #869bb8;
   text-align: center;
-  color: #fff;
+  color: #fff !important; 
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-.mega-dropdown .nav-link:hover,
+.mega-dropdown .nav-link:hover {
+  background: #fff;
+  color: #0056b3 !important;
+}
 .mega-dropdown .nav-link.active {
   background: #fff;
-  color: #002d58;
+  color: #002d58 !important;
 }
-
-/* Rest of your existing CSS styles... */
 .category-list ul {
   display: flex;
   flex-wrap: wrap;
@@ -73,12 +66,10 @@
   padding: 0;
   list-style: none;
 }
-
 .category-list ul li {
   width: 33.333%;
   padding: 10px;
 }
-
 .category1 {
   position: relative;
   border: 1px solid #e8e8e8;
@@ -86,12 +77,10 @@
   height: 100%;
   transition: all 0.3s ease;
 }
-
 .category1:hover {
   border-color: #002d58;
   box-shadow: 0 2px 8px rgba(0,45,88,0.1);
 }
-
 .category1 a {
   position: absolute;
   top: 0;
@@ -103,7 +92,6 @@
 .category-list ul li {
     padding: 0 !important;
 }
-
 .mega-dropdown .nav-link {
     padding: 10px 18px;
     background: #446798;

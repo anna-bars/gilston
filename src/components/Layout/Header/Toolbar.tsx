@@ -10,6 +10,8 @@ import logOutIcon from '../../../assets/logout-icon.png';
 import cartIcon from '../../../assets/grocery-store.png';
 import toolsIcon from '../../../assets/settings.png';
 import searchIcon from '../../../assets/loupe.png';
+
+import phoneImg from '../../../assets/phone-receiver-silhouette.png'
 // Նոր ֆայլերի ներմուծում մոբայլ մենյուի համար (համոզվեք, որ նկարները գոյություն ունեն)
 import closeMenu from '../../../assets/close-menu.png'; // Փակման նկար
 import sievingMobile from '../../../assets/sieving-mobile.png';
@@ -483,7 +485,9 @@ const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => void }) =>
                                 </form>
                             </div>
                             <div className="col-6 d-lg-none d-flex justify-content-end align-items-center">
-                                <div className="me-3 text-center"><i className="fa fa-phone fs-4" style={{color: styles.colors.textBlue}}></i><p className="m-0" style={{fontSize: '10px'}}>Contact</p></div>
+                                <div className="me-3 text-center">
+                                    <i className="fa fa-phone fs-4" style={{color: styles.colors.textBlue}}>
+                                        </i><p className="m-0" style={{fontSize: '10px'}}>Contact</p></div>
                                 <div onClick={toggleMobileMenu} className="text-center" style={{cursor: 'pointer'}}><i className="fa fa-bars fs-3" style={{color: styles.colors.textBlue}}></i><p className="m-0" style={{fontSize: '10px'}}>Menu</p></div>
                             </div>
                         </div>
@@ -493,7 +497,8 @@ const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => void }) =>
                         <div className="row align-items-center">
                             <div className="col-md-5 ms-auto border-end" style={{ borderColor: styles.colors.borderGrey }}>
                                 <div className="d-flex align-items-center justify-content-end pe-3">
-                                    <div className="me-2"><i className="fa fa-phone" style={{ fontSize: '28px', border: `1px solid ${styles.colors.textBlue}`, borderRadius: '5px', padding: '5px 8px', color: styles.colors.textBlue }}></i></div>
+                                    <div className="me-2"><i className="fa fa-phone" style={{ fontSize: '28px', border: `1px solid ${styles.colors.textBlue}`, borderRadius: '5px', padding: '5px 8px', color: styles.colors.textBlue, display: 'flex', alignItems: 'center', height: '100%' }}
+><img loading="lazy" src={phoneImg} alt="Live Chat" /></i></div>
                                     <div className="text-end" style={{ lineHeight: 1.2 }}><p className="m-0" style={{ fontSize: '14px', color: '#686868' }}>Have a question? Call us</p><p className="m-0"><em style={{ color: styles.colors.lightBlue, fontSize: '24px', fontWeight: 'bold', fontStyle: 'normal' }}>800-444-1508</em></p></div>
                                 </div>
                             </div>

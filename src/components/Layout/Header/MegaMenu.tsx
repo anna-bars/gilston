@@ -38,12 +38,13 @@ const megaMenuStyles: React.CSSProperties = {
     top: '100%',
     left: 0,
     right: 0,
-    width: '1320px', 
+    width: '85%', 
     zIndex: 1000,
     backgroundColor: '#fff',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     textAlign: 'left',
-    color: '#333'
+    color: '#333',
+    margin: 'auto',
 };
 
 const MegaMenu = ({ data }: { data: any }) => {
