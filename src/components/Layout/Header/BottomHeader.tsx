@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MegaMenu, { sievingData } from "./MegaMenu";
+import MegaMenu, { aggregatesData, asphaltData, concreteData, generalLabData, sampleSplittingData, screeningData, sievingData, soilsData } from "./MegaMenu";
 
 const styles = {
     colors: {
@@ -59,15 +59,15 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
 // BottomHeader-ը թարմացված
 const BottomHeader = () => {
     const navItems = [
-        { name: "Sieving", link: "sieve-analysis-equipment", data: sievingData }, // Ավելացրինք data
-        { name: "Screening", link: "screening", data: sievingData  }, // Այստեղ կարող ես ավելացնել screeningData և այլն
-        { name: "Sample Splitting", link: "sampling-dividing" },
-        { name: "Aggregates", link: "aggregate-testing-equipment" },
-        { name: "Asphalt", link: "asphalt-testing-equipment" },
-        { name: "Concrete", link: "concrete-testing-equipment" },
-        { name: "Soils", link: "soil-testing-equipment" },
-        { name: "General Lab", link: "pans-tools-glassware" }
-    ];
+    { name: "Sieving", link: "sieve-analysis-equipment", data: sievingData },
+    { name: "Screening", link: "screening", data: screeningData },
+    { name: "Sample Splitting", link: "sampling-dividing", data: sampleSplittingData },
+    { name: "Aggregates", link: "aggregate-testing-equipment", data: aggregatesData },
+    { name: "Asphalt", link: "asphalt-testing-equipment", data: asphaltData},
+    { name: "Concrete", link: "concrete-testing-equipment", data: concreteData },
+    { name: "Soils", link: "soil-testing-equipment", data: soilsData },
+    { name: "General Lab", link: "pans-tools-glassware", data: generalLabData}
+];
 
     return (
         <div style={{ backgroundColor: styles.colors.textBlue, boxShadow: '0 3px 8px rgba(115,116,118,1)' }}>
