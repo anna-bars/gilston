@@ -1,23 +1,6 @@
-// menuData.ts
-import React from 'react';
-
-// Main menu data structure
-
-// Alternative version with all in one tab
-
-
-
-// Alternative version with all in one tab
-
-// Alternative version with all in one tab
-
+// MegaMenu.tsx
 import { useState } from 'react';
-// menuData.ts կամ նույն ֆայլի մեջ
 
-
-
-
-// Ոճավորում Mega Menu-ի համար (կարող ես տեղափոխել CSS ֆայլ)
 const megaMenuStyles: React.CSSProperties = {
     position: 'absolute',
     top: '100%',
@@ -33,7 +16,6 @@ const megaMenuStyles: React.CSSProperties = {
 };
 
 const MegaMenu = ({ data }: { data: any }) => {
-    // Default active tab-ը գտնում ենք տվյալներից կամ վերցնում առաջինը
     const initialTab = data.tabs.find((t: any) => t.isActive)?.id || data.tabs[0].id;
     const [activeTab, setActiveTab] = useState(initialTab);
 
@@ -42,7 +24,7 @@ const MegaMenu = ({ data }: { data: any }) => {
     return (
         <div className="mega-dropdown" style={megaMenuStyles}>
             
-            {/* Tab Header-ներ */}
+            {/* Tab Headers */}
             <ul className="nav nav-tabs">
                 {data.tabs.map((tab: any) => (
                     <li className="nav-item" key={tab.id}>
@@ -63,18 +45,23 @@ const MegaMenu = ({ data }: { data: any }) => {
             {/* Tab Content */}
             <div className="tab-content">
                 <div className="row">
-                    {/* Ձախ մաս - Կատեգորիաներ (col-md-9) */}
-                    <div className="col-md-9"style={{ padding: '0 24px' }}
- >
-                        <div className="row">
+                    {/* Categories Section - 5 items per row */}
+                    <div className="col-md-9" style={{ padding: '0 12px' }}>
+                        <div className="categories-grid">
                             {currentContent?.categories.map((cat: any, idx: number) => (
-                                <div className="category1" key={idx} style={{ width: '26%', padding: '10px' }}>
-                                    <div className="align-items-center">
-                                        <div className='category-img'><img src={cat.img} alt={cat.name} style={{ width: '100%', marginRight: '10px' }} /></div>
+                                <div className="category-item" key={idx}>
+                                    <div className="category-content">
+                                        <div className='category-img'>
+                                            <img 
+                                                src={cat.img} 
+                                                alt={cat.name} 
+                                                className="category-image"
+                                            />
+                                        </div>
                                         <div className='category-name'>
-                                            <a href={cat.link} style={{ textDecoration: 'none', color: '#333', fontSize: '14px' }}>
-                                            {cat.name}
-                                        </a>
+                                            <a href={cat.link}>
+                                                {cat.name}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,15 +69,21 @@ const MegaMenu = ({ data }: { data: any }) => {
                         </div>
                     </div>
 
-                    {/* Աջ մաս - Ռեսուրսներ (col-md-3) */}
+                    {/* Resources Section */}
                     <div className="col-md-3 border-start">
                         <h6>Resources</h6>
                         <ul className="list-unstyled">
                             {currentContent?.resources.map((res: any, idx: number) => (
                                 <li key={idx} className="mb-3">
                                     <a href={res.link} className="d-block text-decoration-none">
-                                        <img src={res.img} alt={res.title} style={{ width: '100%', marginBottom: '5px' }} />
-                                        <span style={{ fontSize: '13px', color: '#002d58', fontWeight: 'bold' }}>{res.title}</span>
+                                        <img 
+                                            src={res.img} 
+                                            alt={res.title} 
+                                            className="resource-image"
+                                        />
+                                        <span style={{ fontSize: '13px', color: '#002d58', fontWeight: 'bold' }}>
+                                            {res.title}
+                                        </span>
                                     </a>
                                 </li>
                             ))}
