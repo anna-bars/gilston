@@ -1734,7 +1734,8 @@ footer {
     padding: 10px 18px;
     background: #446798;
     font-size: 14px;
-    border-right: 1px solid #869bb8;
+    border-right: 1px solid #869bb8 !important;
+    border-radius: 0 !important;
     text-align: center;
     color: #fff
 }

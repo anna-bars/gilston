@@ -31,7 +31,7 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
 
     return (
         <li 
-            className="flex-fill text-center position-relative" // position-relative կարևոր է
+            className="flex-fill text-center " // position-relative կարևոր է
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
@@ -60,7 +60,7 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
 const BottomHeader = () => {
     const navItems = [
         { name: "Sieving", link: "sieve-analysis-equipment", data: sievingData }, // Ավելացրինք data
-        { name: "Screening", link: "screening" }, // Այստեղ կարող ես ավելացնել screeningData և այլն
+        { name: "Screening", link: "screening", data: sievingData  }, // Այստեղ կարող ես ավելացնել screeningData և այլն
         { name: "Sample Splitting", link: "sampling-dividing" },
         { name: "Aggregates", link: "aggregate-testing-equipment" },
         { name: "Asphalt", link: "asphalt-testing-equipment" },

@@ -37,14 +37,13 @@ const megaMenuStyles: React.CSSProperties = {
     position: 'absolute',
     top: '100%',
     left: 0,
-    width: '1000px', // Կամ '100vw' եթե ուզում ես ամբողջ էկրանով, բայց պետք է ծնողը լինի static
+    right: 0,
+    width: '1320px', 
     zIndex: 1000,
     backgroundColor: '#fff',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     textAlign: 'left',
-    color: '#333',
-    padding: '10px',
-    border: '1px solid #ddd'
+    color: '#333'
 };
 
 const MegaMenu = ({ data }: { data: any }) => {
