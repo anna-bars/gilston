@@ -1,6 +1,6 @@
 import { useState } from "react";
-import MegaMenu, { aggregatesData, asphaltData, concreteData, generalLabData, sampleSplittingData, screeningData, sievingData, soilsData } from "./MegaMenu";
-
+import MegaMenu from "./MegaMenu";
+import {navItems} from '../../../data/menudata/menuData'
 const styles = {
     colors: {
         bgTop: '#f4f5f6',
@@ -57,17 +57,8 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
 };
 
 // BottomHeader-ը թարմացված
-const BottomHeader = () => {
-    const navItems = [
-    { name: "Sieving", link: "sieve-analysis-equipment", data: sievingData },
-    { name: "Screening", link: "screening", data: screeningData },
-    { name: "Sample Splitting", link: "sampling-dividing", data: sampleSplittingData },
-    { name: "Aggregates", link: "aggregate-testing-equipment", data: aggregatesData },
-    { name: "Asphalt", link: "asphalt-testing-equipment", data: asphaltData},
-    { name: "Concrete", link: "concrete-testing-equipment", data: concreteData },
-    { name: "Soils", link: "soil-testing-equipment", data: soilsData },
-    { name: "General Lab", link: "pans-tools-glassware", data: generalLabData}
-];
+const BottomHeader = () => { 
+ 
 
     return (
         <div style={{ backgroundColor: styles.colors.textBlue, boxShadow: '0 3px 8px rgba(115,116,118,1)' }}>
