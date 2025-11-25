@@ -1,32 +1,34 @@
+// App.tsx
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Toolbar from './components/Layout/Header/Toolbar';
 import Footer from './components/Layout/Footer/Footer'
 import FooterSupport from './components/Layout/Footer/FooterSupport';
 import FooterBanner from './components/Layout/Footer/FooterBanner';
-import Banner from './components/Layout/Banner';
-import Category from './components/Layout/Category';
-import BestSeller from './components/Layout/BestSeller';
-import WhoArea from './components/Layout/WhoArea';
-import GilsonInsights from './components/Layout/GilsonInsights';
-import Video from './components/Layout/Video';
+
+// Import pages
+import HomePage from './pages/HomePage';
+import ShopPage from './pages/ShopPage';
 
 function App() {
-
   return (
-    <>
-      <Toolbar />
-      <Banner />
-      <Category />
-      <BestSeller />
-      <WhoArea />
-      <GilsonInsights />
-      <Video />
+    <Router>
+      <div className="App">
+        <Toolbar />
+        
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            {/* Ավելացրեք այլ routes */}
+          </Routes>
+        </main>
 
-
-      <FooterBanner />
-      <FooterSupport />
-      <Footer />
-    </>
+        <FooterBanner />
+        <FooterSupport />
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
