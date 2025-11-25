@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 // menuData.ts կամ նույն ֆայլի մեջ
+import astmTestSieves from '../../../assets/astm-test-sieves.png'
+
 export const sievingData = {
     tabs: [
         { id: 'test-sieves', label: 'Test Sieves', isActive: false },
@@ -10,23 +12,23 @@ export const sievingData = {
     ],
     content: {
         'test-sieves': {
-            categories: [
-                { name: 'ASTM Test Sieves', link: '/astm-test-sieves', img: 'images/astm-test-sieves.png' },
+            categories: [ 
+                { name: 'ASTM Test Sieves', link: '/astm-test-sieves', img: astmTestSieves },
                 { name: 'ISO Test Sieves', link: '/iso-test-sieves', img: 'images/iso-sieves.png' },
                 // ... այստեղ ավելացրու մնացածը
-            ],
+            ], 
             resources: [
-                { title: 'Sieve Analysis Guide', link: '/blog/sieve-analysis', img: 'images/sieve-analysis-blog.png' }
+                { title: 'Sieve Analysis Guide', link: '/blog/sieve-analysis', img: astmTestSieves }
             ]
         },
         'shakers': {
             categories: [
-                { name: 'Mechanical Tapping', link: '/mechanical-tapping-shakers', img: 'images/mechanical-tapping.png' },
+                { name: 'Mechanical Tapping', link: '/mechanical-tapping-shakers', img: astmTestSieves },
                 { name: 'Orbital Shakers', link: '/orbital-shakers', img: 'images/shakers2.png' },
                 // ...
             ],
             resources: [
-                { title: 'Selecting a Shaker', link: '/blog/selecting-shaker', img: 'images/sieve-shaker-blog.png' }
+                { title: 'Selecting a Shaker', link: '/blog/selecting-shaker', img: astmTestSieves }
             ]
         }
         // ... ավելացրու մյուս ID-ների համար տվյալները
@@ -56,6 +58,7 @@ const MegaMenu = ({ data }: { data: any }) => {
 
     return (
         <div className="mega-dropdown" style={megaMenuStyles}>
+            
             {/* Tab Header-ներ */}
             <ul className="nav nav-tabs">
                 {data.tabs.map((tab: any) => (
@@ -75,18 +78,21 @@ const MegaMenu = ({ data }: { data: any }) => {
             </ul>
 
             {/* Tab Content */}
-            <div className="tab-content p-3">
+            <div className="tab-content">
                 <div className="row">
                     {/* Ձախ մաս - Կատեգորիաներ (col-md-9) */}
-                    <div className="col-md-9">
+                    <div className="col-md-9"style={{ padding: '0 24px' }}
+ >
                         <div className="row">
                             {currentContent?.categories.map((cat: any, idx: number) => (
-                                <div className="col-md-4 mb-3" key={idx}>
-                                    <div className="d-flex align-items-center">
-                                        <img src={cat.img} alt={cat.name} style={{ width: '50px', marginRight: '10px' }} />
-                                        <a href={cat.link} style={{ textDecoration: 'none', color: '#333', fontSize: '14px' }}>
+                                <div className="category1" key={idx} style={{ width: '22%', padding: '10px' }}>
+                                    <div className="align-items-center">
+                                        <div className='category-img'><img src={cat.img} alt={cat.name} style={{ width: '100%', marginRight: '10px' }} /></div>
+                                        <div className='category-name'>
+                                            <a href={cat.link} style={{ textDecoration: 'none', color: '#333', fontSize: '14px' }}>
                                             {cat.name}
                                         </a>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
