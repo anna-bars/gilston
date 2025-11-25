@@ -27,7 +27,7 @@ import productSvg from '../../../assets/product.svg';
 import parcelSvg from '../../../assets/parcel.svg';
 import logoutSvg from '../../../assets/logout.svg';
 
-
+import BottomHeader from './BottomHeader'
 import { useState } from 'react';
 
 // 1. Գույների և ոճերի կոնստանտներ
@@ -55,27 +55,7 @@ const styles = {
     }
 };
 
-const NavItem = ({ item, isLast }: { item: any, isLast: boolean }) => {
-    const [hover, setHover] = useState(false);
-    return (
-        <li className="flex-fill text-center position-relative">
-            <a 
-                href={`https://www.globalgilson.com/${item.link}`}
-                className="d-block text-white fw-bold text-decoration-none py-3"
-                style={{
-                    fontSize: '16px',
-                    transition: 'all .4s ease-in-out',
-                    backgroundColor: hover ? styles.colors.navHover : 'transparent',
-                    borderRight: isLast ? 'none' : `1px solid ${styles.colors.navBorder}`
-                }}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-            >
-                {item.name}
-            </a>
-        </li>
-    );
-};
+
 
 // Կոմպոնենտ Մոբայլ Մենյուի համար (Offcanvas)
 const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
@@ -611,43 +591,7 @@ const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => void }) =>
     );
 };
 
-const BottomHeader = () => {
-    const navItems = [
-        { name: "Sieving", link: "sieve-analysis-equipment" },
-        { name: "Screening", link: "screening" },
-        { name: "Sample Splitting", link: "sampling-dividing" },
-        { name: "Aggregates", link: "aggregate-testing-equipment" },
-        { name: "Asphalt", link: "asphalt-testing-equipment" },
-        { name: "Concrete", link: "concrete-testing-equipment" },
-        { name: "Soils", link: "soil-testing-equipment" },
-        { name: "General Lab", link: "pans-tools-glassware" }
-    ];
 
-    return (
-        <div style={{ backgroundColor: styles.colors.textBlue, boxShadow: '0 3px 8px rgba(115,116,118,1)' }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12 d-none d-lg-block">
-                        <ul className="d-flex justify-content-between m-0 p-0 list-unstyled w-100">
-                            {navItems.map((item, index) => (
-                                <NavItem key={item.name} item={item} isLast={index === navItems.length - 1} />
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="col-12 d-lg-none py-2">
-                         <div className="row align-items-center">
-                            <div className="col-7"><input type="text" className="form-control" placeholder="Search" /></div>
-                            <div className="col-5 d-flex justify-content-around text-white">
-                                <div className="text-center"><i className="fa fa-user"></i><p className="m-0" style={{fontSize: '10px'}}>Account</p></div>
-                                 <div className="text-center"><i className="fa fa-shopping-cart"></i><p className="m-0" style={{fontSize: '10px'}}>Cart</p></div>
-                            </div>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
 
 export const Toolbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
