@@ -1,5 +1,7 @@
 import { useState, useMemo, useRef } from 'react';
 
+import gilsonCatalogBtn from '../../../assets/gilson-catalog-button.png'
+
 const MEGA_MENU_STYLES: React.CSSProperties = {
     position: 'absolute',
     top: '100%',
@@ -147,14 +149,7 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
 
                     {/* Resources Section - Show if resources exist (regardless of tab count) */}
                     {hasResources && (
-                        <div className="col-md-3 border-start p-3">
-                            <h6 className="mb-3" style={{ color: COLORS.textPrimary }}>Resources</h6>
-                            <ul className="list-unstyled">
-                                {currentContent.resources.map((res, idx) => (
-                                    <ResourceItem key={res.title + idx} resource={res} />
-                                ))}
-                            </ul>
-                        </div>
+                        <ResourcesSection resources={currentContent.resources} />
                     )}
                 </div>
             </div>
@@ -198,6 +193,57 @@ const CategoryItem = ({ category }: { category: { name: string; link: string; im
                     }}
                 >
                     {category.name}
+                </a>
+            </div>
+        </div>
+    );
+};
+
+const ResourcesSection = ({ resources }: { resources: Array<{ title: string; link: string; img: string }> }) => {
+    return (
+        <div 
+            className="col-md-3 border-start p-3"
+            style={{ backgroundColor: COLORS.resourcesBackground }}
+        >
+            <h6 className="mb-3" style={{ color: COLORS.textPrimary }}>Resources</h6>
+            <ul className="list-unstyled">
+                {resources.map((res, idx) => (
+                    <ResourceItem key={res.title + idx} resource={res} />
+                ))}
+            </ul>
+
+            {/* Additional Resource Buttons */}
+            <div className="border-bottom border-secondary mb-3 pb-3">
+                <a 
+                    href="https://www.globalgilson.com/customer-resource-center" 
+                    className="d-block text-center text-decoration-none border border-secondary rounded text-primary fw-bold py-2"
+                    style={{ fontSize: '14px' }}
+                >
+                    Resource Center
+                </a>
+            </div>
+
+            <div className="mb-3">
+                <a 
+                    href="https://www.globalgilson.com/Content/Images/uploaded/pdf/product-catalogs/pdf-viewer/2021/index.html?reload=1591207903917#page=1" 
+                    className="d-block text-decoration-none"
+                >
+                    <img 
+                        src={gilsonCatalogBtn} 
+                        alt="Gilson Catalog" 
+                        className="w-100"
+                        loading="lazy"
+                    />
+                </a>
+            </div>
+
+            <div>
+                <a 
+                    href="https://www.globalgilson.com/gilson-catalog" 
+                    className="d-block text-center text-decoration-none border border-secondary rounded text-primary fw-bold py-2"
+                    style={{ fontSize: '14px' }}
+                >
+                    Request Catalog
                 </a>
             </div>
         </div>
