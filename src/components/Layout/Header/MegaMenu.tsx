@@ -96,7 +96,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
         }
     };
 
-    // Check if current content has resources
     const hasResources = currentContent?.resources && currentContent.resources.length > 0;
 
     return (

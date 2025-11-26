@@ -8,7 +8,7 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
 
     return (
         <li 
-            className="flex-fill text-center " // position-relative կարևոր է
+            className="flex-fill text-center " 
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >

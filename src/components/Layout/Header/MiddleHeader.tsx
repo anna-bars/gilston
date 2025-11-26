@@ -10,6 +10,9 @@ import cartIcon from '../../../assets/grocery-store.png';
 import toolsIcon from '../../../assets/settings.png';
 import searchIcon from '../../../assets/loupe.png';
 
+import contactIcon from '../../../assets/toolbar/phone-receiver-silhouette.png'
+import hamburgerIcon from '../../../assets/toolbar/hamburger.png'
+
 import phoneImg from '../../../assets/phone-receiver-silhouette.png'
 import { CartDropdown } from './CartDropdown';
 import { styles } from './style/headerstyle';
@@ -43,8 +46,8 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                             <div className="col-6 d-lg-none d-flex justify-content-end align-items-center">
                                 <div className="me-3 text-center">
                                     <i className="fa fa-phone fs-4" style={{color: styles.colors.textBlue}}>
-                                        </i><p className="m-0" style={{fontSize: '10px'}}>Contact</p></div>
-                                <div onClick={toggleMobileMenu} className="text-center" style={{cursor: 'pointer'}}><i className="fa fa-bars fs-3" style={{color: styles.colors.textBlue}}></i><p className="m-0" style={{fontSize: '10px'}}>Menu</p></div>
+                                        </i><img loading="lazy" src={contactIcon} alt="Live Chat" /><p className="m-0" style={{fontSize: '10px'}}>Contact</p></div>
+                                <div onClick={toggleMobileMenu} className="text-center" style={{cursor: 'pointer'}}><i className="fa fa-bars fs-3" style={{color: styles.colors.textBlue}}></i><img loading="lazy" src={hamburgerIcon} alt="Live Chat" /><p className="m-0" style={{fontSize: '10px'}}>Menu</p></div>
                             </div>
                         </div>
                     </div>
