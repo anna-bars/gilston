@@ -253,3 +253,71 @@ export { default as pansDishesBowls } from '../../../assets/pans-dishes-bowls.pn
 export { default as timersStopwatches } from '../../../assets/timers-stopwatches.png';
 export { default as books } from '../../../assets/books.png';
 export { default as heating } from '../../../assets/heating.png';
+export { default as sieveAnakysisBlogImg } from '../../../assets/sieve-analysis-blog.png';
+export { default as wetSievingBlog } from '../../../assets/wet-sieving-blog.png';
+export { default as testSieveVideo } from '../../../assets/test-sieve-video.png';
+export { default as sieveShakerBlog } from '../../../assets/sieve-shaker-blog.png';
+export { default as sieveShaker2Video } from '../../../assets/sieve-shaker-2-video.png';
+export { default as sieveShakerVideo } from '../../../assets/sieve-shaker-video.png';
+export { default as sievingBlog } from '../../../assets/sieving-blog.png';
+export { default as testSieveVideoImg } from '../../../assets/test-sieve-video.png';
+export { default as TestSieve2Vd } from '../../../assets/test-sieve-2-video.png';
+export { default as coarseSievingBlog } from '../../../assets/coarse-sieving-blog.png';
+export { default as wetSievingBlogImg } from '../../../assets/wet-sieving-blog.png';
+export { default as tetsSieve3Vd } from '../../../assets/test-sieve-3-video.png';
+export { default as sieveSrmBlog } from '../../../assets/sieve-srm-blog.png';
+export { default as sieveAnalysis2Blog } from '../../../assets/sieve-analysis-2-blog.png';
+export { default as testSieveVd } from '../../../assets/test-sieve-video.png';
+export { default as testSievesBlog } from '../../../assets/test-sieves-blog.png';
+export { default as testSieve3Vd } from '../../../assets/test-sieve-3-video.png';
+export { default as specialtySievesVd } from '../../../assets/specialty-sieves-video.png';
+export { default as coarseGraduationBlog } from '../../../assets/coarse-gradation-blog.png';
+export { default as ScreenShakersVd } from '../../../assets/screen-shakers-video.png';
+export { default as ScreeningAccessoriesVd } from '../../../assets/screening-accessories-video.png';
+export { default as testScreenBlog } from '../../../assets/test-screen-blog.png';
+export { default as screenShakerVd } from '../../../assets/screen-shaker-video.png';
+export { default as screenTrayVd } from '../../../assets/screen-tray-video.png';
+export { default as screeningAccessoriesVd } from '../../../assets/screening-accessories-video.png';
+export { default as screeningBrushesVd } from '../../../assets/screening-brushes-video.png';
+export { default as cleanWeighVd } from '../../../assets/clean-n-weigh-video.png';
+export { default as selectingSplitterBlog } from '../../../assets/selecting-splitter-blog.png';
+export { default as splittingTipsVd } from '../../../assets/splitting-tips-video.png';
+export { default as reducingSampleAggVd } from '../../../assets/reducing-sample-agg-video.png';
+export { default as fitnessAggBlog } from '../../../assets/fineness-agg-blog.png';
+export { default as characteristicsAggVideo } from '../../../assets/characteristics-agg-video.png';
+export { default as manualAggVd } from '../../../assets/manual-agg-video.png';
+export { default as marshallBlog } from '../../../assets/marshall-blog.png';
+export { default as asphaltSgBlog } from '../../../assets/asphalt-sg-blog.png';
+export { default as marshallSetupVd } from '../../../assets/marshall-setup-video.png';
+export { default as rtfoBlog } from '../../../assets/rtfo-blog.png';
+export { default as pavBlog } from '../../../assets/pav-blog.png';
+export { default as bbrVideo } from '../../../assets/bbr-video.png';
+export { default as aspahltTechBlog } from '../../../assets/asphalt-tech-blog.png';
+export { default as flirCamerasVd } from '../../../assets/flir-cameras-video.png';
+export { default as ncatPermVd } from '../../../assets/ncat-perm-video.png';
+export { default as freshConcreteBlog } from '../../../assets/fresh-concrete-blog.png';
+export { default as airContentBlog } from '../../../assets/air-content-blog.png';
+export { default as airMeterCalibration } from '../../../assets/air-meter-calibration-video.png';
+export { default as curingBlog } from '../../../assets/curing-blog.png';
+export { default as reliableTestCylindersBlog } from '../../../assets/reliable-test-cylinders-blog.png';
+export { default as concreteVd } from '../../../assets/concrete-video.png';
+export { default as selectionCompressionMachineBlog } from '../../../assets/selection-compression-machine-blog.png';
+export { default as cappingPadsBlog } from '../../../assets/capping-pads-blog.png';
+export { default as compressionMachineVd } from '../../../assets/compression-machine-video.png';
+export { default as nonDestructiveBlog } from '../../../assets/non-destructive-blog.png';
+export { default as reboundHammerBlog } from '../../../assets/rebound-hammer-blog.png';
+export { default as concreteCrackingBlog } from '../../../assets/concrete-cracking-blog.png';
+export { default as certifiactionVd } from '../../../assets/certification-video.png';
+export { default as extractorsVd } from '../../../assets/extractors-video.png';
+export { default as sawingVd } from '../../../assets/sawing-video.png';
+export { default as cementTestingBlog } from '../../../assets/cement-testing-blog.png';
+export { default as concreteBlog } from '../../../assets/concrete-blog.png';
+export { default as scoopsVd } from '../../../assets/scoops-video.png';
+export { default as groutFlowConeVd } from '../../../assets/grout-flow-cone-video.png';
+
+
+
+
+
+
+

@@ -24,9 +24,9 @@ export const sievingData = {
                 { name: '3in Non-Metallic Sieves', link: '/3-inch-non-metallic-sieves', img: images.nonMetallicSieves },
             ],
             resources: [
-                { title: 'Sieve Analysis of Coarse Aggregate', link: '/blog/sieve-analysis-of-coarse-aggregate', img: images.astmTestSieves },
-                { title: 'Wet Sieving: A Practical Guide', link: '/blog/wet-sieving-practical-guide', img: images.wetWashSieves },
-                { title: 'How To Clean Your Test Sieves', link: 'http://www.youtube.com/watch?v=VXvHRKLB-Zc', img: images.astmTestSieves, isVideo: true }
+                { title: 'Sieve Analysis of Coarse Aggregate', link: '/blog/sieve-analysis-of-coarse-aggregate', img: images.sieveAnakysisBlogImg },
+                { title: 'Wet Sieving: A Practical Guide', link: '/blog/wet-sieving-practical-guide', img: images.wetSievingBlog },
+                { title: 'How To Clean Your Test Sieves', link: 'http://www.youtube.com/watch?v=VXvHRKLB-Zc', img: images.testSieveVideo, isVideo: true }
             ]
         },
         'shakers': {
@@ -41,9 +41,9 @@ export const sievingData = {
                 { name: 'Gilson Wet-Vac® Wet Sieving Shakers', link: '/gilson-wet-vac-wet-sieve-shaker', img: images.wetVac },
             ],
             resources: [
-                { title: 'An Expert Guide to Selecting a Sieve Shaker', link: '/blog/an-expert-guide-to-selecting-a-sieve-shaker', img: images.mechanicalTapping },
-                { title: 'Standard Method for Sieve Analysis', link: 'https://www.youtube.com/watch?v=3Xqq1cxhD-s', img: images.shakers2, isVideo: true },
-                { title: 'Gilson Sieve Shakers', link: 'https://www.youtube.com/watch?v=w6YJMT5BChs', img: images.rotary, isVideo: true }
+                { title: 'An Expert Guide to Selecting a Sieve Shaker', link: '/blog/an-expert-guide-to-selecting-a-sieve-shaker', img: images.sieveShakerBlog },
+                { title: 'Standard Method for Sieve Analysis', link: 'https://www.youtube.com/watch?v=3Xqq1cxhD-s', img: images.sieveShaker2Video, isVideo: true },
+                { title: 'Gilson Sieve Shakers', link: 'https://www.youtube.com/watch?v=w6YJMT5BChs', img: images.sieveShakerVideo, isVideo: true }
             ]
         },
         'service': {
@@ -53,9 +53,9 @@ export const sievingData = {
                 { name: 'Master-Matched Services', link: '/master-matched-services-for-sieves', img: images.masterMatched },
             ],
             resources: [
-                { title: 'A Guide to Acing the Sieve Grade Selection Process', link: '/blog/compliance-inspection-or-calibration-astm-test-sieves-whats-right-for-me', img: images.verification },
-                { title: 'Gilson Verification of New Test Sieves', link: 'https://www.youtube.com/watch?v=xVBdk5tBhHU', img: images.reverification, isVideo: true },
-                { title: 'Gilson Master-Matched Services', link: 'https://www.youtube.com/watch?v=yDiZrQTNXRg', img: images.masterMatched, isVideo: true }
+                { title: 'A Guide to Acing the Sieve Grade Selection Process', link: '/blog/compliance-inspection-or-calibration-astm-test-sieves-whats-right-for-me', img: images.sievingBlog },
+                { title: 'Gilson Verification of New Test Sieves', link: 'https://www.youtube.com/watch?v=xVBdk5tBhHU', img: images.testSieveVideoImg, isVideo: true },
+                { title: 'Gilson Master-Matched Services', link: 'https://www.youtube.com/watch?v=yDiZrQTNXRg', img: images.TestSieve2Vd, isVideo: true }
             ]
         },
         'accessories': {
@@ -72,9 +72,9 @@ export const sievingData = {
                 { name: 'Clean-N-Stor', link: '/clean-n-stor', img: images.cleanNStor },
             ],
             resources: [
-                { title: 'Sieve Analysis of Coarse Aggregate: Sample Prepping', link: '/blog/sample-prepping-for-coarse-aggregate-sieve-analysis', img: images.pansCovers },
-                { title: 'How to Clean Your Test Sieves', link: '/blog/how-to-clean-a-sieve', img: images.sieveBrushes },
-                { title: 'Wet Sieving: A Practical Guide', link: 'https://www.youtube.com/watch?v=YKgmelyCc68', img: images.wetSievingEssentials, isVideo: true }
+                { title: 'Sieve Analysis of Coarse Aggregate: Sample Prepping', link: '/blog/sample-prepping-for-coarse-aggregate-sieve-analysis', img: images.coarseSievingBlog },
+                { title: 'How to Clean Your Test Sieves', link: '/blog/how-to-clean-a-sieve', img: images.wetSievingBlogImg },
+                { title: 'Wet Sieving: A Practical Guide', link: 'https://www.youtube.com/watch?v=YKgmelyCc68', img: images.tetsSieve3Vd, isVideo: true }
             ]
         },
         'reference-materials': {
@@ -83,9 +83,9 @@ export const sievingData = {
                 { name: 'NIST Reference Materials', link: '/nist-reference-materials', img: images.nistSrm },
             ],
             resources: [
-                { title: 'Reference Materials for Test Sieves: Performance Testing for Quality', link: '/blog/reference-materials-for-test-sieves-performance-testing-for-quality', img: images.whitehouseSrm },
-                { title: 'How to Optimize Fines Content Determinations', link: '/blog/how-to-optimize-fines-content-determinations', img: images.nistSrm },
-                { title: 'Choosing the Right Test Sieve: Test Specifications', link: 'https://www.youtube.com/watch?v=Acjw3FR_H6c', img: images.whitehouseSrm, isVideo: true }
+                { title: 'Reference Materials for Test Sieves: Performance Testing for Quality', link: '/blog/reference-materials-for-test-sieves-performance-testing-for-quality', img: images.sieveSrmBlog },
+                { title: 'How to Optimize Fines Content Determinations', link: '/blog/how-to-optimize-fines-content-determinations', img: images.sieveAnalysis2Blog },
+                { title: 'Choosing the Right Test Sieve: Test Specifications', link: 'https://www.youtube.com/watch?v=Acjw3FR_H6c', img: images.testSieveVd, isVideo: true }
             ]
         },
         'inspection-tools': {
@@ -96,9 +96,9 @@ export const sievingData = {
                 { name: '10x Optical Comparator', link: '/10x-optical-comparator', img: images.opticalComparator },
             ],
             resources: [
-                { title: 'Tips to Preserve & Extend Service Life of Your Equipment', link: '/blog/simple-steps-to-preserve-extend-service-life-of-costly-equipment', img: images.digitalCalipers },
-                { title: '5 Steps to Setting Up a Flawless Quality Control Program', link: '/blog/test-sieves-setting-up-a-quality-control-program', img: images.pocketMagnifier },
-                { title: 'Choosing the Right Test Sieve Mesh', link: 'https://www.youtube.com/watch?v=Jq0DrMyhEPk', img: images.screenOpeningGauge, isVideo: true }
+                { title: 'Tips to Preserve & Extend Service Life of Your Equipment', link: '/blog/simple-steps-to-preserve-extend-service-life-of-costly-equipment', img: images.sieveSrmBlog },
+                { title: '5 Steps to Setting Up a Flawless Quality Control Program', link: '/blog/test-sieves-setting-up-a-quality-control-program', img: images.sievingBlog },
+                { title: 'Choosing the Right Test Sieve Mesh', link: 'https://www.youtube.com/watch?v=Jq0DrMyhEPk', img: images.testSieveVd, isVideo: true }
             ]
         },
         'cut-to-order': {
@@ -107,9 +107,9 @@ export const sievingData = {
                 { name: 'Polyester and Nylon Cloth', link: '/polyester-nylon-monofilament-screen-fabric', img: images.polyCloth },
             ],
             resources: [
-                { title: 'Selecting the Right Sieve for Non-Conventional Use', link: '/blog/selecting-the-right-test-sieve-for-non-conventional-use', img: images.astmWireCloth },
-                { title: 'Hand Sieving Method for Materials Sieve Analysis', link: 'https://www.youtube.com/watch?v=Jf_p934fSpA', img: images.polyCloth, isVideo: true },
-                { title: 'Choosing the Right Specialized Test Sieve', link: 'https://www.youtube.com/watch?v=9me8RbBGZlE', img: images.astmWireCloth, isVideo: true }
+                { title: 'Selecting the Right Sieve for Non-Conventional Use', link: '/blog/selecting-the-right-test-sieve-for-non-conventional-use', img: images.testSievesBlog },
+                { title: 'Hand Sieving Method for Materials Sieve Analysis', link: 'https://www.youtube.com/watch?v=Jf_p934fSpA', img: images.testSieve3Vd, isVideo: true },
+                { title: 'Choosing the Right Specialized Test Sieve', link: 'https://www.youtube.com/watch?v=9me8RbBGZlE', img: images.specialtySievesVd, isVideo: true }
             ]
         }
     }

@@ -1,6 +1,6 @@
 import * as images from '../images';
 
-export const screeningData = {
+export const screeningData = { 
     tabs: [
         { id: 'screen-shakers', label: 'Screen Shakers', isActive: true },
         { id: 'screen-trays', label: 'Screen Trays', isActive: false },
@@ -17,9 +17,9 @@ export const screeningData = {
                 { name: 'Gilso-Matic® Screening Assemblies', link: '/gilso-matic-screening-assemblies', img: images.gilsomatic },
             ],
             resources: [
-                { title: 'Screen Shaking Techniques Guide', link: '/blog/screen-shaking-techniques', img: images.testingScreen },
-                { title: 'Screen Shaker Maintenance', link: 'https://www.youtube.com/watch?v=example1', img: images.testMaster, isVideo: true },
-                { title: 'Choosing the Right Screen Shaker', link: '/blog/choosing-screen-shaker', img: images.porta }
+                { title: 'Screen Shaking Techniques Guide', link: '/blog/screen-shaking-techniques', img: images.coarseGraduationBlog },
+                { title: 'Screen Shaker Maintenance', link: 'https://www.youtube.com/watch?v=example1', img: images.ScreenShakersVd, isVideo: true },
+                { title: 'Choosing the Right Screen Shaker', link: '/blog/choosing-screen-shaker', img: images.ScreeningAccessoriesVd }
             ]
         },
         'screen-trays': {
@@ -36,9 +36,9 @@ export const screeningData = {
                 { name: 'Reverification of Used Trays', link: '/reverification-of-used-trays', img: images.trayReverification },
             ],
             resources: [
-                { title: 'Screen Tray Selection Guide', link: '/blog/screen-tray-selection', img: images.astmScreenTrays },
-                { title: 'Screen Tray Installation', link: 'https://www.youtube.com/watch?v=example2', img: images.isoScreenTrays, isVideo: true },
-                { title: 'Tray Maintenance Best Practices', link: '/blog/tray-maintenance-best-practices', img: images.perforatedTrays }
+                { title: 'Screen Tray Selection Guide', link: '/blog/screen-tray-selection', img: images.testScreenBlog },
+                { title: 'Screen Tray Installation', link: 'https://www.youtube.com/watch?v=example2', img: images.screenShakerVd, isVideo: true },
+                { title: 'Tray Maintenance Best Practices', link: '/blog/tray-maintenance-best-practices', img: images.screenTrayVd }
             ]
         },
         'screen-accessories': {
@@ -60,9 +60,9 @@ export const screeningData = {
                 { name: 'Hydraulic Clamping Conversion Kit', link: '/hydraulic-clamping-conversion-kit', img: images.hydraulicClampKit },
             ],
             resources: [
-                { title: 'Screen Accessories Maintenance', link: '/blog/screen-accessories-maintenance', img: images.screenTrayRack },
-                { title: 'Screen Cleaning Techniques', link: 'https://www.youtube.com/watch?v=example3', img: images.screenTrayBrushes, isVideo: true },
-                { title: 'Accessory Setup Guide', link: '/blog/screen-accessory-setup', img: images.cleanNWeigh }
+                { title: 'Screen Accessories Maintenance', link: '/blog/screen-accessories-maintenance', img: images.screeningAccessoriesVd },
+                { title: 'Screen Cleaning Techniques', link: 'https://www.youtube.com/watch?v=example3', img: images.screeningBrushesVd, isVideo: true },
+                { title: 'Accessory Setup Guide', link: '/blog/screen-accessory-setup', img: images.cleanWeighVd }
             ]
         }
     }

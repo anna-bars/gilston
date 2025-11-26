@@ -4,7 +4,7 @@ export const aggregatesData = {
     tabs: [
         { id: 'all-aggregates', label: 'Aggregate Testing', isActive: true },
     ],
-    content: {
+    content: { 
         'all-aggregates': {
             categories: [
                 { name: 'Durability and Abrasion', link: '/durability-and-abrasion-testing', img: images.durabilityAbrasion },
@@ -18,9 +18,9 @@ export const aggregatesData = {
                 { name: 'Coal Testing', link: '/coal-testing', img: images.coalTesting },
             ],
             resources: [
-                { title: 'Complete Aggregate Testing Guide', link: '/blog/complete-aggregate-testing-guide', img: images.durabilityAbrasion },
-                { title: 'Aggregate Quality Control Procedures', link: '/blog/aggregate-quality-control', img: images.specificGravity },
-                { title: 'Field Testing Techniques Video', link: 'https://www.youtube.com/watch?v=aggregate-field-testing', img: images.sandEquivalentSet, isVideo: true }
+                { title: 'Complete Aggregate Testing Guide', link: '/blog/complete-aggregate-testing-guide', img: images.fitnessAggBlog },
+                { title: 'Aggregate Quality Control Procedures', link: '/blog/aggregate-quality-control', img: images.characteristicsAggVideo },
+                { title: 'Field Testing Techniques Video', link: 'https://www.youtube.com/watch?v=aggregate-field-testing', img: images.manualAggVd, isVideo: true }
             ]
         }
     }

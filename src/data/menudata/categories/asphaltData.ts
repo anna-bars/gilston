@@ -23,9 +23,9 @@ export const asphaltData = {
                 { name: 'Specimen Measurement', link: '/specimen-measurement', img: images.digitalCalipers },
             ],
             resources: [
-                { title: 'Marshall Mix Design Guide', link: '/blog/marshall-mix-design', img: images.marshall },
-                { title: 'Superpave Mix Design Procedures', link: '/blog/superpave-mix-design', img: images.superpaveOven },
-                { title: 'Asphalt Content Testing Video', link: 'https://www.youtube.com/watch?v=asphalt-content-video', img: images.contentFurnace, isVideo: true }
+                { title: 'Marshall Mix Design Guide', link: '/blog/marshall-mix-design', img: images.marshallBlog },
+                { title: 'Superpave Mix Design Procedures', link: '/blog/superpave-mix-design', img: images.asphaltSgBlog },
+                { title: 'Asphalt Content Testing Video', link: 'https://www.youtube.com/watch?v=asphalt-content-video', img: images.marshallSetupVd, isVideo: true }
             ]
         },
         'binder-testing': {
@@ -44,9 +44,9 @@ export const asphaltData = {
                 { name: 'Pyrolytic Oven', link: '/pyrolytic-oven', img: images.pyrolyticOven },
             ],
             resources: [
-                { title: 'Binder Testing Standards', link: '/blog/binder-testing-standards', img: images.rtfo },
-                { title: 'Rheology Testing Guide', link: '/blog/rheology-testing-guide', img: images.dsr },
-                { title: 'Aging Test Procedures Video', link: 'https://www.youtube.com/watch?v=aging-test-video', img: images.pav, isVideo: true }
+                { title: 'Binder Testing Standards', link: '/blog/binder-testing-standards', img: images.rtfoBlog },
+                { title: 'Rheology Testing Guide', link: '/blog/rheology-testing-guide', img: images.pavBlog },
+                { title: 'Aging Test Procedures Video', link: 'https://www.youtube.com/watch?v=aging-test-video', img: images.bbrVideo, isVideo: true }
             ]
         },
         'pavement-quality': {
@@ -60,9 +60,9 @@ export const asphaltData = {
                 { name: 'Digital Calipers', link: '/asphalt-digital-calipers', img: images.digitalCalipers },
             ],
             resources: [
-                { title: 'Pavement Quality Assessment', link: '/blog/pavement-quality-assessment', img: images.coreSampling },
-                { title: 'Field Permeability Testing', link: '/blog/field-permeability-testing', img: images.ncatFieldPermeameter },
-                { title: 'Thermal Imaging Applications Video', link: 'https://www.youtube.com/watch?v=thermal-imaging-video', img: images.thermalImagingCameras, isVideo: true }
+                { title: 'Pavement Quality Assessment', link: '/blog/pavement-quality-assessment', img: images.aspahltTechBlog },
+                { title: 'Field Permeability Testing', link: '/blog/field-permeability-testing', img: images.flirCamerasVd },
+                { title: 'Thermal Imaging Applications Video', link: 'https://www.youtube.com/watch?v=thermal-imaging-video', img: images.ncatPermVd, isVideo: true }
             ]
         }
     }

@@ -21,9 +21,9 @@ export const sampleSplittingData = {
                 { name: 'Production Split-O-Matic Splitters', link: '/production-split-o-matic-splitters', img: images.productionSplitomatic },
             ],
             resources: [
-                { title: 'Sample Splitting Techniques Guide', link: '/blog/sample-splitting-techniques', img: images.sampleSplitters },
-                { title: 'How to Choose the Right Sample Splitter', link: '/blog/choosing-sample-splitter', img: images.spinningRiffler },
-                { title: 'Sample Division Best Practices', link: 'https://www.youtube.com/watch?v=splitter-video', img: images.riffleSplitter, isVideo: true }
+                { title: 'Sample Splitting Techniques Guide', link: '/blog/sample-splitting-techniques', img: images.selectingSplitterBlog },
+                { title: 'How to Choose the Right Sample Splitter', link: '/blog/choosing-sample-splitter', img: images.splittingTipsVd },
+                { title: 'Sample Division Best Practices', link: 'https://www.youtube.com/watch?v=splitter-video', img: images.reducingSampleAggVd, isVideo: true }
             ]
         },
         'accessories': {
@@ -34,9 +34,9 @@ export const sampleSplittingData = {
                 { name: 'Core Sampling', link: '/core-sampling', img: images.coreSampling },
             ],
             resources: [
-                { title: 'Sample Quartering Techniques', link: '/blog/sample-quartering-techniques', img: images.quarteringKit },
-                { title: 'Proper Sampling Probe Usage', link: '/blog/sampling-probe-usage', img: images.sampleProbes },
-                { title: 'Core Sampling Methods', link: 'https://www.youtube.com/watch?v=core-sampling-video', img: images.coreSampling, isVideo: true }
+                { title: 'Sample Splitting Techniques Guide', link: '/blog/sample-splitting-techniques', img: images.selectingSplitterBlog },
+                { title: 'How to Choose the Right Sample Splitter', link: '/blog/choosing-sample-splitter', img: images.splittingTipsVd },
+                { title: 'Sample Division Best Practices', link: 'https://www.youtube.com/watch?v=splitter-video', img: images.reducingSampleAggVd, isVideo: true }
             ]
         }
     }

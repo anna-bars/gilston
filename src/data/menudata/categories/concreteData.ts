@@ -24,10 +24,10 @@ export const concreteData = {
                 { name: 'Fresh Testing Accessories', link: '/fresh-testing-accessories', img: images.freshTestingAccessories },
             ],
             resources: [
-                { title: 'Fresh Concrete Testing Guide', link: '/blog/fresh-concrete-testing', img: images.slump },
-                { title: 'Air Content Testing Procedures', link: '/blog/air-content-testing', img: images.concreteAirMeters },
-                { title: 'Slump Test Video Demonstration', link: 'https://www.youtube.com/watch?v=slump-test-video', img: images.slump, isVideo: true }
-            ]
+                { title: 'Fresh Concrete Testing Guide', link: '/blog/fresh-concrete-testing', img: images.freshConcreteBlog },
+                { title: 'Air Content Testing Procedures', link: '/blog/air-content-testing', img: images.airContentBlog },
+                { title: 'Slump Test Video Demonstration', link: 'https://www.youtube.com/watch?v=slump-test-video', img: images.airMeterCalibration, isVideo: true }
+            ] 
         },
         'sample-molds': {
             categories: [
@@ -37,8 +37,9 @@ export const concreteData = {
                 { name: 'Sample Mold Accessories', link: '/sample-mold-accessories', img: images.concreteMoldAccessories },
             ],
             resources: [
-                { title: 'Concrete Sample Preparation Guide', link: '/blog/concrete-sample-preparation', img: images.concreteCylinderMolds },
-                { title: 'Mold Selection and Usage', link: '/blog/mold-selection-usage', img: images.beamMold }
+                { title: '4 Important Steps to Reliable Concrete Test Cylinder Test', link: 'blog/four-important-steps-to-reliable-concrete-samples', img: images.freshConcreteBlog },
+                { title: `Gilson's Single-Use Plastic Concrete Cylinder Molds`, link: 'https://www.youtube.com/watch?v=vCQ7PLsJdpE', img: images.airContentBlog },
+                { title: `Gilson's Steel Concrete Beam Models`, link: 'https://www.youtube.com/watch?v=-eMQnpfLqus', img: images.airMeterCalibration }
             ]
         },
         'curing': {
@@ -57,9 +58,9 @@ export const concreteData = {
                 { name: 'Registering Max/Min Thermometers', link: '/registering-max-min-thermometers', img: images.maxMinRegisteringThermometers },
             ],
             resources: [
-                { title: 'Concrete Curing Best Practices', link: '/blog/concrete-curing-best-practices', img: images.curingBoxes },
-                { title: 'Moisture Room Control Guide', link: '/blog/moisture-room-control', img: images.moistureControlPanel },
-                { title: 'Curing Procedures Video', link: 'https://www.youtube.com/watch?v=curing-video', img: images.curingTanks, isVideo: true }
+                { title: 'Concrete Curing Best Practices', link: '/blog/concrete-curing-best-practices', img: images.curingBlog },
+                { title: 'Moisture Room Control Guide', link: '/blog/moisture-room-control', img: images.reliableTestCylindersBlog },
+                { title: 'Curing Procedures Video', link: 'https://www.youtube.com/watch?v=curing-video', img: images.concreteVd, isVideo: true }
             ]
         },
         'strength-testing': {
@@ -76,9 +77,9 @@ export const concreteData = {
                 { name: 'Specimen Measurement', link: '/specimen-measurement', img: images.digitalCalipers },
             ],
             resources: [
-                { title: 'Compression Testing Guide', link: '/blog/compression-testing-guide', img: images.compressionMachines },
-                { title: 'Capping Procedures and Standards', link: '/blog/capping-procedures', img: images.cappingCompound },
-                { title: 'Beam Testing Video Guide', link: 'https://www.youtube.com/watch?v=beam-testing-video', img: images.beamTester, isVideo: true }
+                { title: 'Compression Testing Guide', link: '/blog/compression-testing-guide', img: images.selectionCompressionMachineBlog },
+                { title: 'Capping Procedures and Standards', link: '/blog/capping-procedures', img: images.cappingPadsBlog },
+                { title: 'Beam Testing Video Guide', link: 'https://www.youtube.com/watch?v=beam-testing-video', img: images.compressionMachineVd, isVideo: true }
             ]
         },
         'non-destructive': {
@@ -100,9 +101,9 @@ export const concreteData = {
                 { name: 'Strain Gauge Set', link: '/strain-gauge-set', img: images.strainGauge },
             ],
             resources: [
-                { title: 'Non-Destructive Testing Methods', link: '/blog/non-destructive-testing-methods', img: images.testHammers },
-                { title: 'UPV Testing Guide', link: '/blog/upv-testing-guide', img: images.upv },
-                { title: 'GPR Scanning Video', link: 'https://www.youtube.com/watch?v=gpr-scanning-video', img: images.gpr, isVideo: true }
+                { title: 'Non-Destructive Testing Methods', link: '/blog/non-destructive-testing-methods', img: images.nonDestructiveBlog },
+                { title: 'UPV Testing Guide', link: '/blog/upv-testing-guide', img: images.reboundHammerBlog },
+                { title: 'GPR Scanning Video', link: 'https://www.youtube.com/watch?v=gpr-scanning-video', img: images.concreteCrackingBlog, isVideo: true }
             ]
         },
         'coring-sawing': {
@@ -118,9 +119,9 @@ export const concreteData = {
                 { name: 'Masonry Saws', link: '/masonry-saws', img: images.masonrySaws },
             ],
             resources: [
-                { title: 'Concrete Coring Guide', link: '/blog/concrete-coring-guide', img: images.gasPowerCoreDrill },
-                { title: 'Core Bit Selection and Maintenance', link: '/blog/core-bit-selection', img: images.coreBits },
-                { title: 'Core Drilling Video Tutorial', link: 'https://www.youtube.com/watch?v=core-drilling-video', img: images.electricCoringDrill, isVideo: true }
+                { title: 'Concrete Coring Guide', link: '/blog/concrete-coring-guide', img: images.certifiactionVd },
+                { title: 'Core Bit Selection and Maintenance', link: '/blog/core-bit-selection', img: images.extractorsVd },
+                { title: 'Core Drilling Video Tutorial', link: 'https://www.youtube.com/watch?v=core-drilling-video', img: images.sawingVd, isVideo: true }
             ]
         },
         'mixing': {
@@ -132,8 +133,9 @@ export const concreteData = {
                 { name: 'Portable Concrete Mixers', link: '/portable-concrete-mixers', img: images.concreteMixer },
             ],
             resources: [
-                { title: 'Concrete Mixing Procedures', link: '/blog/concrete-mixing-procedures', img: images.labMixer5qt },
-                { title: 'Lab Mixer Selection Guide', link: '/blog/lab-mixer-selection', img: images.labMixer12qt }
+                { title: 'Why Complete Testing of Fresh Concrete Matters', link: '/blog/concrete-mixing-procedures', img: images.cementTestingBlog },
+                { title: 'Setting Up a CMT Field Lab: What Equipment is Needed', link: '/blog/lab-mixer-selection', img: images.concreteBlog },
+                { title: 'Sample Material Handling Scoops', link: '/blog/lab-mixer-selection', img: images.scoopsVd }
             ]
         },
         'cement-testing': {
@@ -155,9 +157,9 @@ export const concreteData = {
                 { name: 'Strain Gauge Set', link: '/cement-strain-gauge-set', img: images.strainGauge },
             ],
             resources: [
-                { title: 'Cement Testing Standards', link: '/blog/cement-testing-standards', img: images.cementCubeMolds },
-                { title: 'Vicat Test Procedures', link: '/blog/vicat-test-procedures', img: images.vicatApparatus },
-                { title: 'Cement Fineness Testing Video', link: 'https://www.youtube.com/watch?v=cement-fineness-video', img: images.finenessOfCement, isVideo: true }
+                { title: 'Cement Testing Standards', link: '/blog/cement-testing-standards', img: images.cementTestingBlog },
+                { title: 'Vicat Test Procedures', link: '/blog/vicat-test-procedures', img: images.groutFlowConeVd },
+                { title: 'Cement Fineness Testing Video', link: 'https://www.youtube.com/watch?v=cement-fineness-video', img: images.concreteVd, isVideo: true }
             ]
         }
     }

@@ -1,7 +1,5 @@
-// MegaMenu.tsx - FIXED VERSION
 import { useState, useMemo } from 'react';
 
-// Constants outside component to prevent re-renders
 const MEGA_MENU_STYLES: React.CSSProperties = {
     position: 'absolute',
     top: '100%',
@@ -41,7 +39,6 @@ const COLORS = {
     resourcesBackground: '#f2f3f4'
 } as const;
 
-// Simple TypeScript interface
 interface MenuItem {
     id: string;
     label: string;
@@ -77,14 +74,13 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
     
     const hasMultipleTabs = data.tabs.length > 1;
     
-    // Use hoverTab if exists, otherwise activeTab
     const currentTab = hoverTab || activeTab;
     const currentContent = data.content[currentTab];
 
     const handleTabClick = (tabId: string) => (e: React.MouseEvent) => {
         e.preventDefault();
         setActiveTab(tabId);
-        setHoverTab(null); // Reset hover when clicked
+        setHoverTab(null);
     };
 
     const handleTabHover = (tabId: string) => {
@@ -98,7 +94,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
     return (
         <div className="mega-dropdown" style={MEGA_MENU_STYLES}>
             
-            {/* Tab Headers - Conditional Rendering */}
             {hasMultipleTabs && (
                 <ul 
                     className="nav nav-tabs border-0"
@@ -129,10 +124,8 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
                 </ul>
             )}
 
-            {/* Tab Content */}
             <div className="tab-content">
                 <div className="row g-0">
-                    {/* Categories Grid */}
                     <div className={hasMultipleTabs ? "col-md-9" : "col-12"}>
                         <div style={CATEGORIES_GRID_STYLE}>
                             {currentContent?.categories.map((cat, idx) => (
@@ -141,7 +134,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
                         </div>
                     </div>
 
-                    {/* Resources Section - Conditional */}
                     {hasMultipleTabs && currentContent?.resources && (
                         <ResourcesSection resources={currentContent.resources} />
                     )}
@@ -151,11 +143,9 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
     );
 };
 
-// Extracted sub-components for better readability
 const CategoryItem = ({ category }: { category: { name: string; link: string; img: string } }) => {
     const [isHovered, setIsHovered] = useState(false);
 
-    // Apply box shadow based on hover state
     const boxShadowStyle = isHovered ? '0 2px 8px rgba(0,45,88,0.1)' : 'none';
 
     return (
@@ -164,7 +154,7 @@ const CategoryItem = ({ category }: { category: { name: string; link: string; im
             style={{ 
                 padding: '15px', 
                 transition: 'all 0.3s ease',
-                boxShadow: boxShadowStyle // Fixed: apply box shadow based on state
+                boxShadow: boxShadowStyle
             }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -235,7 +225,7 @@ const ResourceItem = ({ resource }: { resource: { title: string; link: string; i
                     loading="lazy"
                 />
                 <span style={{ 
-                    fontSize: '13px', 
+                    fontSize: '18px', 
                     lineHeight: '1.3',
                     fontWeight: '400',
                     color: COLORS.textPrimary
