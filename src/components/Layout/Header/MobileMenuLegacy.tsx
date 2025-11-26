@@ -13,7 +13,8 @@ import userSvg from '../../../assets/user.svg';
 import productSvg from '../../../assets/product.svg';
 import parcelSvg from '../../../assets/parcel.svg';
 import logoutSvg from '../../../assets/logout.svg';
-import { styles } from './Toolbar';
+import { styles } from './style/headerstyle';
+
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
     // Կատեգորիաների ցուցակ

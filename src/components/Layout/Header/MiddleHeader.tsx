@@ -11,8 +11,8 @@ import toolsIcon from '../../../assets/settings.png';
 import searchIcon from '../../../assets/loupe.png';
 
 import phoneImg from '../../../assets/phone-receiver-silhouette.png'
-import { styles } from './Toolbar';
 import { CartDropdown } from './CartDropdown';
+import { styles } from './style/headerstyle';
 
 export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => void }) => {
     const [isCartHovered, setIsCartHovered] = useState(false);

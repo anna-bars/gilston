@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 import topAngle from '../../../assets/top-angle.png';
 import liveChat from '../../../assets/live-chat.png';
-import { styles } from './Toolbar';
+import { styles } from './style/headerstyle';
+
 
 export const TopHeader = () => {
     const [isVisible, setIsVisible] = useState(true);
