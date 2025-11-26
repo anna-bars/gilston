@@ -44,54 +44,59 @@ const MegaMenu = ({ data }: { data: any }) => {
     const [activeTab, setActiveTab] = useState(initialTab);
 
     const currentContent = data.content[activeTab];
+    
+    // Check if there's only one tab
+    const hasMultipleTabs = data.tabs.length > 1;
 
     return (
         <div className="mega-dropdown" style={megaMenuStyles}>
             
-            {/* Tab Headers */}
-            <ul className="nav nav-tabs border-0">
-                {data.tabs.map((tab: any) => (
-                    <li className="nav-item" key={tab.id}>
-                        <button
-                            className="nav-link border-0 rounded-0"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setActiveTab(tab.id);
-                            }}
-                            style={{ 
-                                cursor: 'pointer', 
-                                borderRight: '1px solid #869bb8',
-                                fontSize: '14px',
-                                padding: '10px 18px',
-                                transition: 'all 0.3s ease',
-                                margin: '0',
-                                backgroundColor: activeTab === tab.id ? '#fff' : tabBackgroundColor,
-                                color: activeTab === tab.id ? tabHoverColor : '#fff'
-                            }}
-                            onMouseEnter={(e) => {
-                                if (activeTab !== tab.id) {
-                                    e.currentTarget.style.backgroundColor = '#fff';
-                                    e.currentTarget.style.color = tabHoverColor;
-                                }
-                            }}
-                            onMouseLeave={(e) => {
-                                if (activeTab !== tab.id) {
-                                    e.currentTarget.style.backgroundColor = tabBackgroundColor;
-                                    e.currentTarget.style.color = '#fff';
-                                }
-                            }}
-                        >
-                            {tab.label}
-                        </button>
-                    </li>
-                ))}
-            </ul>
+            {/* Tab Headers - Only show if multiple tabs exist */}
+            {hasMultipleTabs && (
+                <ul className="nav nav-tabs border-0">
+                    {data.tabs.map((tab: any) => (
+                        <li className="nav-item" key={tab.id}>
+                            <button
+                                className="nav-link border-0 rounded-0"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setActiveTab(tab.id);
+                                }}
+                                style={{ 
+                                    cursor: 'pointer', 
+                                    borderRight: '1px solid #869bb8',
+                                    fontSize: '14px',
+                                    padding: '10px 18px',
+                                    transition: 'all 0.3s ease',
+                                    margin: '0',
+                                    backgroundColor: activeTab === tab.id ? '#fff' : tabBackgroundColor,
+                                    color: activeTab === tab.id ? tabHoverColor : '#fff'
+                                }}
+                                onMouseEnter={(e) => {
+                                    if (activeTab !== tab.id) {
+                                        e.currentTarget.style.backgroundColor = '#fff';
+                                        e.currentTarget.style.color = tabHoverColor;
+                                    }
+                                }}
+                                onMouseLeave={(e) => {
+                                    if (activeTab !== tab.id) {
+                                        e.currentTarget.style.backgroundColor = tabBackgroundColor;
+                                        e.currentTarget.style.color = '#fff';
+                                    }
+                                }}
+                            >
+                                {tab.label}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            )}
 
             {/* Tab Content */}
             <div className="tab-content">
                 <div className="row g-0">
                     {/* Categories Section - 5 items per row */}
-                    <div className="col-md-9">
+                    <div className={hasMultipleTabs ? "col-md-9" : "col-12"}>
                         <div style={categoriesGridStyle}>
                             {currentContent?.categories.map((cat: any, idx: number) => (
                                 <div key={idx}>
@@ -136,43 +141,45 @@ const MegaMenu = ({ data }: { data: any }) => {
                         </div>
                     </div>
 
-                    {/* Resources Section */}
-                    <div className="col-md-3 border-start p-3">
-                        <h6 className="mb-3" style={{ color: textPrimaryColor }}>Resources</h6>
-                        <ul className="list-unstyled">
-                            {currentContent?.resources.map((res: any, idx: number) => (
-                                <li key={idx} className="mb-2">
-                                    <a href={res.link} 
-                                       className="d-flex align-items-start text-decoration-none p-2"
-                                       style={{
-                                           transition: 'all 0.3s ease',
-                                           borderRadius: '4px'
-                                       }}
-                                       onMouseEnter={(e) => {
-                                           e.currentTarget.style.backgroundColor = '#f8f9fa';
-                                       }}
-                                       onMouseLeave={(e) => {
-                                           e.currentTarget.style.backgroundColor = 'transparent';
-                                       }}>
-                                        <img 
-                                            src={res.img} 
-                                            alt={res.title} 
-                                            style={resourceImageStyle}
-                                            className="me-2 flex-shrink-0"
-                                        />
-                                        <span style={{ 
-                                            fontSize: '13px', 
-                                            lineHeight: '1.3',
-                                            fontWeight: '400',
-                                            color: textPrimaryColor
-                                        }}>
-                                            {res.title}
-                                        </span>
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Resources Section - Only show if multiple tabs exist */}
+                    {hasMultipleTabs && (
+                        <div className="col-md-3 border-start p-3">
+                            <h6 className="mb-3" style={{ color: textPrimaryColor }}>Resources</h6>
+                            <ul className="list-unstyled">
+                                {currentContent?.resources.map((res: any, idx: number) => (
+                                    <li key={idx} className="mb-2">
+                                        <a href={res.link} 
+                                           className="d-flex align-items-start text-decoration-none p-2"
+                                           style={{
+                                               transition: 'all 0.3s ease',
+                                               borderRadius: '4px'
+                                           }}
+                                           onMouseEnter={(e) => {
+                                               e.currentTarget.style.backgroundColor = '#f8f9fa';
+                                           }}
+                                           onMouseLeave={(e) => {
+                                               e.currentTarget.style.backgroundColor = 'transparent';
+                                           }}>
+                                            <img 
+                                                src={res.img} 
+                                                alt={res.title} 
+                                                style={resourceImageStyle}
+                                                className="me-2 flex-shrink-0"
+                                            />
+                                            <span style={{ 
+                                                fontSize: '13px', 
+                                                lineHeight: '1.3',
+                                                fontWeight: '400',
+                                                color: textPrimaryColor
+                                            }}>
+                                                {res.title}
+                                            </span>
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
