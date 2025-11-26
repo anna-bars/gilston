@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 
 const MEGA_MENU_STYLES: React.CSSProperties = {
     position: 'absolute',
@@ -70,7 +70,8 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
     );
     
     const [activeTab, setActiveTab] = useState(initialTab);
-    const [hoverTab, setHoverTab] = useState<string | null>(null); // Added hover state for tabs
+    const [hoverTab, setHoverTab] = useState<string | null>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
     
     const hasMultipleTabs = data.tabs.length > 1;
     
@@ -87,12 +88,22 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
         setHoverTab(tabId);
     };
 
-    const handleTabLeave = () => {
-        setHoverTab(null);
+    const handleMenuLeave = (e: React.MouseEvent) => {
+        if (menuRef.current && !menuRef.current.contains(e.relatedTarget as Node)) {
+            setHoverTab(null);
+        }
     };
 
+    // Check if current content has resources
+    const hasResources = currentContent?.resources && currentContent.resources.length > 0;
+
     return (
-        <div className="mega-dropdown" style={MEGA_MENU_STYLES}>
+        <div 
+            className="mega-dropdown" 
+            style={MEGA_MENU_STYLES}
+            ref={menuRef}
+            onMouseLeave={handleMenuLeave}
+        >
             
             {hasMultipleTabs && (
                 <ul 
@@ -105,7 +116,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
                                 className="nav-link border-0 rounded-0"
                                 onClick={handleTabClick(tab.id)}
                                 onMouseEnter={() => handleTabHover(tab.id)}
-                                onMouseLeave={handleTabLeave}
                                 style={{ 
                                     cursor: 'pointer', 
                                     borderRight: '1px solid #869bb8',
@@ -126,7 +136,8 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
 
             <div className="tab-content">
                 <div className="row g-0">
-                    <div className={hasMultipleTabs ? "col-md-9" : "col-12"}>
+                    {/* Categories Section - Adjust width based on resources existence */}
+                    <div className={hasResources ? "col-md-9" : "col-12"}>
                         <div style={CATEGORIES_GRID_STYLE}>
                             {currentContent?.categories.map((cat, idx) => (
                                 <CategoryItem key={cat.name + idx} category={cat} />
@@ -134,8 +145,16 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
                         </div>
                     </div>
 
-                    {hasMultipleTabs && currentContent?.resources && (
-                        <ResourcesSection resources={currentContent.resources} />
+                    {/* Resources Section - Show if resources exist (regardless of tab count) */}
+                    {hasResources && (
+                        <div className="col-md-3 border-start p-3">
+                            <h6 className="mb-3" style={{ color: COLORS.textPrimary }}>Resources</h6>
+                            <ul className="list-unstyled">
+                                {currentContent.resources.map((res, idx) => (
+                                    <ResourceItem key={res.title + idx} resource={res} />
+                                ))}
+                            </ul>
+                        </div>
                     )}
                 </div>
             </div>
@@ -181,22 +200,6 @@ const CategoryItem = ({ category }: { category: { name: string; link: string; im
                     {category.name}
                 </a>
             </div>
-        </div>
-    );
-};
-
-const ResourcesSection = ({ resources }: { resources: Array<{ title: string; link: string; img: string }> }) => {
-    return (
-        <div 
-            className="col-md-3 border-start p-3"
-            style={{ backgroundColor: COLORS.resourcesBackground }}
-        >
-            <h6 className="mb-3" style={{ color: COLORS.textPrimary }}>Resources</h6>
-            <ul className="list-unstyled">
-                {resources.map((res, idx) => (
-                    <ResourceItem key={res.title + idx} resource={res} />
-                ))}
-            </ul>
         </div>
     );
 };
