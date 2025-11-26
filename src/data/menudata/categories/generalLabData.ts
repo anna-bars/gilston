@@ -22,9 +22,9 @@ export const generalLabData = {
                 { name: 'Laboratory Mixers', link: '/laboratory-mixers', img: images.labMixers },
             ],
             resources: [
-                { title: 'Complete Laboratory Setup Guide', link: '/blog/complete-laboratory-setup-guide', img: images.ovensFurnaces },
-                { title: 'Lab Equipment Selection Guide', link: '/blog/lab-equipment-selection-guide', img: images.scalesBalances },
-                { title: 'Lab Organization and Safety Video', link: 'https://www.youtube.com/watch?v=lab-organization-safety-video', img: images.labSafety, isVideo: true }
+                { title: 'How To Set Up a Field Lab for Construction Materials Testing', link: '/blog/complete-laboratory-setup-guide', img: images.settingUpLab },
+                { title: `6 Do's & Donn'ts for Rejoining Separated Therometers`, link: '/blog/lab-equipment-selection-guide', img: images.rejoiningThermometerBlog },
+                { title: 'Choosing the Right Lab Oven', link: 'https://www.youtube.com/watch?v=lab-organization-safety-video', img: images.selectingOvenBlog, isVideo: true }
             ]
         }
     }

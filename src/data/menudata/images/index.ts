@@ -314,10 +314,13 @@ export { default as cementTestingBlog } from '../../../assets/cement-testing-blo
 export { default as concreteBlog } from '../../../assets/concrete-blog.png';
 export { default as scoopsVd } from '../../../assets/scoops-video.png';
 export { default as groutFlowConeVd } from '../../../assets/grout-flow-cone-video.png';
+export { default as atterbergBlog } from '../../../assets/atterberg-blog.png';
+export { default as proctorBlog } from '../../../assets/proctor-blog.png';
+export { default as soilDensityVd } from '../../../assets/soil-density-video.png';
 
-
-
-
+export { default as settingUpLab } from '../../../assets/setting-up-lab.png';
+export { default as rejoiningThermometerBlog } from '../../../assets/rejoining-thermometer-blog.png';
+export { default as selectingOvenBlog } from '../../../assets/selecting-oven-blog.png';
 
 
 

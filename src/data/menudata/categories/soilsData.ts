@@ -23,9 +23,9 @@ export const soilsData = {
                 { name: 'Load Frames', link: '/load-frames', img: images.loadFrames },
             ],
             resources: [
-                { title: 'Complete Soil Testing Guide', link: '/blog/complete-soil-testing-guide', img: images.proctor1 },
-                { title: 'Soil Mechanics Fundamentals', link: '/blog/soil-mechanics-fundamentals', img: images.triaxial },
-                { title: 'Field Testing Techniques Video', link: 'https://www.youtube.com/watch?v=field-testing-video', img: images.soilField, isVideo: true }
+                { title: 'Atterberg Limits: A Quick Reference Guide', link: '/blog/complete-soil-testing-guide', img: images.atterbergBlog },
+                { title: 'Proctor Compaction Test: A Basic Guide', link: '/blog/soil-mechanics-fundamentals', img: images.proctorBlog },
+                { title: 'Soily Density: Pros and Cons of the Test Methods', link: 'https://www.youtube.com/watch?v=field-testing-video', img: images.soilDensityVd, isVideo: true }
             ]
         }
     }
