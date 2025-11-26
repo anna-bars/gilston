@@ -9,19 +9,6 @@ import { MobileMenu } from './MobileMenuLegacy';
 import { MiddleHeader } from './MiddleHeader'
 import { TopHeader } from './TopHeader';
 
-// 1. Գույների և ոճերի կոնստանտներ
-
-
-
-// Կոմպոնենտ Մոբայլ Մենյուի համար (Offcanvas)
-
-
-
-
-
-
-
-
 export const Toolbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,8 +18,6 @@ export const Toolbar = () => {
             <TopHeader />
             <MiddleHeader toggleMobileMenu={toggleMobileMenu} />
             <BottomHeader />
-            
-            {/* ՆԵՐԱՌՎԱԾ ՄՈԲԱՅԼ ՄԵՆՅՈՒՆ */}
             <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
         </header>
     );

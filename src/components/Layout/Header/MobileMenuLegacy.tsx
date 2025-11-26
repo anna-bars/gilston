@@ -1,4 +1,4 @@
-import closeMenu from '../../../assets/close-menu.png'; // Փակման նկար
+import closeMenu from '../../../assets/close-menu.png';
 import sievingMobile from '../../../assets/sieving-mobile.png';
 import screeningMobile from '../../../assets/screening-mobile.png';
 import splittingMobile from '../../../assets/splitting-mobile.png';
@@ -17,7 +17,6 @@ import { styles } from './style/headerstyle';
 
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
-    // Կատեգորիաների ցուցակ
     const categories = [
         { name: "Sieving", link: "sieve-analysis-equipment", img: sievingMobile },
         { name: "Screening", link: "screening", img: screeningMobile },
@@ -31,15 +30,12 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
         { name: "General Labs", link: "pans-tools-glassware", img: generalLabMobile },
     ];
 
-    // Աջակցության ցուցակների ընդհանուր ոճ
     const listStyle = "py-3 px-3 border-bottom border-light position-relative";
     const linkStyle = "d-flex align-items-center text-decoration-none";
     const textStyle = "fs-6 text-primary fw-bold mb-0";
     const arrowStyle = "fa fa-angle-right fs-5 fw-bold position-absolute end-0 me-3";
 
     return (
-        // Այստեղ օգտագործվում են Offcanvas-ին մոտ դասեր, սակայն `mobile-menu-area` և `mobile-menu1`
-        // դասերի ֆիքսված px չափերը պահանջում են Custom CSS կամ inline ոճեր
         <div 
             className={`position-fixed top-0 end-0 h-100 mobile-menu-area ${isOpen ? 'mobile-menu-open' : ''}`}
             style={{ 
@@ -47,31 +43,29 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                 transition: 'all .5s ease-in-out',
                 overflowX: 'hidden',
                 backgroundColor: 'rgba(0,0,0,0.7)',
-                width: isOpen ? '100%' : '0' // Կառավարում է բացված/փակված վիճակը
+                width: isOpen ? '100%' : '0'
             }}
             onClick={(e) => {
-                // Եթե սեղմում ենք մենյուի կոնտեյների վրա, բայց ոչ բուն մենյուի վրա
                 if (e.target === e.currentTarget) {
                     onClose();
                 }
             }}
         >
-            {/* Բուն մենյուի բլոկը */}
             <div 
                 className="mobile-menu1 bg-white position-absolute top-0 end-0"
                 style={{
-                    width: '80%', // Custom CSS-ից
+                    width: '80%', 
                     height: '100%',
                     overflowY: 'auto',
-                    padding: '50px 0 100px 0', // Custom CSS-ից
+                    padding: '50px 0 100px 0', 
                 }}
             >
-                {/* Փակման կոճակը */}
+               
                 <div className="close-btn position-absolute" style={{top: '25px', left: '25px', cursor: 'pointer'}} onClick={onClose}>
                     <img loading="lazy" src={closeMenu} alt="Close Menu" />
                 </div>
 
-                {/* Կատեգորիաներ */}
+                
                 <h3 className="fs-6 text-secondary text-uppercase fw-bold py-3 px-3 border-bottom border-light mb-0" style={{color: '#535353', fontSize: '15px'}}>Shop by Category</h3>
                 <ul className="list-unstyled mb-0">
                     {categories.map((cat) => (
@@ -85,11 +79,10 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     ))}
                 </ul>
 
-                {/* Account Բաժին */}
+                
                 <div className="mob-account-list mt-4">
                     <h3 className="fs-6 text-secondary text-uppercase fw-bold py-3 px-3 border-bottom border-light mb-0" style={{color: '#535353', fontSize: '15px'}}>Account</h3>
                     <ul className="list-unstyled mb-0">
-                        {/* My Account */}
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/customer/info" className={linkStyle}>
                                 <img loading="lazy" src={userSvg} alt="My Account" className="svgimg me-2" style={{width: '18px', height: '18px', marginRight: '10px'}}/>
@@ -97,7 +90,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
-                        {/* Order History */}
                          <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/order/history" className={linkStyle}>
                                 <img loading="lazy" src={productSvg} alt="Order History" className="svgimg me-2" style={{width: '18px', height: '18px', marginRight: '10px'}}/>
@@ -105,7 +97,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
-                        {/* Returns */}
                          <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="#" className={linkStyle}>
                                 <img loading="lazy" src={parcelSvg} alt="Returns" className="svgimg me-2" style={{width: '18px', height: '18px', marginRight: '10px'}}/>
@@ -113,7 +104,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
-                        {/* Logout */}
                          <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/logout" className={linkStyle}>
                                 <img loading="lazy" src={logoutSvg} alt="Logout" className="svgimg me-2" style={{width: '18px', height: '18px', marginRight: '10px'}}/>
@@ -124,7 +114,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     </ul>
                 </div>
 
-                {/* Tools Բաժին */}
                 <div className="mob-account-list mt-4">
                      <h3 className="fs-6 text-secondary text-uppercase fw-bold py-3 px-3 border-bottom border-light mb-0" style={{color: '#535353', fontSize: '15px'}}>Tools</h3>
                     <ul className="list-unstyled mb-0">
@@ -161,7 +150,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     </ul>
                 </div>
 
-                {/* Resources Բաժին */}
                 <div className="mob-account-list mt-4">
                     <h3 className="fs-6 text-secondary text-uppercase fw-bold py-3 px-3 border-bottom border-light mb-0" style={{color: '#535353', fontSize: '15px'}}>Resources</h3>
                     <ul className="list-unstyled mb-0">
@@ -198,7 +186,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     </ul>
                 </div>
 
-                {/* Replacement Parts Կոճակ */}
                 <div className="part-btn">
                     <a href="https://www.globalgilson.com/replacement-parts" 
                        className="btn text-white fw-bold d-block text-center mx-3 my-4 py-3" 
@@ -207,9 +194,7 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     </a>
                 </div>
 
-                {/* Կոնտակտային Բաժին */}
                 <div className="mob-menu-contact px-3 pt-1 pb-4">
-                    {/* Սփրայթ նկարի դասը պահպանված է, որպեսզի աշխատի ֆոնային նկարը */}
                     <div className="sprite-img menu-contact-img" style={{display: 'block', margin: '0 auto 25px auto'}}></div>
                     <div className="mob-contact-text text-center">
                         <h4 className="fs-6 fw-bold mb-2" style={{color: styles.colors.gilsonDarkBlue, fontSize: '16px'}}>We're here to help</h4>
@@ -219,14 +204,11 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                style={{border: `1px solid ${styles.colors.borderGrey}`, background: '#fff', color: styles.colors.textBlue, fontSize: '14px'}}>
                                 <i className="fa fa-phone me-2 fs-4 fw-bold"></i> 800-444-1508
                             </a>
-                            {/* Սա ապահովելու համար Custom CSS կպահանջվի, որը չի նշված կոդում */}
                         </div>
                     </div>
 
-                    {/* Աջակցության Իկոններ */}
                     <div className="support-text mt-4 px-3">
                         <ul className="list-unstyled d-flex justify-content-around">
-                            {/* Call */}
                             <li className="position-relative">
                                 <a href="tel:18004441508" className="position-absolute w-100 h-100 top-0 start-0">call</a>
                                 <div className="support-icon">
@@ -236,7 +218,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                     <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Call</p>
                                 </div>
                             </li>
-                             {/* Text */}
                             <li className="position-relative">
                                 <a href="sms://18004441508" className="position-absolute w-100 h-100 top-0 start-0">Text</a>
                                 <div className="support-icon">
@@ -246,7 +227,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                     <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Text</p>
                                 </div>
                             </li>
-                             {/* Chat */}
                             <li className="position-relative">
                                 <a href="https://home-c33.nice-incontact.com/incontact/chatclient/chatclient.aspx?poc=e441b03a-781f-49b4-b063-dc0320b162d7&amp;bu=4598504" target="_blank" rel="noreferrer" className="position-absolute w-100 h-100 top-0 start-0">Chat</a>
                                 <div className="support-icon">
@@ -256,7 +236,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                                     <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Chat</p>
                                 </div>
                             </li>
-                             {/* Email */}
                             <li className="position-relative">
                                 <a href="mailto:customerservice@gilsonco.com" className="position-absolute w-100 h-100 top-0 start-0">Email</a>
                                 <div className="support-icon">
@@ -269,10 +248,8 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                         </ul>
                     </div>
 
-                    {/* Callback / Support Ticket */}
                     <div className="mob-call-back mt-4">
                         <ul className="list-unstyled d-flex justify-content-center align-items-center position-relative">
-                             {/* Ուղղահայաց բաժանարարի համար անհրաժեշտ է Custom CSS::after */}
                             <li className="mx-3">
                                 <a href="#" className="text-center d-inline-block p-3 text-decoration-none" style={{border: '1px solid transparent', borderRadius: '5px'}}>
                                     <div className="sprite-img call-back" style={{width: '20px', height: '20px', display: 'inline-block'}}></div>
@@ -290,12 +267,10 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                         </ul>
                     </div>
                     
-                    {/* Fax */}
                     <div className="mob-call-btn text-center mt-3" style={{border: 'none'}}>
                         <div className="sprite-img fax-icon me-1" style={{width: '25px', height: '25px', display: 'inline-block'}}></div> 740-548-5314
                     </div>
 
-                    {/* Սոցիալական Մեդիա */}
                     <div className="newsletter-area mt-4 px-3">
                         <ul className="list-unstyled d-flex justify-content-start">
                             <li className="me-2"><a href="https://www.facebook.com/GilsonCompany" className="text-decoration-none"><div className="sprite-img fb-icon" style={{width: '26px', height: '26px', display: 'inline-block'}}></div></a></li>

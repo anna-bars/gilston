@@ -138,7 +138,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
 
             <div className="tab-content">
                 <div className="row g-0">
-                    {/* Categories Section - Adjust width based on resources existence */}
                     <div className={hasResources ? "col-md-9" : "col-12"}>
                         <div style={CATEGORIES_GRID_STYLE}>
                             {currentContent?.categories.map((cat, idx) => (
@@ -147,7 +146,6 @@ const MegaMenu = ({ data }: { data: MenuData }) => {
                         </div>
                     </div>
 
-                    {/* Resources Section - Show if resources exist (regardless of tab count) */}
                     {hasResources && (
                         <ResourcesSection resources={currentContent.resources} />
                     )}
@@ -212,7 +210,6 @@ const ResourcesSection = ({ resources }: { resources: Array<{ title: string; lin
                 ))}
             </ul>
 
-            {/* Additional Resource Buttons */}
             <div className="border-bottom border-secondary mb-3 pb-3">
                 <a 
                     href="https://www.globalgilson.com/customer-resource-center" 

@@ -3,8 +3,6 @@ import MegaMenu from "./MegaMenu";
 import {navItems} from '../../../data/menudata/menuData'
 import { styles } from "./style/headerstyle";
 
-
-// NavItem-ը թարմացված
 export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean, menuData?: any }) => {
     const [hover, setHover] = useState(false);
 
@@ -27,7 +25,6 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
                 {item.name}
             </a>
 
-            {/* Եթե hover է և կա menuData, ցուցադրել MegaMenu-ն */}
             {hover && menuData && (
                 <MegaMenu data={menuData} />
             )}
@@ -35,10 +32,7 @@ export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean
     );
 };
 
-// BottomHeader-ը թարմացված
 const BottomHeader = () => { 
- 
-
     return (
         <div style={{ backgroundColor: styles.colors.textBlue, boxShadow: '0 3px 8px rgba(115,116,118,1)' }}>
             <div className="container">
@@ -50,12 +44,11 @@ const BottomHeader = () => {
                                     key={item.name} 
                                     item={item} 
                                     isLast={index === navItems.length - 1} 
-                                    menuData={item.data} // Փոխանցում ենք տվյալները
+                                    menuData={item.data} 
                                 />
                             ))}
                         </ul>
                     </div>
-                    {/* ... mobile view code ... */}
                 </div>
             </div>
         </div>

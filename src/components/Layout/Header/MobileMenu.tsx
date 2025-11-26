@@ -20,7 +20,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
               <i className="fa fa-angle-right" aria-hidden="false"></i>
             </a>
           </li>
-          {/* Մնացած կատեգորիաները նույն սկզբունքով... */}
           <li>
             <a href="#">
               <img loading="lazy" src="/images/screening-mobile.png" alt="" />
@@ -28,7 +27,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
               <i className="fa fa-angle-right" aria-hidden="false"></i>
             </a>
           </li>
-          {/* ... և այլն */}
         </ul>
 
         <div className="mob-account-list">
@@ -41,7 +39,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
                 <i className="fa fa-angle-right" aria-hidden="false"></i>
               </a>
             </li>
-            {/* ... */}
           </ul>
         </div>
 
@@ -49,7 +46,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
           <h3>Tools</h3>
           <ul>
              <li><a href="#"><p>Catalog</p><i className="fa fa-angle-right" aria-hidden="false"></i></a></li>
-             {/* ... */}
           </ul>
         </div>
 
@@ -57,7 +53,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
           <h3>Resources</h3>
           <ul>
              <li><a href="#"><p>Blog</p><i className="fa fa-angle-right" aria-hidden="false"></i></a></li>
-             {/* ... */}
           </ul>
         </div>
 
@@ -80,7 +75,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
                      <div className="support-icon"><i className="fa fa-phone" aria-hidden="true"></i></div>
                      <div className="call-text1"><p>Call</p></div>
                  </li>
-                 {/* ... մյուս կոնտակտները */}
              </ul>
           </div>
 
@@ -108,7 +102,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ closeMenu }) => {
             <ul>
                <li><a href="#"><div className="sprite-img fb-icon"></div>Facebook</a></li>
                <li><a href="#"><div className="sprite-img insta-icon"></div>Instagram</a></li>
-               {/* ... */}
             </ul>
           </div>
         </div>

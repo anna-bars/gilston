@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import './header.css'; // Այստեղ պետք է լինեն ձեր օրիգինալ CSS ստայլերը
-// Ներմուծեք MobileMenu-ն, եթե այն առանձին է, կամ կարող եք դնել նույն ֆայլում
+import './header.css'; 
 import { MobileMenu } from './MobileMenu'; 
 
 export const Header = () => {
-  // Mobile menu-ի բացել/փակելու վիճակը (State)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,7 +16,6 @@ export const Header = () => {
           <div className="row">
             <div className="col-md-12 p-0">
               
-              {/* --- TOP HEADER --- */}
               <div className="top-header">
                 <div className="container">
                   <div className="row align-items-center">
@@ -81,7 +78,6 @@ export const Header = () => {
                 </div>
               </div>
 
-              {/* --- MIDDLE HEADER --- */}
               <div className="middle-header">
                 <div className="container">
                   <div className="row align-items-center">
@@ -114,7 +110,6 @@ export const Header = () => {
                                 </div>
                               </li>
                               <li>
-                                {/* Mobile Menu Toggle Button */}
                                 <div className="menu-toggler" onClick={toggleMenu}>
                                   <div className="bar1"></div>
                                   <div className="bar2"></div>
@@ -144,7 +139,6 @@ export const Header = () => {
                           </div>
                           <div className="col-md-6">
                             <div className="account-area">
-                              {/* Tools Dropdown */}
                               <div className="account-tools">
                                 <div className="sprite-img tool-icon"></div>
                                 <p>Tools</p>
@@ -162,7 +156,6 @@ export const Header = () => {
                                 </div>
                               </div>
                               
-                              {/* My Account Dropdown */}
                               <div className="my-account-area">
                                 <div className="my-account-icon">
                                   <img loading="lazy" src="/images/user-icon.png" alt="" />
@@ -190,7 +183,6 @@ export const Header = () => {
                                 </div>
                               </div>
 
-                              {/* Cart Area */}
                               <div className="cart-area">
                                 <div className="sprite-img cart-icon"></div>
                                 <p>2</p>
@@ -224,10 +216,8 @@ export const Header = () => {
                                           </div>
                                         </div>
                                       </li>
-                                      {/* Cart item 2 (կրճատված օրինակ) */}
                                       <li>
                                          <div className="cart-item1">
-                                            {/* ... նույն կառուցվածքը ... */}
                                          </div>
                                       </li>
                                     </ul>
@@ -249,7 +239,6 @@ export const Header = () => {
                 </div>
               </div>
 
-              {/* --- BOTTOM HEADER --- */}
               <div className="bottom-header">
                 <div className="container">
                   <div className="row">
@@ -309,7 +298,6 @@ export const Header = () => {
         </div>
       </header>
       
-      {/* Mobile Menu-ն Render ենք անում այստեղ, կախված state-ից */}
       {isMenuOpen && <MobileMenu closeMenu={() => setIsMenuOpen(false)} />}
     </>
   );

@@ -62,7 +62,6 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                             <div className="col-md-6">
                                 <div className="d-flex align-items-center justify-content-end">
                                     
-                                    {/* Tools with Hover Dropdown */}
                                     <div className="text-center me-3 position-relative" 
                                          style={{cursor: 'pointer'}}
                                          onMouseEnter={() => setIsToolsHovered(true)}
@@ -87,7 +86,6 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                                         )}
                                     </div>
 
-                                    {/* My Account */}
                                     <div className="d-flex align-items-center border rounded px-3 py-2 me-3 position-relative"
                                         style={{ borderColor: styles.colors.lightBlue, cursor: 'pointer' }}
                                         onMouseEnter={() => setIsAccountHovered(true)}
@@ -114,22 +112,18 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                                         )}
                                     </div>
 
-                                    {/* Cart Area - Corrected Layout */}
                                     <div className="position-relative ps-2 pe-3" 
                                         style={{ cursor: 'pointer', paddingRight: '18px' }}
                                         onMouseEnter={() => setIsCartHovered(true)}
                                         onMouseLeave={() => setIsCartHovered(false)}>
                                         
-                                        {/* Flex column for Icon (top) and Text (bottom) */}
                                         <div className="d-flex flex-column align-items-center">
                                             <div className="me-0">
                                                  <img src={cartIcon} alt="cart" />
                                             </div>
-                                            {/* Text Below Icon */}
                                             <h4 className="m-0 mt-1" style={{ color: 'rgb(0 45 88 / 80%)', fontSize: '12px' }}>Cart</h4>
                                         </div>
 
-                                        {/* Absolute Positioned Number - Top Right of the container */}
                                         <p className="m-0 fw-bold" style={{ 
                                             position: 'absolute', 
                                             top: '0px', 
