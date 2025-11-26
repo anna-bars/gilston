@@ -1,11 +1,9 @@
-import topAngle from '../../../assets/top-angle.png';
 import cartItem from '../../../assets/cart-item-img.png';
 
 export const CartDropdown = () => {
     return (
         <div className="position-absolute bg-white shadow rounded end-0 mt-0" style={{ top: '100%', width: '300px', zIndex: 1000, cursor: 'default' }}>
             <div className="position-absolute" style={{ top: '-9px', right: '15px' }}>
-                <img src={topAngle} alt="arrow" />
             </div>
             <div className="d-flex justify-content-between align-items-center p-3 border-bottom bg-light rounded-top">
                 <h4 className="m-0" style={{ fontSize: '14px', color: '#002d58' }}>Cart (2 Items)</h4>

@@ -76,7 +76,6 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                                         {isToolsHovered && (
                                             <div className="position-absolute bg-white shadow p-3 rounded start-50 translate-middle-x" style={{ top: '100%', width: '180px', zIndex: 1050, marginTop: '10px' }}>
                                                  <div className="text-center position-absolute" style={{ top: '-9px', left: '50%', transform: 'translateX(-50%)' }}>
-                                                    <img src={topAngle} alt="arrow" />
                                                 </div>
                                                 <ul className="list-unstyled m-0 text-start">
                                                     <li className="mb-2"><a href="https://www.globalgilson.com/online-catalog" target="_blank" rel="noreferrer" className="text-decoration-none" style={{color: styles.colors.lightBlue, fontSize: '13px'}}>Online Catalog</a></li>
@@ -100,7 +99,7 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
                                         </div>
                                         {isAccountHovered && (
                                              <div className="position-absolute bg-white shadow p-3 rounded" style={{top:'100%', right: 0, width: '220px', zIndex: 1000, marginTop: '5px'}}>
-                                                 <div className="text-center position-absolute" style={{ top: '-9px', right: '30px' }}><img src={topAngle} alt="arrow" /></div>
+                                                 <div className="text-center position-absolute" style={{ top: '-9px', right: '30px' }}></div>
                                                 <div className="d-flex gap-2 mb-2">
                                                     <a href="#" className="btn btn-sm w-50 text-white" style={{backgroundColor: styles.colors.textBlue}}>Login</a>
                                                     <a href="#" className="btn btn-sm btn-outline-primary w-50">Sign Up</a>

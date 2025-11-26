@@ -1,9 +1,7 @@
 import { useState } from 'react';
-
 import topAngle from '../../../assets/top-angle.png';
 import liveChat from '../../../assets/live-chat.png';
 import { styles } from './style/headerstyle';
-
 
 export const TopHeader = () => {
     const [isVisible, setIsVisible] = useState(true);
@@ -21,7 +19,7 @@ export const TopHeader = () => {
     };
 
     return (
-        <div className="position-relative" style={{ backgroundColor: styles.colors.bgTop, borderBottom: `1px solid ${styles.colors.borderGrey}`, zIndex: 9999 }}>
+        <div className="d-none d-md-block position-relative" style={{ backgroundColor: styles.colors.bgTop, borderBottom: `1px solid ${styles.colors.borderGrey}`, zIndex: 9999 }}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-md-4">
