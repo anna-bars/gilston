@@ -1,10 +1,12 @@
 import cartItem from '../../../assets/cart-item-img.png';
+import editIcon from '../../../assets/cart-down/edit.png';
+import deleteIcon from '../../../assets/cart-down/delete.png';
 
 export const CartDropdown = () => {
     return (
         <div className="position-absolute bg-white border rounded end-0 mt-1" 
              style={{ 
-                 minWidth: '245px', 
+                 minWidth: '310px', 
                  width: '100%',
                  top: '55px', 
                  zIndex: 99, 
@@ -19,8 +21,8 @@ export const CartDropdown = () => {
             </div>
 
             {/* Cart Header */}
-            <div className="d-flex justify-content-between align-items-center p-2 border-bottom" 
-                 style={{ borderBottomColor: '#a3a3a3 !important' }}>
+            <div className="d-flex justify-content-between align-items-centerborder-bottom" 
+                 style={{ borderBottomColor: '#a3a3a3 !important',  padding: '15px 10px' }}>
                 <h4 className="m-0 fw-bold" style={{ fontSize: '12px', color: '#002d58' }}>
                     Cart (2 Items)
                 </h4>
@@ -96,14 +98,18 @@ export const CartDropdown = () => {
                                                    fontSize: '18px',
                                                    cursor: 'pointer'
                                                }} 
-                                               aria-hidden="true"></i>
+                                               aria-hidden="true">
+                                                <img loading="lazy" src={editIcon} alt="Live Chat" />
+                                               </i>
                                             <i className="fa fa-trash-o" 
                                                style={{ 
                                                    color: '#002c58', 
                                                    fontSize: '18px',
                                                    cursor: 'pointer'
                                                }} 
-                                               aria-hidden="true"></i>
+                                               aria-hidden="true">
+                                                <img loading="lazy" src={deleteIcon} alt="Live Chat" />
+                                               </i>
                                         </div>
                                     </div>
                                 </div>
