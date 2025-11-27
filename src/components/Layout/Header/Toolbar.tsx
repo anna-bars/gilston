@@ -14,12 +14,14 @@ export const Toolbar = () => {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (
-        <header className="sticky-top" style={{ top: 0, zIndex: 9999 }}>
+        <>
             <TopHeader />
-            <MiddleHeader toggleMobileMenu={toggleMobileMenu} />
-            <BottomHeader />
-            <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
-        </header>
+            <header className="sticky-top" style={{ top: 0, zIndex: 9999 }}>
+                <MiddleHeader toggleMobileMenu={toggleMobileMenu} />
+                <BottomHeader />
+                <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
+            </header>
+        </>
     );
 };
 
