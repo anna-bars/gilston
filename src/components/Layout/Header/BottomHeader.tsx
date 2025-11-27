@@ -41,7 +41,6 @@ const BottomHeader = () => {
         <div style={{ 
             backgroundColor: styles.colors.textBlue, 
             boxShadow: '0 3px 8px rgba(115,116,118,1)',
-            padding: '10px 0'
         }}>
             <div className="container">
                 <div className="row">

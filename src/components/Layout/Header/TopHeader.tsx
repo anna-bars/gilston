@@ -43,7 +43,7 @@ export const TopHeader = () => {
                                     {isContactOpen && (
                                         <div className="position-absolute bg-white shadow p-3 rounded start-0" style={{ top: '100%', width: '280px', zIndex: 1000 }}>
                                             <div className="text-center position-absolute" style={{ top: '-9px', left: '20px' }}>
-                                                <img src={topAngle} alt="arrow" />
+
                                             </div>
                                             <div className="d-flex align-items-center border-bottom pb-2 mb-2">
                                                 <div className="me-2"><img src={liveChat} alt="Live Chat" /></div>

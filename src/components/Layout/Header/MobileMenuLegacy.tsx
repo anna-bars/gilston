@@ -15,6 +15,15 @@ import parcelSvg from '../../../assets/parcel.svg';
 import logoutSvg from '../../../assets/logout.svg';
 import { styles } from './style/headerstyle';
 
+import mobEmail from '../../../assets/mobile-menu/mob-email.png';
+import mobPhone from '../../../assets/mobile-menu/mob-phone-call.png';
+import mobComment from '../../../assets/mobile-menu/mob-comment.png';
+import mobChatting from '../../../assets/mobile-menu/mob-chatting.png';
+
+import phoneIcon from '../../../assets/toolbar/phone-receiver-silhouette.png';
+import callBackImg from '../../../assets/mobile-menu/call-back.png';
+import supportTicket from '../../../assets/mobile-menu/support-ticket.png';
+import printImg from '../../../assets/mobile-menu/printing.png'
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
     const categories = [
@@ -119,31 +128,31 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     <ul className="list-unstyled mb-0">
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/gilson-catalog" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Catalog</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Catalog</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/quick-order" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Quick Order</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Quick Order</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="#" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Reorder</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Reorder</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="#" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Saved Carts</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Saved Carts</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/favoriteslist" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Lists</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Lists</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
@@ -155,31 +164,31 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     <ul className="list-unstyled mb-0">
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/blog" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Blog</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Blog</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/gilson-videos" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Video Library</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Video Library</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/product-manuals" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Manuals and Instructions</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Manuals and Instructions</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/product-sds" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>SDS</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>SDS</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
                         <li className={listStyle} style={{padding: '13px 15px'}}>
                             <a href="https://www.globalgilson.com/360-product-views" className={linkStyle}>
-                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px', marginLeft: '28px'}}>Product 360s</p>
+                                <p className="fs-6 fw-normal mb-0" style={{color: '#597baa', fontSize: '15px'}}>Product 360s</p>
                                 <i className={arrowStyle} aria-hidden="false"></i>
                             </a>
                         </li>
@@ -202,7 +211,7 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                         <div className="mob-call-btn position-relative text-center mt-3">
                             <a href="#" className="d-inline-flex align-items-center justify-content-center text-decoration-none px-3 py-2 border rounded" 
                                style={{border: `1px solid ${styles.colors.borderGrey}`, background: '#fff', color: styles.colors.textBlue, fontSize: '14px'}}>
-                                <i className="fa fa-phone me-2 fs-4 fw-bold"></i> 800-444-1508
+                                <i className="fa fa-phone me-2 fs-4 fw-bold"><img loading="lazy" src={phoneIcon} alt="Live Chat" /></i> 800-444-1508
                             </a>
                         </div>
                     </div>
@@ -210,39 +219,47 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     <div className="support-text mt-4 px-3">
                         <ul className="list-unstyled d-flex justify-content-around">
                             <li className="position-relative">
-                                <a href="tel:18004441508" className="position-absolute w-100 h-100 top-0 start-0">call</a>
+                                <a href="tel:18004441508" className="position-absolute w-100 h-100 top-0 start-0"></a>
                                 <div className="support-icon">
-                                    <i className="fa fa-phone p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}></i>
+                                    <i className="fa fa-phone p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}>
+                                        <img loading="lazy" src={mobPhone} alt="Live Chat" />
+                                    </i>
                                 </div>
                                 <div className="call-text1">
-                                    <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Call</p>
+                                    <p className="text-center fw-bold fs-6 mt-14"  style={{ paddingTop: '20px', color: '#424445'}}>Call</p>
                                 </div>
                             </li>
                             <li className="position-relative">
-                                <a href="sms://18004441508" className="position-absolute w-100 h-100 top-0 start-0">Text</a>
+                                <a href="sms://18004441508" className="position-absolute w-100 h-100 top-0 start-0"></a>
                                 <div className="support-icon">
-                                    <i className="fa fa-commenting-o p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}></i>
+                                    <i className="fa fa-commenting-o p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}>
+                                        <img loading="lazy" src={mobChatting} alt="Live Chat" />
+                                    </i>
                                 </div>
                                 <div className="call-text1">
-                                    <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Text</p>
+                                    <p className="text-center fw-bold fs-6 mt-1" style={{ paddingTop: '20px', color: '#424445'}}>Text</p>
                                 </div>
                             </li>
                             <li className="position-relative">
-                                <a href="https://home-c33.nice-incontact.com/incontact/chatclient/chatclient.aspx?poc=e441b03a-781f-49b4-b063-dc0320b162d7&amp;bu=4598504" target="_blank" rel="noreferrer" className="position-absolute w-100 h-100 top-0 start-0">Chat</a>
+                                <a href="https://home-c33.nice-incontact.com/incontact/chatclient/chatclient.aspx?poc=e441b03a-781f-49b4-b063-dc0320b162d7&amp;bu=4598504" target="_blank" rel="noreferrer" className="position-absolute w-100 h-100 top-0 start-0"></a>
                                 <div className="support-icon">
-                                    <i className="fa fa-comments p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}></i>
+                                    <i className="fa fa-comments p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}>
+                                        <img loading="lazy" src={mobComment} alt="Live Chat" />
+                                    </i>
                                 </div>
                                 <div className="call-text1">
-                                    <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Chat</p>
+                                    <p className="text-center fw-bold fs-6 mt-1" style={{ paddingTop: '20px', color: '#424445'}}>Chat</p>
                                 </div>
                             </li>
                             <li className="position-relative">
-                                <a href="mailto:customerservice@gilsonco.com" className="position-absolute w-100 h-100 top-0 start-0">Email</a>
+                                <a href="mailto:customerservice@gilsonco.com" className="position-absolute w-100 h-100 top-0 start-0"></a>
                                 <div className="support-icon">
-                                    <i className="fa fa-envelope p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}></i>
+                                    <i className="fa fa-envelope p-3 rounded text-white" style={{background: styles.colors.gilsonOrange, fontSize: '20px'}}>
+                                        <img loading="lazy" src={mobEmail} alt="Live Chat" />
+                                    </i>
                                 </div>
                                 <div className="call-text1">
-                                    <p className="text-center fw-bold fs-6 mt-1" style={{color: '#424445'}}>Email</p>
+                                    <p className="text-center fw-bold fs-6 mt-1" style={{ paddingTop: '20px', color: '#424445'}}>Email</p>
                                 </div>
                             </li>
                         </ul>
@@ -252,14 +269,14 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                         <ul className="list-unstyled d-flex justify-content-center align-items-center position-relative">
                             <li className="mx-3">
                                 <a href="#" className="text-center d-inline-block p-3 text-decoration-none" style={{border: '1px solid transparent', borderRadius: '5px'}}>
-                                    <div className="sprite-img call-back" style={{width: '20px', height: '20px', display: 'inline-block'}}></div>
+                                    <div className="sprite-img call-back" style={{width: '20px', height: '20px', display: 'inline-block'}}><img loading="lazy" src={callBackImg} alt="Live Chat" /></div>
                                     <p className="fs-7 fw-bold mb-1 lh-sm" style={{color: styles.colors.textBlue, fontSize: '14px'}}>Request Callback</p>
                                     <i className="fa fa-angle-right fs-6" aria-hidden="false"></i>
                                 </a>
                             </li>
                             <li className="mx-3">
                                 <a href="#" className="text-center d-inline-block p-3 text-decoration-none" style={{border: '1px solid transparent', borderRadius: '5px'}}>
-                                    <div className="sprite-img support-ticket" style={{width: '20px', height: '20px', display: 'inline-block'}}></div>
+                                    <div className="sprite-img support-ticket" style={{width: '20px', height: '20px', display: 'inline-block'}}><img loading="lazy" src={supportTicket} alt="Live Chat" /></div>
                                     <p className="fs-7 fw-bold mb-1 lh-sm" style={{color: styles.colors.textBlue, fontSize: '14px'}}>Support Ticket</p>
                                     <i className="fa fa-angle-right fs-6" aria-hidden="false"></i>
                                 </a>
@@ -268,7 +285,7 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
                     </div>
                     
                     <div className="mob-call-btn text-center mt-3" style={{border: 'none'}}>
-                        <div className="sprite-img fax-icon me-1" style={{width: '25px', height: '25px', display: 'inline-block'}}></div> 740-548-5314
+                        <div className="sprite-img fax-icon me-1" style={{width: '25px', height: '25px', display: 'inline-block'}}><img loading="lazy" src={printImg} alt="Live Chat" /></div> 740-548-5314
                     </div>
 
                     <div className="newsletter-area mt-4 px-3">
