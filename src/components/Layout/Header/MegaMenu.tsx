@@ -7,7 +7,7 @@ const MEGA_MENU_STYLES: React.CSSProperties = {
     top: '100%',
     left: 0,
     right: 0,
-    width: '85%', 
+    width: '98%', 
     zIndex: 1000,
     backgroundColor: '#fff',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',

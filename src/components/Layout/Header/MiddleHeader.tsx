@@ -24,7 +24,7 @@ export const MiddleHeader = ({ toggleMobileMenu }: { toggleMobileMenu: () => voi
 
     return (
         <div className="py-3 bg-white">
-            <div className="container">
+            <div className="container"  style={{ maxWidth: '98%'}}>
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="row align-items-center">

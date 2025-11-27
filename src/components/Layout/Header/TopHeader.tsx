@@ -20,7 +20,7 @@ export const TopHeader = () => {
 
     return (
         <div className="d-none d-md-block position-relative" style={{ backgroundColor: styles.colors.bgTop, borderBottom: `1px solid ${styles.colors.borderGrey}`, zIndex: 9999 }}>
-            <div className="container">
+            <div className="container" style={{ maxWidth: '98%'}}>
                 <div className="row align-items-center">
                     <div className="col-md-4">
                         <div className="py-2">

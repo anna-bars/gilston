@@ -17,7 +17,7 @@ export const Header = () => {
             <div className="col-md-12 p-0">
               
               <div className="top-header">
-                <div className="container">
+                <div className="container" style={{ maxWidth: '98%'}}>
                   <div className="row align-items-center">
                     <div className="col-md-4">
                       <div className="top-header-title">
@@ -79,7 +79,7 @@ export const Header = () => {
               </div>
 
               <div className="middle-header">
-                <div className="container">
+                <div className="container" style={{ maxWidth: '98%'}}>
                   <div className="row align-items-center">
                     <div className="col-lg-6 col-md-12 d-1024-full">
                       <div className="row align-items-center">
@@ -240,7 +240,7 @@ export const Header = () => {
               </div>
 
               <div className="bottom-header">
-                <div className="container">
+                <div className="container" style={{ maxWidth: '98%'}}>
                   <div className="row">
                     <div className="col-md-12">
                       <div className="menu-list d-1024-none d-lg-block d-none">
