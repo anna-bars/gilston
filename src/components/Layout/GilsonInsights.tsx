@@ -1,12 +1,8 @@
 import React from 'react';
-// Swiper React Components
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Swiper Modules
 import { Autoplay, Navigation } from 'swiper/modules';
 
-
-// Images Import (Vite-ի համար)
-// Համոզվիր, որ այս նկարները քո src/assets ֆոլդերում են
+// Images Import
 import img1 from '../../assets/coarse-aggregate-gradation.png';
 import img2 from '../../assets/sand-equivlant.png';
 import img3 from '../../assets/detecting-rebar-in-concrete.png';
@@ -16,7 +12,7 @@ import img6 from '../../assets/cmt-field-lab-essentials.png';
 import img7 from '../../assets/cbr-test.png';
 import img8 from '../../assets/concrete-cracking.png';
 
-// Տվյալների կառուցվածք (Clean Code)
+// Տվյալների կառուցվածք
 const insights = [
   {
     id: 1,
@@ -86,103 +82,225 @@ const insights = [
 
 const GilsonInsights: React.FC = () => {
   return (
-    <div className="gilson-insight">
-      <div className="container">
+    <div className="py-5">
+      <div className="container" style={{maxWidth: '98%'}}>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-12">
             
             {/* Header */}
-            <div className="who-title">
-              <h3>Gilson Insights</h3>
+            <div className="text-center mb-4">
+              <h3 
+                className="text-uppercase fw-bold" 
+                style={{ 
+                  color: '#002d58', 
+                  fontSize: '18px'
+                }}
+              >
+                Gilson Insights
+              </h3>
             </div>
 
             {/* Slider Wrapper */}
-            <div className="seller-slider">
-              {/* 
-                  Swiper Container
-                  className="insight-slider slider" պահպանված է հին CSS-ի համար
-              */}
+            <div className="position-relative">
               <Swiper
-                className="insight-slider slider"
                 modules={[Autoplay, Navigation]}
                 spaceBetween={20}
                 loop={true}
-                navigation={true}
+                navigation={{
+                  nextEl: '.custom-insight-next',
+                  prevEl: '.custom-insight-prev',
+                }}
                 autoplay={{
                   delay: 5000,
                   disableOnInteraction: false,
                 }}
-                // Responsive Logic
                 breakpoints={{
                   320: { slidesPerView: 1, spaceBetween: 10 },
                   576: { slidesPerView: 2, spaceBetween: 15 },
                   768: { slidesPerView: 3, spaceBetween: 20 },
                   1024: { slidesPerView: 4, spaceBetween: 20 },
                 }}
-                // Inline Styles: 
-                // 1. Padding - որ ստվերները չկտրվեն
-                // 2. Navigation color - սև սլաքներ
                 style={{
-                    '--swiper-navigation-color': '#333',
-                    '--swiper-navigation-size': '30px',
-                    padding: '15px 5px',
+                  padding: '15px 0',
                 } as React.CSSProperties}
               >
                 {insights.map((item) => (
                   <SwiperSlide 
-                    key={item.id} 
-                    className="slide"
-                    // Հավասար բարձրության համար:
-                    style={{ height: 'auto', display: 'flex' }}
+                    key={item.id}
+                    style={{ height: 'auto' }}
                   >
                     <div 
-                        className="insight1"
-                        // Քարտը ձգվում է ամբողջ բարձրությամբ
-                        style={{ width: '100%', display: 'flex', flexDirection: 'column' }}
+                      className="h-100 d-flex flex-column bg-white rounded"
+                      style={{
+                        boxShadow: '0 0 5px rgba(24, 66, 66, 0.2)',
+                        transition: 'all 0.3s ease',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = '0 5px 15px rgba(24, 66, 66, 0.3)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = '0 0 5px rgba(24, 66, 66, 0.2)';
+                      }}
                     >
-                      <div className="insight-img">
+                      {/* Image Section */}
+                      <div 
+                        className="insight-img"
+                        style={{
+                          backgroundColor: '#b5bdc4',
+                          boxShadow: '0 0 5px rgba(24, 66, 66, 0.2)',
+                          position: 'relative',
+                          width: '100%',
+                        }}
+                      >
                         <a href={item.link}>
-                          {/* 
-                              Optimization: 
-                              width/height հստակ նշված են (ինչպես օրիգինալում), 
-                              որը կանխում է CLS-ը:
-                          */}
                           <img 
                             loading="lazy" 
                             src={item.img} 
                             alt={item.alt} 
                             width="313" 
                             height="172"
-                            style={{ width: '100%', height: 'auto', display: 'block' }}
+                            className="img-fluid w-100"
+                            style={{
+                              height: 'auto',
+                              objectFit: 'cover',
+                              display: 'block'
+                            }}
                           />
                         </a>
                       </div>
                       
-                      {/* Flex grow-ի շնորհիվ տեքստը լցնում է ներքևը, 
-                          իսկ երկար վերնագրերի դեպքում քարտը հարմարվում է */}
-                      <div className="insight-text" style={{ flexGrow: 1 }}>
-                        <h3>{item.title}</h3>
-                        <p>{item.desc}</p>
+                      {/* Text Section */}
+                      <div 
+                        className="p-3 d-flex flex-column flex-grow-1"
+                        style={{
+                          flex: '1'
+                        }}
+                      >
+                        <h3 
+                          className="fw-bold mb-2"
+                          style={{ 
+                            color: '#002c58', 
+                            fontSize: '16px',
+                            lineHeight: '20px'
+                          }}
+                        >
+                          {item.title}
+                        </h3>
+                        <p 
+                          className="mb-0 flex-grow-1"
+                          style={{ 
+                            color: '#6c6e70', 
+                            fontSize: '16px'
+                          }}
+                        >
+                          {item.desc}
+                        </p>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              {/* Footer Link */}
-              <div className="more-insight">
-                <a 
-                    href="https://www.globalgilson.com/blog" 
-                    title="Click here to read more Gilson Insights blog posts"
-                >
-                    Read More Gilson Insights
-                </a>
-              </div>
-
+              {/* Custom Navigation Buttons */}
+              <button className="custom-insight-prev position-absolute top-50 start-0 translate-middle-y z-3 bg-white border-0 rounded-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+              <button className="custom-insight-next position-absolute top-50 end-0 translate-middle-y z-3 bg-white border-0 rounded-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
+
+            {/* Footer Link */}
+            <div className="text-center mt-4">
+              <a 
+                href="https://www.globalgilson.com/blog" 
+                title="Click here to read more Gilson Insights blog posts"
+                className="d-inline-block text-decoration-none text-white fw-bold px-4 py-2 rounded"
+                style={{
+                  backgroundColor: '#f59a1f',
+                  fontSize: '14px',
+                  transition: 'background-color 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#e08b1d';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#f59a1f';
+                }}
+              >
+                Read More Gilson Insights
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
+
+      {/* Responsive Styles */}
+      <style>{`
+        /* Custom navigation buttons */
+        .custom-insight-prev,
+        .custom-insight-next {
+          width: 40px !important;
+          height: 40px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+          transition: all 0.3s ease !important;
+        }
+        
+        .custom-insight-prev:hover,
+        .custom-insight-next:hover {
+          background: #e9ecef !important;
+          transform: scale(1.1);
+        }
+        
+        /* Hide buttons on mobile */
+        @media (max-width: 576px) {
+          .custom-insight-prev,
+          .custom-insight-next {
+            display: none !important;
+          }
+          
+          .insight-slider-mobile {
+            margin-bottom: 30px;
+          }
+          
+          .insight-text-mobile h3,
+          .insight-text-mobile p {
+            font-size: 16px;
+          }
+          
+          .insight-text-mobile {
+            padding: 10px;
+          }
+          
+          .insight-text-mobile p {
+            margin-bottom: 20px;
+          }
+        }
+        
+        @media (max-width: 1024px) {
+          .insight-text-responsive h3 {
+            font-size: 14px;
+          }
+          
+          .insight-text-responsive p {
+            font-size: 14px;
+          }
+        }
+        
+        @media (max-width: 767px) {
+          .swiper-slide-mobile:last-child {
+            display: none;
+          }
+        }
+      `}</style>
     </div>
   );
 };

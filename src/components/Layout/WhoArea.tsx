@@ -72,7 +72,7 @@ const WhoArea: React.FC = () => {
         backgroundSize: 'cover'
       }}
     >
-      <div className="container">
+      <div className="container" style={{maxWidth: '98%'}}>
         
         {/* --- HEADER --- */}
         <div className="row">
