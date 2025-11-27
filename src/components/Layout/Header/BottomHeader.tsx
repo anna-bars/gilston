@@ -41,7 +41,7 @@ const BottomHeader = () => {
         <div style={{ 
             backgroundColor: styles.colors.textBlue, 
             boxShadow: '0 3px 8px rgba(115,116,118,1)',
-        }}>
+        }} className="py-2 py-lg-0">
             <div className="container" style={{ maxWidth: '98%'}}>
                 <div className="row">
                     <div className="col-md-12">
