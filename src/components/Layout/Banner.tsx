@@ -39,7 +39,7 @@ const slides = [
   }
   */
 ];
-
+ 
 const Banner: React.FC = () => {
   return (
     <div className="banner-area">

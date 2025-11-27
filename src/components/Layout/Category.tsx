@@ -1,7 +1,6 @@
 import React from 'react';
 
 // Նկարների import (Vite-ի համար)
-// Համոզվիր, որ նկարները գտնվում են ճիշտ ճանապարհի վրա (assets folder)
 import sievingImg from '../../assets/sieving.png';
 import screeningImg from '../../assets/screening.png';
 import sampleSplittingImg from '../../assets/sample-splitting.png';
@@ -13,8 +12,6 @@ import ovensImg from '../../assets/ovens.png';
 import scalesImg from '../../assets/scales-balances.png';
 import generalLabImg from '../../assets/general-lab.png';
 
-// Տվյալների կառուցվածք
-// Այսպես շատ հեշտ է փոխել լինկը կամ անունը ապագայում՝ առանց HTML-ը քանդելու
 const categories = [
   {
     id: 1,
@@ -90,41 +87,130 @@ const categories = [
 
 const Category: React.FC = () => {
   return (
-    <div className="category-area">
-      <div className="container">
+    <div className="py-5 bg-light">
+      <div className="container" style={{maxWidth: "98%"}}>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-12">
             <div className="category-list">
-              <ul>
-                {categories.map((category) => (
-                  <li key={category.id}>
-                    <div className="category1">
-                      <div className="category-img">
-                        {/* 
-                           Performance Optimization:
-                           - loading="lazy": Քանի որ սա էջի ներքևում է (Banner-ից հետո), 
-                             մենք թողնում ենք lazy loading-ը:
-                           - width/height: Ցանկալի է CSS-ում ֆիքսված լինի, 
-                             բայց HTML-ում img-ը մնում է պարզ:
-                        */}
-                        <img 
+              <div className="row g-0">
+                {categories.map((category, index) => {
+                  // Որոշել border classes-ը ըստ դիրքի
+                  const isFirstRow = index < 5; // 0-4 (առաջին շարք)
+                  const isSecondRow = index >= 5; // 5-9 (երկրորդ շարք)
+                  const isFirstInRow = index % 5 === 0; // Յուրաքանչյուր շարքի առաջին էլեմենտ
+                  const isLastInRow = index % 5 === 4; // Յուրաքանչյուր շարքի վերջին էլեմենտ
+                  
+                  // Border logic - Վերևի շարքում border-top չկա, ներքևի շարքում border-bottom չկա
+                  let borderClass = 'border-end';
+                  
+                  // Միայն վերևի շարքին ավելացնել border-bottom
+                  if (isFirstRow) {
+                    borderClass += ' border-bottom';
+                  }
+                  
+                  // Վերջին շարքի վերջին էլեմենտին border չպետք է լինի
+                  if (isLastInRow && !isSecondRow) {
+                    borderClass += ' border-end-0';
+                  }
+                  
+                  // Երկրորդ շարքի վերջին էլեմենտին border չպետք է լինի
+                  if (index === 9) {
+                    borderClass += ' border-end-0';
+                  }
+
+                  return (
+                    <div 
+                      key={category.id} 
+                      className="col-lg-2-4 col-md-4 col-sm-6"
+                    >
+                      <div 
+                        className={`h-100 bg-light position-relative text-center ${borderClass} hover-effect`}
+                        style={{ 
+                          transition: 'all 0.4s ease-in-out',
+                          padding: '35px 0' 
+                        }}
+                      >
+                        <div className="category-img mb-2" style={{height: '130px'}}>
+                          <img 
                             loading="lazy" 
                             src={category.img} 
                             alt={category.alt}
-                            // style={{ display: 'block' }} // Օգնում է խուսափել տակից ավելորդ տարածությունից
-                        />
-                      </div>
-                      <div className="category-name">
-                        <a href={category.link}>{category.title}</a>
+                            className="w-100 h-100 object-fit-contain"
+                          />
+                        </div>
+                        <div className="category-name">
+                          <a 
+                            href={category.link} 
+                            className="stretched-link text-decoration-none fw-bold"
+                            style={{ color: '#002d58' }}
+                          >
+                            {category.title}
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </li>
-                ))}
-              </ul>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Ավելացնում ենք միայն անհրաժեշտ CSS-ը */}
+      <style>{`
+        /* Custom class for 5 columns in large screens */
+        .col-lg-2-4 {
+          flex: 0 0 auto;
+          width: 20%;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+          .col-lg-2-4 {
+            width: 50%;
+          }
+          
+          /* Tablet-ի համար border adjustments */
+          .category-list .col-lg-2-4:nth-child(odd) > div {
+            border-right: 1px solid #dee2e6;
+          }
+          
+          .category-list .col-lg-2-4:nth-child(even) > div {
+            border-right: none;
+          }
+          
+          .category-list .col-lg-2-4:nth-child(-n+2) > div {
+            border-bottom: 1px solid #dee2e6;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .col-lg-2-4 {
+            width: 100%;
+          }
+          
+          /* Mobile-ի համար border adjustments */
+          .category-list .col-lg-2-4:not(:last-child) > div {
+            border-bottom: 1px solid #dee2e6;
+          }
+          
+          .category-list .col-lg-2-4 > div {
+            border-right: none;
+          }
+        }
+        
+        .hover-effect:hover {
+          background: #fff !important;
+          box-shadow: 5px 5px 18px rgba(24, 66, 66, 0.2) !important;
+        }
+        .hover-effect:hover .category-name a {
+          color: #6995c3 !important;
+        }
+        .object-fit-contain {
+          object-fit: contain;
+        }
+      `}</style>
     </div>
   );
 };
