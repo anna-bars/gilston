@@ -1,17 +1,8 @@
 import React from 'react';
+import imgDesktop from '../../../assets/footer-bg2.jpg';
+import imgMobile from '../../../assets/footer-bg2-mob.jpg';
 
-// Սահմանում ենք տվյալների տիպերը (TypeScript)
-interface SupportItem {
-  id: string;
-  actionType: string; // 'call', 'text', 'chat', 'email'
-  href: string;
-  iconClass: string;
-  label: string;
-  target?: string;
-}
-
-// Տվյալները առանձնացված են (Clean Code)
-const supportItems: SupportItem[] = [
+const supportItems = [
   {
     id: 'call',
     actionType: 'call',
@@ -42,25 +33,14 @@ const supportItems: SupportItem[] = [
     label: 'Email',
   },
 ];
-import imgDesktop from '../../../assets/footer-bg2.jpg';
-import imgMobile from '../../../assets/footer-bg2-mob.jpg';
 
 const FooterSupport: React.FC = () => {
-  // Նկարների ճանապարհները (ենթադրվում է, որ դրանք public ֆոլդերում են կամ import են արված)
-
-
-  return (
+  return ( 
     <div className="footer-support">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-12 p-0">
-            <div className="footer-support-img">
-              {/* 
-                  LCP Optimization: 
-                  Օգտագործում ենք <picture> տարբեր էկրանների համար։
-                  loading="lazy"-ը թողնում ենք, եթե սա էջի ամենավերևում չէ։
-              */}
-              
+      <div className="container-fluid p-0">
+        <div className="row g-0">
+          <div className="col-12 p-0">
+            <div className="position-relative">
               <picture>
                 <source media="(min-width:1025px)" srcSet={imgDesktop} />
                 <source media="(min-width:319px)" srcSet={imgMobile} />
@@ -68,32 +48,48 @@ const FooterSupport: React.FC = () => {
                   loading="lazy"
                   src={imgMobile}
                   alt="Gilson Customer Support Banner"
-                  width="375"
-                  height="413"
-                  style={{ width: '100%', height: 'auto' }} // height: auto ավելացվել է ասպեկտի պահպանման համար
+                  className="w-100 object-fit-cover object-position-center"
+                  style={{ height: '215px' }}
                 />
               </picture>
 
-              <div className="support-text">
-                <h3>We're Dedicated to our customers!</h3>
-                <ul>
-                  {supportItems.map((item) => (
-                    <li key={item.id}>
-                      <a href={item.href} target={item.target} aria-label={item.label}>
-                        {item.actionType}
-                      </a>
-                      <div className="support-icon">
-                        <i className={item.iconClass} aria-hidden="true"></i>
+              <div className="position-absolute top-0 end-0 h-100 w-50 p-3 p-md-4">
+                <div className="d-flex flex-column h-100 justify-content-center">
+                  <h3 className="text-center text-primary fw-bold fs-5 mb-3 text-uppercase">
+                    We're Dedicated to our customers!
+                  </h3>
+                  
+                  <div className="row g-2 g-md-3 mb-3">
+                    {supportItems.map((item) => (
+                      <div key={item.id} className="col-3 position-relative">
+                        <a 
+                          href={item.href} 
+                          target={item.target} 
+                          className="stretched-link text-decoration-none"
+                          aria-label={item.label}
+                        >
+                          <span className="visually-hidden">{item.actionType}</span>
+                        </a>
+                        <div className="d-flex flex-column align-items-center">
+                          <div className="bg-warning rounded-1 p-2 p-md-3 text-white">
+                            <i className={item.iconClass} aria-hidden="true"></i>
+                          </div>
+                          <div className="mt-1 mt-md-2">
+                            <p className="mb-0 text-dark fw-bold small">{item.label}</p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="call-text1">
-                        <p>{item.label}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-                <h4>
-                  or check out our <a href="#">Support Center</a>
-                </h4>
+                    ))}
+                  </div>
+                  
+                  <div className="position-relative d-flex align-items-center">
+                    <hr className="flex-grow-1 text-dark m-0" />
+                    <h4 className="text-center text-dark mb-0 mx-3 small">
+                      or check out our <a href="#" className="text-primary fw-bold text-decoration-underline">Support Center</a>
+                    </h4>
+                    <hr className="flex-grow-1 text-dark m-0" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
