@@ -41,7 +41,6 @@ export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () =
 
     const listStyle = "py-3 px-3 border-bottom border-light position-relative";
     const linkStyle = "d-flex align-items-center text-decoration-none";
-    const textStyle = "fs-6 text-primary fw-bold mb-0";
     const arrowStyle = "fa fa-angle-right fs-5 fw-bold position-absolute end-0 me-3";
 
     return (

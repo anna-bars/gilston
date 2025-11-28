@@ -110,7 +110,7 @@ export const concreteData = {
             categories: [
                 { name: 'Gas-Powered Core Drill', link: '/gas-powered-core-drill', img: images.gasPowerCoreDrill },
                 { name: 'Electric Core Drill', link: '/electric-core-drill', img: images.electricCoringDrill },
-                { name: 'Diamond Core Bits', link: '/diamond-core-bits', img: images.coreBits },
+                { name: 'Diamond Core Bits', link: '/diamond-core-bits', img: images.coreBitExpander }, 
                 { name: 'Core Bit Expander Sets', link: '/core-bit-expander-sets', img: images.coreBitExpander },
                 { name: 'Core Retrieval', link: '/core-retrieval', img: images.coringRetrieval },
                 { name: 'Pressurized Water Tank', link: '/pressurized-water-tank', img: images.pressurizedWaterTank },

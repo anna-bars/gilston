@@ -97,7 +97,6 @@ const Category: React.FC = () => {
                   // Որոշել border classes-ը ըստ դիրքի
                   const isFirstRow = index < 5; // 0-4 (առաջին շարք)
                   const isSecondRow = index >= 5; // 5-9 (երկրորդ շարք)
-                  const isFirstInRow = index % 5 === 0; // Յուրաքանչյուր շարքի առաջին էլեմենտ
                   const isLastInRow = index % 5 === 4; // Յուրաքանչյուր շարքի վերջին էլեմենտ
                   
                   // Border logic - Վերևի շարքում border-top չկա, ներքևի շարքում border-bottom չկա
