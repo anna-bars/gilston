@@ -18,6 +18,9 @@ import linkedin from '../../../assets/linkedin.png';
 import youtube from '../../../assets/utube.png';
 import social from '../../../assets/social.png';
 
+import locationIcon from '../../../assets/footer/maps-and-flags.png';
+import phoneIcon from '../../../assets/footer/phone-call.png';
+
 // Footer data
 const footerData = {
   information: [
@@ -140,7 +143,7 @@ const Footer: React.FC = () => {
               <div className="bg-white rounded-3 p-3 shadow-sm mb-3">
                 <div className="d-flex align-items-center mb-2">
                   <div className="bg-light rounded-2 p-2 me-2 text-primary">
-                    <i className="fa fa-map-marker"></i>
+                    <i className="fa fa-map-marker"><img loading="lazy" src={locationIcon} alt="Live Chat" /></i>
                   </div>
                   <div>
                     <p className="mb-0 small text-muted">7975 North Central Drive<br />Lewis Center, OH 43035</p>
@@ -148,7 +151,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="d-flex align-items-center">
                   <div className="bg-light rounded-2 p-2 me-2 text-primary">
-                    <i className="fa fa-phone"></i>
+                    <i className="fa fa-phone"><img loading="lazy" src={phoneIcon} alt="Live Chat" /></i>
                   </div>
                   <div>
                     <a href="tel:18004441508" className="text-decoration-underline text-muted small">
