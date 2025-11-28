@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Import images
 import accreditedBusiness from '../../../assets/accredited-bus.png';
@@ -81,6 +81,18 @@ const footerData = {
 };
 
 const Footer: React.FC = () => {
+  const [openSections, setOpenSections] = useState<string[]>([]);
+
+  const toggleSection = (section: string) => {
+    setOpenSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const isSectionOpen = (section: string) => openSections.includes(section);
+
   return (
     <footer className="bg-light pt-5 pb-3">
       <div className="container">
@@ -89,76 +101,133 @@ const Footer: React.FC = () => {
         <div className="row border-bottom border-light pb-5 mb-5">
           
           {/* Information Column */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div className="mb-4">
-              <h5 className="text-dark fw-bold text-uppercase mb-3">Information</h5>
-              <ul className="list-unstyled">
-                {footerData.information.map((item, idx) => (
-                  <li key={idx} className="mb-2">
-                    <a href={item.url} className="text-decoration-none text-primary">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+            <div className={`footer-1 ${isSectionOpen('information') ? 'footer-menu-open' : ''}`}>
+              <h4 
+                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                onClick={() => toggleSection('information')}
+                style={{ cursor: 'pointer' }}
+              >
+                Information
+                <span className="d-lg-none">
+                  {isSectionOpen('information') ? '−' : '+'}
+                </span>
+              </h4>
+              <div className={`footer-mob ${isSectionOpen('information') ? 'd-block' : 'd-none d-lg-block'}`}>
+                <ul className="list-unstyled mb-0">
+                  {footerData.information.map((item, idx) => (
+                    <li key={idx} className="mb-2">
+                      <a href={item.url} className="text-dark text-decoration-none">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* My Gilson Column */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div className="mb-4">
-              <h5 className="text-dark fw-bold text-uppercase mb-3">My Gilson</h5>
-              <ul className="list-unstyled">
-                {footerData.myGilson.map((item, idx) => (
-                  <li key={idx} className="mb-2">
-                    <a href={item.url} className="text-decoration-none text-primary">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+            <div className={`footer-1 ${isSectionOpen('myGilson') ? 'footer-menu-open' : ''}`}>
+              <h4 
+                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                onClick={() => toggleSection('myGilson')}
+                style={{ cursor: 'pointer' }}
+              >
+                My Gilson
+                <span className="d-lg-none">
+                  {isSectionOpen('myGilson') ? '−' : '+'}
+                </span>
+              </h4>
+              <div className={`footer-mob ${isSectionOpen('myGilson') ? 'd-block' : 'd-none d-lg-block'}`}>
+                <ul className="list-unstyled mb-0">
+                  {footerData.myGilson.map((item, idx) => (
+                    <li key={idx} className="mb-2">
+                      <a href={item.url} className="text-dark text-decoration-none">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* Products Column */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div className="mb-4">
-              <h5 className="text-dark fw-bold text-uppercase mb-3">Products</h5>
-              <ul className="list-unstyled">
-                {footerData.products.map((item, idx) => (
-                  <li key={idx} className="mb-2">
-                    <a href={item.url} className="text-decoration-none text-primary">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+            <div className={`footer-1 ${isSectionOpen('products') ? 'footer-menu-open' : ''}`}>
+              <h4 
+                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                onClick={() => toggleSection('products')}
+                style={{ cursor: 'pointer' }}
+              >
+                Products
+                <span className="d-lg-none">
+                  {isSectionOpen('products') ? '−' : '+'}
+                </span>
+              </h4>
+              <div className={`footer-mob ${isSectionOpen('products') ? 'd-block' : 'd-none d-lg-block'}`}>
+                <ul className="list-unstyled mb-0">
+                  {footerData.products.map((item, idx) => (
+                    <li key={idx} className="mb-2">
+                      <a href={item.url} className="text-dark text-decoration-none">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
           {/* Contact Us Column */}
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <div className="mb-4">
-              <h5 className="text-dark fw-bold text-uppercase mb-3">Contact Us</h5>
-              <div className="bg-white rounded-3 p-3 shadow-sm mb-3">
-                <div className="d-flex align-items-center mb-2">
-                  <div className="bg-light rounded-2 p-2 me-2 text-primary">
-                    <i className="fa fa-map-marker"><img loading="lazy" src={locationIcon} alt="Live Chat" /></i>
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+            <div className={`footer-1 contact-mob ${isSectionOpen('contact') ? 'footer-menu-open' : ''}`}>
+              <h4 
+                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                onClick={() => toggleSection('contact')}
+                style={{ cursor: 'pointer' }}
+              >
+                Contact Us
+                <span className="d-lg-none">
+                  {isSectionOpen('contact') ? '−' : '+'}
+                </span>
+              </h4>
+              <div className={`contact-mob-wrap ${isSectionOpen('contact') ? 'd-block' : 'd-none d-lg-block'}`}>
+                <div className="contact-detail bg-white rounded-3 p-3 shadow-sm mb-3">
+                  <div className="address d-flex align-items-center mb-2">
+                    <div className="address-icon bg-light rounded-2 p-2 me-2">
+                      <img src={locationIcon} alt="Location" width="16" height="16" />
+                    </div>
+                    <div className="address-para">
+                      <p className="mb-0 small text-muted">7975 North Central Drive<br />Lewis Center, OH 43035</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="mb-0 small text-muted">7975 North Central Drive<br />Lewis Center, OH 43035</p>
+                  <div className="call d-flex align-items-center">
+                    <div className="address-icon bg-light rounded-2 p-2 me-2">
+                      <img src={phoneIcon} alt="Phone" width="16" height="16" />
+                    </div>
+                    <div className="address-para">
+                      <p className="mb-0">
+                        <a href="tel:18004441508" className="text-muted text-decoration-underline small">
+                          1-800-444-1508
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="d-flex align-items-center">
-                  <div className="bg-light rounded-2 p-2 me-2 text-primary">
-                    <i className="fa fa-phone"><img loading="lazy" src={phoneIcon} alt="Live Chat" /></i>
-                  </div>
-                  <div>
-                    <a href="tel:18004441508" className="text-decoration-underline text-muted small">
-                      1-800-444-1508
-                    </a>
-                  </div>
-                </div>
+
+                {/* Product links in contact section */}
+                <ul className="list-unstyled mb-0">
+                  {footerData.products.map((item, idx) => (
+                    <li key={`contact-${idx}`} className="mb-2">
+                      <a href={item.url} className="text-dark text-decoration-none">
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -166,103 +235,112 @@ const Footer: React.FC = () => {
         </div>
 
         {/* --- ROW 2: Newsletter & Icons --- */}
-        <div className="row border-bottom border-light pb-4 mb-4">
+        <div className="footer-row-2 row border-bottom border-light pb-4 mb-4">
           
           {/* Newsletter & Socials */}
           <div className="col-lg-5 mb-4 mb-lg-0">
-            <div className="text-center text-lg-start">
-              <h5 className="text-dark fw-bold text-uppercase mb-2">Stay Updated</h5>
+            <div className="newsletter-area text-center text-lg-start">
+              <h4 className="text-dark fw-bold text-uppercase mb-2">Stay Updated</h4>
               <p className="text-muted small mb-3">
                 Lorem ispsum dolor sit amet, consectuer adipiscing<br />
                 elit, sed do eiusmod tempor incidunt ut labore et
               </p>
               
               <form className="mb-3">
-                <div className="d-flex w-100 w-lg-auto">
+                <div className="form-group d-flex align-items-center justify-content-center justify-content-lg-start">
                   <input 
                     type="email" 
-                    className="form-control rounded-0 rounded-start border-0 shadow-sm"
+                    name="email"
+                    className="form-control newsletter-input border-0 shadow-sm rounded-0 rounded-start"
                     placeholder="Enter Email Address"
-                    style={{maxWidth: '310px'}}
+                    style={{width: '310px'}}
                   />
-                  <button 
+                  <input 
                     type="submit" 
+                    name="submit" 
+                    value="Subscribe" 
                     className="btn btn-warning text-white fw-bold rounded-0 rounded-end px-4"
-                  >
-                    Subscribe
-                  </button>
+                    style={{height: '45px'}}
+                  />
                 </div>
               </form>
 
-              <div className="d-flex justify-content-center justify-content-lg-start gap-3">
+              <ul className="list-unstyled d-flex justify-content-center justify-content-lg-start gap-3 mb-0">
                 {footerData.socials.map((item, idx) => (
-                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
-                    <img 
-                      src={item.path} 
-                      alt={item.label}
-                      loading="lazy"
-                      className="img-fluid"
-                      style={{width: '30px', height: '30px', objectFit: 'contain'}}
-                    />
-                  </a>
+                  <li key={idx}>
+                    <a href={item.url} className="text-decoration-none" aria-label={item.label}>
+                      <img 
+                        src={item.path} 
+                        alt={item.label}
+                        loading="lazy"
+                        className="img-fluid"
+                        style={{width: '26px', height: '26px', objectFit: 'contain'}}
+                      />
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
 
           {/* Certifications & Payments */}
           <div className="col-lg-7">
-            <div className="text-center text-lg-end">
-              {/* Certifications */}
-              <div className="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3 mb-3">
+            <div className="certify-area text-center text-lg-end">
+              <ul className="list-unstyled d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center gap-3 mb-3">
                 {footerData.certifications.map((item, idx) => (
-                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
-                    <img 
-                      src={item.path} 
-                      alt={item.label}
-                      loading="lazy"
-                      className="img-fluid"
-                      style={{width: '120px', height: '60px', objectFit: 'contain'}}
-                    />
-                  </a>
+                  <li key={idx}>
+                    <a href={item.url} className="text-decoration-none" aria-label={item.label}>
+                      <img 
+                        src={item.path} 
+                        alt={item.label}
+                        loading="lazy"
+                        className="img-fluid"
+                        style={{width: '137px', height: '49px', objectFit: 'contain'}}
+                      />
+                    </a>
+                  </li>
                 ))}
-              </div>
-              
-              {/* Payment Methods */}
-              <div className="d-flex flex-wrap justify-content-center justify-content-lg-end gap-2">
+              </ul>
+              <ul className="list-unstyled d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center gap-2 mb-0">
                 {footerData.payments.map((item, idx) => (
-                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
-                    <img 
-                      src={item.path} 
-                      alt={item.label}
-                      loading="lazy"
-                      className="img-fluid"
-                      style={{width: '70px', height: '40px', objectFit: 'contain'}}
-                    />
-                  </a>
+                  <li key={idx}>
+                    <a href={item.url} className="text-decoration-none" aria-label={item.label}>
+                      <img 
+                        src={item.path} 
+                        alt={item.label}
+                        loading="lazy"
+                        className="img-fluid"
+                        style={{width: '70px', height: '40px', objectFit: 'contain'}}
+                      />
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
 
         </div>
 
         {/* --- ROW 3: Copyright & Policy --- */}
-        <div className="row">
-          <div className="col-md-6 mb-2 mb-md-0">
-            <div className="text-center text-md-start">
-              <p className="text-muted small mb-0">
+        <div className="footer-row-3 row">
+          <div className="col-lg-6 col-md-6 mb-2 mb-md-0">
+            <div className="copy-text">
+              <p className="text-muted small mb-0 text-center text-md-start">
                 Copyright &copy; 2020 GlobalGilson.com. All rights reserved.
               </p>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="d-flex justify-content-center justify-content-md-end gap-3">
-              {footerData.policies.map((item, idx) => (
-                <a key={idx} href={item.url} className="text-decoration-none text-primary small">
-                  {item.label}
-                </a>
-              ))}
+          <div className="col-lg-6 col-md-6">
+            <div className="policy-list">
+              <ul className="list-unstyled d-flex justify-content-center justify-content-md-end gap-3 mb-0">
+                {footerData.policies.map((item, idx) => (
+                  <li key={idx}>
+                    <a href={item.url} className="text-dark text-decoration-none small">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
