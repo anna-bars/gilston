@@ -2,6 +2,11 @@ import React from 'react';
 import imgDesktop from '../../../assets/footer-bg2.jpg';
 import imgMobile from '../../../assets/footer-bg2-mob.jpg';
 
+import callIcon from '../../../assets/footer-support/phone-call.png';
+import textIcon from '../../../assets/footer-support/comment.png';
+import chatIcon from '../../../assets/footer-support/chatting.png';
+import emailIcon from '../../../assets/footer-support/email.png';
+
 const supportItems = [
   {
     id: 'call',
@@ -9,6 +14,7 @@ const supportItems = [
     href: 'tel:18004441508',
     iconClass: 'fa fa-phone',
     label: 'Call',
+    url: callIcon
   },
   {
     id: 'text',
@@ -16,6 +22,7 @@ const supportItems = [
     href: 'sms://18004441508',
     iconClass: 'fa fa-commenting-o',
     label: 'Text',
+    url: textIcon
   },
   {
     id: 'chat',
@@ -24,6 +31,7 @@ const supportItems = [
     iconClass: 'fa fa-comments',
     label: 'Chat',
     target: '_blank',
+    url: chatIcon
   },
   {
     id: 'email',
@@ -31,6 +39,7 @@ const supportItems = [
     href: 'mailto:customerservice@gilson.com',
     iconClass: 'fa fa-envelope',
     label: 'Email',
+    url: emailIcon
   },
 ];
 
@@ -72,7 +81,7 @@ const FooterSupport: React.FC = () => {
                         </a>
                         <div className="d-flex flex-column align-items-center">
                           <div className="bg-warning rounded-1 p-2 p-md-3 text-white">
-                            <i className={item.iconClass} aria-hidden="true"></i>
+                            <i className={item.iconClass} aria-hidden="true"><img loading="lazy" src={item.url} alt="Live Chat" /></i>
                           </div>
                           <div className="mt-1 mt-md-2">
                             <p className="mb-0 text-dark fw-bold small">{item.label}</p>
