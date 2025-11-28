@@ -1,5 +1,82 @@
 import React from 'react';
 
+// Import images
+import accreditedBusiness from '../../../assets/accredited-bus.png';
+import digiSceert from '../../../assets/digisceert.png';
+import googleReviews from '../../../assets/google-reviews.png';
+
+import paypal from '../../../assets/Paypal.png';
+import visa from '../../../assets/Visa.png';
+import masterCard from '../../../assets/Master-Card.png';
+import discover from '../../../assets/Discover.png';
+import americanExpress from '../../../assets/American-Express.png';
+
+import fb from '../../../assets/fb.png';
+import insta from '../../../assets/insta.png';
+import twitter from '../../../assets/twitter.png';
+import linkedin from '../../../assets/linkedin.png';
+import youtube from '../../../assets/utube.png';
+import social from '../../../assets/social.png';
+
+// Footer data
+const footerData = {
+  information: [
+    { label: "About Us", url: "#" },
+    { label: "Careers", url: "#" },
+    { label: "Contact Us", url: "#" },
+    { label: "Newsletter", url: "#" },
+    { label: "Testimonials", url: "#" },
+    { label: "Case Studies", url: "#" },
+    { label: "Distributor Information", url: "#" },
+    { label: "Privacy Policy", url: "#" },
+    { label: "Terms & Conditions", url: "#" },
+    { label: "Sitemap", url: "#" },
+  ],
+  myGilson: [
+    { label: "Customer Information", url: "#" },
+    { label: "Addresses", url: "#" },
+    { label: "Orders", url: "#" },
+    { label: "Invoices", url: "#" },
+    { label: "Favorites List", url: "#" },
+    { label: "Shopping Cart", url: "#" },
+    { label: "Quick Order", url: "#" },
+  ],
+  products: [
+    { label: "Online Catalog", url: "#" },
+    { label: "Request Catalog", url: "#" },
+    { label: "Price List", url: "#" },
+    { label: "New Products List", url: "#" },
+    { label: "Clearance List", url: "#" },
+    { label: "Recently Viewed Products", url: "#" },
+    { label: "Resource Center", url: "#" },
+  ],
+  socials: [
+    { label: "fb", url: "#", path: fb },
+    { label: "insta", url: "#", path: insta },
+    { label: "twitter", url: "#", path: twitter },
+    { label: "linkedin", url: "#", path: linkedin },
+    { label: "youtube", url: "#", path: youtube },
+    { label: "social", url: "#", path: social },
+  ],
+  certifications: [
+    { label: "googlerate", url: "#", path: googleReviews },
+    { label: "bbb-logo", url: "#", path: digiSceert },
+    { label: "download1", url: "#", path: accreditedBusiness },
+  ],
+  payments: [
+    { label: "paypal", url: "#", path: paypal },
+    { label: "visa", url: "#", path: visa },
+    { label: "mastercard", url: "#", path: masterCard },
+    { label: "discover", url: "#", path: discover },
+    { label: "american-express", url: "#", path: americanExpress },
+  ],
+  policies: [
+    { label: "Terms and Conditions", url: "#" },
+    { label: "Privacy Policy", url: "#" },
+    { label: "Site Map", url: "#" },
+  ]
+};
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-light pt-5 pb-3">
@@ -13,16 +90,13 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <h5 className="text-dark fw-bold text-uppercase mb-3">Information</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">About Us</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Careers</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Contact Us</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Newsletter</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Testimonials</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Case Studies</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Distributor Information</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Privacy Policy</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Terms & Conditions</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Sitemap</a></li>
+                {footerData.information.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <a href={item.url} className="text-decoration-none text-primary">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -32,13 +106,13 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <h5 className="text-dark fw-bold text-uppercase mb-3">My Gilson</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Customer Information</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Addresses</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Orders</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Invoices</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Favorites List</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Shopping Cart</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Quick Order</a></li>
+                {footerData.myGilson.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <a href={item.url} className="text-decoration-none text-primary">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -48,13 +122,13 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <h5 className="text-dark fw-bold text-uppercase mb-3">Products</h5>
               <ul className="list-unstyled">
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Online Catalog</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Request Catalog</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Price List</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">New Products List</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Clearance List</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Recently Viewed Products</a></li>
-                <li className="mb-2"><a href="#" className="text-decoration-none text-primary">Resource Center</a></li>
+                {footerData.products.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <a href={item.url} className="text-decoration-none text-primary">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -77,7 +151,9 @@ const Footer: React.FC = () => {
                     <i className="fa fa-phone"></i>
                   </div>
                   <div>
-                    <a href="tel:18004441508" className="text-decoration-underline text-muted small">1-800-444-1508</a>
+                    <a href="tel:18004441508" className="text-decoration-underline text-muted small">
+                      1-800-444-1508
+                    </a>
                   </div>
                 </div>
               </div>
@@ -116,12 +192,15 @@ const Footer: React.FC = () => {
               </form>
 
               <div className="d-flex justify-content-center justify-content-lg-start gap-3">
-                {['fb', 'insta', 'twitter', 'linkedin', 'youtube', 'social'].map((social) => (
-                  <a key={social} href="#" className="text-decoration-none">
-                    <div className="bg-secondary rounded-circle d-flex align-items-center justify-content-center" 
-                         style={{width: '30px', height: '30px'}}>
-                      <span className="text-white small">{social}</span>
-                    </div>
+                {footerData.socials.map((item, idx) => (
+                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
+                    <img 
+                      src={item.path} 
+                      alt={item.label}
+                      loading="lazy"
+                      className="img-fluid"
+                      style={{width: '30px', height: '30px', objectFit: 'contain'}}
+                    />
                   </a>
                 ))}
               </div>
@@ -133,24 +212,30 @@ const Footer: React.FC = () => {
             <div className="text-center text-lg-end">
               {/* Certifications */}
               <div className="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3 mb-3">
-                {['google-rate', 'bbb-logo', 'download-icon'].map((cert) => (
-                  <a key={cert} href="#" className="text-decoration-none">
-                    <div className="bg-light border rounded p-2 d-flex align-items-center justify-content-center"
-                         style={{width: '120px', height: '60px'}}>
-                      <span className="text-muted small">{cert}</span>
-                    </div>
+                {footerData.certifications.map((item, idx) => (
+                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
+                    <img 
+                      src={item.path} 
+                      alt={item.label}
+                      loading="lazy"
+                      className="img-fluid"
+                      style={{width: '120px', height: '60px', objectFit: 'contain'}}
+                    />
                   </a>
                 ))}
               </div>
               
               {/* Payment Methods */}
               <div className="d-flex flex-wrap justify-content-center justify-content-lg-end gap-2">
-                {['paypal', 'visa', 'mastercard', 'discover', 'american-express'].map((payment) => (
-                  <a key={payment} href="#" className="text-decoration-none">
-                    <div className="bg-light border rounded p-2 d-flex align-items-center justify-content-center"
-                         style={{width: '70px', height: '40px'}}>
-                      <span className="text-muted small">{payment}</span>
-                    </div>
+                {footerData.payments.map((item, idx) => (
+                  <a key={idx} href={item.url} className="text-decoration-none" aria-label={item.label}>
+                    <img 
+                      src={item.path} 
+                      alt={item.label}
+                      loading="lazy"
+                      className="img-fluid"
+                      style={{width: '70px', height: '40px', objectFit: 'contain'}}
+                    />
                   </a>
                 ))}
               </div>
@@ -170,9 +255,11 @@ const Footer: React.FC = () => {
           </div>
           <div className="col-md-6">
             <div className="d-flex justify-content-center justify-content-md-end gap-3">
-              <a href="#" className="text-decoration-none text-primary small">Terms and Conditions</a>
-              <a href="#" className="text-decoration-none text-primary small">Privacy Policy</a>
-              <a href="#" className="text-decoration-none text-primary small">Site Map</a>
+              {footerData.policies.map((item, idx) => (
+                <a key={idx} href={item.url} className="text-decoration-none text-primary small">
+                  {item.label}
+                </a>
+              ))}
             </div>
           </div>
         </div>
