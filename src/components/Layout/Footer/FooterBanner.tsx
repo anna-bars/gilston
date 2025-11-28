@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 // Images Import
-import desktopImg1 from '../../../assets/footer-banner1.jpg';
-import mobDesktopImg1 from '../../../assets/footer-banner1-mob.jpg';
-import desktopImg2 from '../../../assets/footer-banner1.jpg';
-import mobDesktopImg2 from '../../../assets/footer-banner1-mob.jpg';
+import desktopImg1 from '../../../assets/footer-component/footer-banner/footer-banner1.jpg';
+import mobDesktopImg1 from '../../../assets/footer-component/footer-banner/footer-banner1-mob.jpg';
+import desktopImg2 from '../../../assets/footer-component/footer-banner/footer-banner1.jpg';
+import mobDesktopImg2 from '../../../assets/footer-component/footer-banner/footer-banner1-mob.jpg';
 
 // Banner slides data
 const bannerSlides = [

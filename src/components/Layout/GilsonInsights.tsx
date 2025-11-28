@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 // Images Import
-import img1 from '../../assets/coarse-aggregate-gradation.png';
-import img2 from '../../assets/sand-equivlant.png';
-import img3 from '../../assets/detecting-rebar-in-concrete.png';
-import img4 from '../../assets/direct-shear-test.png';
-import img5 from '../../assets/cmt-field-lab-setup.png';
-import img6 from '../../assets/cmt-field-lab-essentials.png';
-import img7 from '../../assets/cbr-test.png';
-import img8 from '../../assets/concrete-cracking.png';
+import img1 from '../../assets/home/insights/coarse-aggregate-gradation.png';
+import img2 from '../../assets/home/insights/sand-equivlant.png';
+import img3 from '../../assets/home/insights/detecting-rebar-in-concrete.avif';
+import img4 from '../../assets/home/insights/direct-shear-test.avif';
+import img5 from '../../assets/home/insights/cmt-field-lab-setup.avif';
+import img6 from '../../assets/home/insights/cmt-field-lab-essentials.png';
+import img7 from '../../assets/home/insights/cbr-test.avif';
+import img8 from '../../assets/home/insights/concrete-cracking.avif';
 
 // Տվյալների կառուցվածք
 const insights = [

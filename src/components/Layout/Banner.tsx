@@ -8,10 +8,10 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 // Նկարների ներմուծում (Օրինակ)
 // Լավագույնը Vite-ի համար՝ import անել, որպեսզի build ժամանակ hash ավելանա (caching)
-import desktopWebp from '../../assets/gilson-materials-testing-equipment.webp';
-import desktopJpg from '../../assets/gilson-materials-testing-equipment.jpg'; // Fallback
-import mobileImg from '../../assets/banner1-mob.jpg';
-import mobileSmallImg from '../../assets/banner1-mob_2_360x.jpg';
+import desktopWebp from '../../assets/home/banner/gilson-materials-testing-equipment.webp';
+import desktopJpg from '../../assets/home/banner/gilson-materials-testing-equipment.jpg'; // Fallback
+import mobileImg from '../../assets/home/banner/banner1-mob.jpg';
+import mobileSmallImg from '../../assets/home/banner/banner1-mob_2_360x.jpg';
 
 // Տվյալների կառուցվածք (Maintainable Code)
 const slides = [

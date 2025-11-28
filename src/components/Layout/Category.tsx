@@ -1,16 +1,16 @@
 import React from 'react';
 
 // Նկարների import (Vite-ի համար)
-import sievingImg from '../../assets/sieving.png';
-import screeningImg from '../../assets/screening.png';
-import sampleSplittingImg from '../../assets/sample-splitting.png';
-import aggregatesImg from '../../assets/aggregates.png';
-import asphaltImg from '../../assets/asphalt.png';
-import concreteImg from '../../assets/concrete.png';
-import soilsImg from '../../assets/soils.png';
-import ovensImg from '../../assets/ovens.png';
-import scalesImg from '../../assets/scales-balances.png';
-import generalLabImg from '../../assets/general-lab.png';
+import sievingImg from '../../assets/home/category/sieving.png';
+import screeningImg from '../../assets/home/category/screening.avif';
+import sampleSplittingImg from '../../assets/home/category/sample-splitting.avif';
+import aggregatesImg from '../../assets/home/category/aggregates.avif';
+import asphaltImg from '../../assets/home/category/asphalt.avif';
+import concreteImg from '../../assets/home/category/concrete.png';
+import soilsImg from '../../assets/home/category/soils.png';
+import ovensImg from '../../assets/home/category/ovens.avif';
+import scalesImg from '../../assets/home/category/scales-balances.png';
+import generalLabImg from '../../assets/home/category/general-lab.png';
 
 const categories = [
   {

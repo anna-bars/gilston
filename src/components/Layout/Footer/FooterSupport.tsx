@@ -1,11 +1,11 @@
 import React from 'react';
-import imgDesktop from '../../../assets/footer-bg2.jpg';
-import imgMobile from '../../../assets/footer-bg2-mob.jpg';
+import imgDesktop from '../../../assets/footer-component/footer-support/footer-bg2.jpg';
+import imgMobile from '../../../assets/footer-component/footer-support/footer-bg2-mob.jpg';
 
-import callIcon from '../../../assets/footer-support/phone-call.png';
-import textIcon from '../../../assets/footer-support/comment.png';
-import chatIcon from '../../../assets/footer-support/chatting.png';
-import emailIcon from '../../../assets/footer-support/email.png';
+import callIcon from '../../../assets/footer-component/footer-support/icon/phone-call.png';
+import textIcon from '../../../assets/footer-component/footer-support/icon/comment.png';
+import chatIcon from '../../../assets/footer-component/footer-support/icon/chatting.png';
+import emailIcon from '../../../assets/footer-component/footer-support/icon/email.png'; 
 
 const supportItems = [
   {

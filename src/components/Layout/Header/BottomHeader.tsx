@@ -2,10 +2,10 @@ import { useState } from "react";
 import MegaMenu from "./MegaMenu";
 import {navItems} from '../../../data/menudata/menuData'
 import { styles } from "./style/headerstyle";
-import searchIcon from '../../../assets/loupe.png';
 
-import cartIcon from '../../../assets/toolbar/grocery-store.png';
-import userIcon from '../../../assets/toolbar/user.png';
+import searchIcon from '../../../assets/haeder-component/loupe.png';
+import cartIcon from '../../../assets/haeder-component/grocery-store.png';
+import userIcon from '../../../assets/haeder-component/user.png';
 
 export const NavItem = ({ item, isLast, menuData }: { item: any, isLast: boolean, menuData?: any }) => {
     const [hover, setHover] = useState(false);

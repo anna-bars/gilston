@@ -1,19 +1,18 @@
 import { useState } from 'react';
-import topAngle from '../../../assets/top-angle.png';
-import logo from '../../../assets/logo.png';
-import userIcon from '../../../assets/user-icon.png';
-import myAccount from '../../../assets/my-account.png';
-import orderDetail from '../../../assets/order-detail.png';
-import pareclIcon from '../../../assets/parcel-icon.png';
-import logOutIcon from '../../../assets/logout-icon.png';
-import cartIcon from '../../../assets/grocery-store.png';
-import toolsIcon from '../../../assets/settings.png';
-import searchIcon from '../../../assets/loupe.png';
+import logo from '../../../assets/haeder-component/middle-header/logo.png';
+import userIcon from '../../../assets/haeder-component/middle-header/user-icon.png';
+import myAccount from '../../../assets/haeder-component/middle-header/my-account.png';
+import orderDetail from '../../../assets/haeder-component/middle-header/order-detail.png';
+import pareclIcon from '../../../assets/haeder-component/middle-header/parcel-icon.png';
+import logOutIcon from'../../../assets/haeder-component/middle-header/logout-icon.png';
+import cartIcon from '../../../assets/haeder-component/middle-header/grocery-store.png';
+import toolsIcon from '../../../assets/haeder-component/middle-header/settings.png';
+import searchIcon from '../../../assets/haeder-component/middle-header/loupe.png';
 
-import contactIcon from '../../../assets/toolbar/phone-receiver-silhouette.png'
+import contactIcon from '../../../assets/haeder-component/middle-header/phone-receiver-silhouette.png';
 import hamburgerIcon from '../../../assets/toolbar/hamburger.png'
 
-import phoneImg from '../../../assets/phone-receiver-silhouette.png'
+import phoneImg from '../../../assets/haeder-component/middle-header/phone-receiver-silhouette.png';
 import { CartDropdown } from './CartDropdown';
 import { styles } from './style/headerstyle';
 

@@ -1,6 +1,6 @@
-import cartItem from '../../../assets/cart-item-img.png';
-import editIcon from '../../../assets/cart-down/edit.png';
-import deleteIcon from '../../../assets/cart-down/delete.png';
+import cartItem from '../../../assets/haeder-component/cart-item-img.png';
+import editIcon from '../../../assets/haeder-component/edit.png';
+import deleteIcon from '../../../assets/haeder-component/delete.png';
 
 export const CartDropdown = () => {
     return (

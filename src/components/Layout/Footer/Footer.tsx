@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
 // Import images
-import accreditedBusiness from '../../../assets/accredited-bus.png';
-import digiSceert from '../../../assets/digisceert.png';
-import googleReviews from '../../../assets/google-reviews.png';
+import accreditedBusiness from '../../../assets/footer-component/footer/payment-methods/accredited-bus.avif';
+import digiSceert from '../../../assets/footer-component/footer/payment-methods/digisceert.png';
+import googleReviews from '../../../assets/footer-component/footer/payment-methods/google-reviews.avif';
 
-import paypal from '../../../assets/Paypal.png';
-import visa from '../../../assets/Visa.png';
-import masterCard from '../../../assets/Master-Card.png';
-import discover from '../../../assets/Discover.png';
-import americanExpress from '../../../assets/American-Express.png';
+import paypal from '../../../assets/footer-component/footer/payment-methods/Paypal.png';
+import visa from '../../../assets/footer-component/footer/payment-methods/Visa.png';
+import masterCard from '../../../assets/footer-component/footer/payment-methods/Master-Card.png';
+import discover from '../../../assets/footer-component/footer/payment-methods/Discover.png';
+import americanExpress from '../../../assets/footer-component/footer/payment-methods/American-Express.png';
 
-import fb from '../../../assets/fb.png';
-import insta from '../../../assets/insta.png';
-import twitter from '../../../assets/twitter.png';
-import linkedin from '../../../assets/linkedin.png';
-import youtube from '../../../assets/utube.png';
-import social from '../../../assets/social.png';
+import fb from '../../../assets/footer-component/footer/social-icons/fb.png';
+import insta from '../../../assets/footer-component/footer/social-icons/insta.png';
+import twitter from '../../../assets/footer-component/footer/social-icons/twitter.png';
+import linkedin from '../../../assets/footer-component/footer/social-icons/linkedin.png';
+import youtube from '../../../assets/footer-component/footer/social-icons/utube.png';
+import social from '../../../assets/footer-component/footer/social-icons/social.png';
 
-import locationIcon from '../../../assets/footer/maps-and-flags.png';
-import phoneIcon from '../../../assets/footer/phone-call.png';
+import locationIcon from '../../../assets/footer-component/footer/icon/maps-and-flags.png';
+import phoneIcon from '../../../assets/footer-component/footer/icon/phone-call.png';
 
 // Footer data
 const footerData = {

@@ -1,29 +1,29 @@
-import closeMenu from '../../../assets/close-menu.png';
-import sievingMobile from '../../../assets/sieving-mobile.png';
-import screeningMobile from '../../../assets/screening-mobile.png';
-import splittingMobile from '../../../assets/splitting-mobile.png';
-import aggregatesMobile from '../../../assets/aggregates-mobile.png';
-import asphaltMobile from '../../../assets/asphalt-mobile.png';
-import concreteMobile from '../../../assets/concrete-mobile.png';
-import soilsMobile from '../../../assets/soils-mobile.png';
-import ovensMobile from '../../../assets/ovens-mobile.png';
-import scalesMobile from '../../../assets/scales-mobile.png';
-import generalLabMobile from '../../../assets/general-lab-mobile.png';
-import userSvg from '../../../assets/user.svg';
-import productSvg from '../../../assets/product.svg';
-import parcelSvg from '../../../assets/parcel.svg';
-import logoutSvg from '../../../assets/logout.svg';
+import closeMenu from '../../../assets/haeder-component/mobile-menu/close-menu.png';
+import sievingMobile from '../../../assets/haeder-component/mobile-menu/sieving-mobile.png';
+import screeningMobile from '../../../assets/haeder-component/mobile-menu/screening-mobile.png';
+import splittingMobile from '../../../assets/haeder-component/mobile-menu/splitting-mobile.png';
+import aggregatesMobile from '../../../assets/haeder-component/mobile-menu/aggregates-mobile.png';
+import asphaltMobile from '../../../assets/haeder-component/mobile-menu/asphalt-mobile.png';
+import concreteMobile from '../../../assets/haeder-component/mobile-menu/concrete-mobile.png';
+import soilsMobile from '../../../assets/haeder-component/mobile-menu/soils-mobile.png';
+import ovensMobile from '../../../assets/haeder-component/mobile-menu/ovens-mobile.png';
+import scalesMobile from '../../../assets/haeder-component/mobile-menu/scales-mobile.png';
+import generalLabMobile from '../../../assets/haeder-component/mobile-menu/general-lab-mobile.png';
+import userSvg from '../../../assets/haeder-component/mobile-menu/user.svg';
+import productSvg from '../../../assets/haeder-component/mobile-menu/product.svg';
+import parcelSvg from '../../../assets/haeder-component/mobile-menu/parcel.svg';
+import logoutSvg from '../../../assets/haeder-component/mobile-menu/logout.svg';
 import { styles } from './style/headerstyle';
 
-import mobEmail from '../../../assets/mobile-menu/mob-email.png';
-import mobPhone from '../../../assets/mobile-menu/mob-phone-call.png';
-import mobComment from '../../../assets/mobile-menu/mob-comment.png';
-import mobChatting from '../../../assets/mobile-menu/mob-chatting.png';
+import mobEmail from '../../../assets/haeder-component/mobile-menu/icon/mob-email.png';
+import mobPhone from '../../../assets/haeder-component/mobile-menu/icon/mob-phone-call.png';
+import mobComment from '../../../assets/haeder-component/mobile-menu/icon/mob-comment.png';
+import mobChatting from '../../../assets/haeder-component/mobile-menu/icon/mob-chatting.png';
 
-import phoneIcon from '../../../assets/toolbar/phone-receiver-silhouette.png';
-import callBackImg from '../../../assets/mobile-menu/call-back.png';
-import supportTicket from '../../../assets/mobile-menu/support-ticket.png';
-import printImg from '../../../assets/mobile-menu/printing.png'
+import phoneIcon from '../../../assets/haeder-component/middle-header/phone-receiver-silhouette.png';
+import callBackImg from '../../../assets/haeder-component/mobile-menu/icon/call-back.png';
+import supportTicket from '../../../assets/haeder-component/mobile-menu/icon/support-ticket.png';
+import printImg from '../../../assets/haeder-component/mobile-menu/icon/printing.png';
 
 export const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
     const categories = [

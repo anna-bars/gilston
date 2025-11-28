@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 // Images Import
-import img1 from '../../assets/choosing-right-specialty-sieve.jpg';
-import img2 from '../../assets/choosing-right-sieve-by-specification.jpg';
-import img3 from '../../assets/marshall-component-setup.jpg';
-import img4 from '../../assets/conrete-air-meters.jpg';
-import img5 from '../../assets/hm-705-test-hammer.jpg';
-import img6 from '../../assets/hm-597-static-segregation-column.jpg';
-import img7 from '../../assets/asphalt-tack-coat-strength-test.jpg';
+import img1 from '../../assets/home/video/choosing-right-specialty-sieve.avif';
+import img2 from '../../assets/home/video/choosing-right-sieve-by-specification.avif';
+import img3 from '../../assets/home/video/marshall-component-setup.avif';
+import img4 from '../../assets/home/video/conrete-air-meters.avif';
+import img5 from '../../assets/home/video/hm-705-test-hammer.avif';
+import img6 from '../../assets/home/video/hm-597-static-segregation-column.avif';
+import img7 from '../../assets/home/video/asphalt-tack-coat-strength-test.avif';
 
 // YouTube Play Icon SVG
 const YoutubePlayIcon = () => (

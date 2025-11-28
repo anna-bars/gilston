@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import topAngle from '../../../assets/top-angle.png';
-import liveChat from '../../../assets/live-chat.png';
+import liveChat from '../../../assets/haeder-component/mobile-menu/live-chat.png';
 import { styles } from './style/headerstyle';
 
 export const TopHeader = () => {

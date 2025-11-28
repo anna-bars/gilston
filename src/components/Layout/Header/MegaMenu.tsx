@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef } from 'react';
 
-import gilsonCatalogBtn from '../../../assets/gilson-catalog-button.png'
+import gilsonCatalogBtn from '../../../assets/haeder-component/gilson-catalog-button.webp';
 
 const MEGA_MENU_STYLES: React.CSSProperties = {
     position: 'absolute',
