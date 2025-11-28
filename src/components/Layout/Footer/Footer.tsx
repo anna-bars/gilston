@@ -104,7 +104,7 @@ const Footer: React.FC = () => {
           <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
             <div className={`footer-1 ${isSectionOpen('information') ? 'footer-menu-open' : ''}`}>
               <h4 
-                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                className="text-dark fw-bold text-uppercase mb-3 d-flex justify-content-between align-items-center d-lg-block"
                 onClick={() => toggleSection('information')}
                 style={{ cursor: 'pointer' }}
               >
@@ -128,10 +128,10 @@ const Footer: React.FC = () => {
           </div>
 
           {/* My Gilson Column */}
-          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4">
             <div className={`footer-1 ${isSectionOpen('myGilson') ? 'footer-menu-open' : ''}`}>
               <h4 
-                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                className="text-dark fw-bold text-uppercase mb-3 d-flex justify-content-between align-items-center d-lg-block"
                 onClick={() => toggleSection('myGilson')}
                 style={{ cursor: 'pointer' }}
               >
@@ -155,10 +155,10 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Products Column */}
-          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4">
             <div className={`footer-1 ${isSectionOpen('products') ? 'footer-menu-open' : ''}`}>
               <h4 
-                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                className="text-dark fw-bold text-uppercase mb-3 d-flex justify-content-between align-items-center d-lg-block"
                 onClick={() => toggleSection('products')}
                 style={{ cursor: 'pointer' }}
               >
@@ -182,10 +182,10 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Us Column */}
-          <div className="col-lg-3 p-sm-0 p-md-15 mb-4 mb-lg-0">
+          <div className="col-lg-3 p-sm-0 p-md-15 mb-4">
             <div className={`footer-1 contact-mob ${isSectionOpen('contact') ? 'footer-menu-open' : ''}`}>
               <h4 
-                className="text-dark fw-bold text-uppercase mb-3 mb-lg-0 d-flex justify-content-between align-items-center d-lg-block"
+                className="text-dark fw-bold text-uppercase mb-3 d-flex justify-content-between align-items-center d-lg-block"
                 onClick={() => toggleSection('contact')}
                 style={{ cursor: 'pointer' }}
               >
@@ -238,7 +238,7 @@ const Footer: React.FC = () => {
         <div className="footer-row-2 row border-bottom border-light pb-4 mb-4">
           
           {/* Newsletter & Socials */}
-          <div className="col-lg-5 mb-4 mb-lg-0">
+          <div className="col-lg-5 mb-4">
             <div className="newsletter-area text-center text-lg-start">
               <h4 className="text-dark fw-bold text-uppercase mb-2">Stay Updated</h4>
               <p className="text-muted small mb-3">
@@ -260,7 +260,6 @@ const Footer: React.FC = () => {
                     name="submit" 
                     value="Subscribe" 
                     className="btn btn-warning text-white fw-bold rounded-0 rounded-end px-4"
-                    style={{height: '45px'}}
                   />
                 </div>
               </form>
