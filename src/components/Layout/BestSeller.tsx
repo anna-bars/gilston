@@ -2,12 +2,12 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
-import compactorImg from '../../assets/home/best-seller/hm-685-gyratory-compactor.png';
-import loadFrameImg from '../../assets/home/best-seller/hm-399-load-frame.png';
-import marshallImg from '../../assets/home/best-seller/msa-134-marshall-software.png';
-import microDevalImg from '../../assets/home/best-seller/md-2000-microdeval.png';
-import compressionImg from '../../assets/home/best-seller/mc-500pr-concrete-compression-machine.png';
-import flexWallImg from '../../assets/home/best-seller/hma-516-flexible-wall-permeability-cell.png';
+import compactorImg from '../../assets/home/best-seller/hm-685-gyratory-compactor.avif';
+import loadFrameImg from '../../assets/home/best-seller/hm-399-load-frame.avif';
+import marshallImg from '../../assets/home/best-seller/msa-134-marshall-software.avif';
+import microDevalImg from '../../assets/home/best-seller/md-2000-microdeval.avif';
+import compressionImg from '../../assets/home/best-seller/mc-500pr-concrete-compression-machine.avif';
+import flexWallImg from '../../assets/home/best-seller/hma-516-flexible-wall-permeability-cell.avif';
 
 const products = [
   {

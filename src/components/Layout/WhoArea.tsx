@@ -1,16 +1,16 @@
 import React from 'react';
 
 // Images Import
-import aboutLogo from '../../assets/home/who-area/about-logo.png';
-import jenhImg from '../../assets/home/who-area/jenh.png';
-import joecImg from '../../assets/home/who-area/joec.png';
-import irenasImg from '../../assets/home/who-area/irenas.png';
-import testSievesImg from '../../assets/home/who-area/test-sieves.png';
-import sieveShakersImg from '../../assets/home/who-area/sieve-shakers.png';
+import aboutLogo from '../../assets/home/who-area/about-logo.avif';
+import jenhImg from '../../assets/home/who-area/jenh.avif';
+import joecImg from '../../assets/home/who-area/joec.avif';
+import irenasImg from '../../assets/home/who-area/irenas.avif';
+import testSievesImg from '../../assets/home/who-area/test-sieves.avif';
+import sieveShakersImg from '../../assets/home/who-area/sieve-shakers.avif';
 import screenShakersImg from '../../assets/home/who-area/screen-shakers.avif';
 import whoImg from '../../assets/home/who-area/who-bg.avif';
 import who1Bg from '../../assets/home/who-area/who-bg.avif';
-import who1BgMob from '../../assets/home/who-area/who1-bg-mob.jpg';
+import who1BgMob from '../../assets/home/who-area/who1-bg-mob.avif';
  
 const whyUsData = [
   {

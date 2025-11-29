@@ -3,12 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 // Images Import
-import img1 from '../../assets/home/insights/coarse-aggregate-gradation.png';
-import img2 from '../../assets/home/insights/sand-equivlant.png';
+import img1 from '../../assets/home/insights/coarse-aggregate-gradation.avif';
+import img2 from '../../assets/home/insights/sand-equivlant.avif';
 import img3 from '../../assets/home/insights/detecting-rebar-in-concrete.avif';
 import img4 from '../../assets/home/insights/direct-shear-test.avif';
 import img5 from '../../assets/home/insights/cmt-field-lab-setup.avif';
-import img6 from '../../assets/home/insights/cmt-field-lab-essentials.png';
+import img6 from '../../assets/home/insights/cmt-field-lab-essentials.avif';
 import img7 from '../../assets/home/insights/cbr-test.avif';
 import img8 from '../../assets/home/insights/concrete-cracking.avif';
 

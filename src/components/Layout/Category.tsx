@@ -1,16 +1,16 @@
 import React from 'react';
 
 // Նկարների import (Vite-ի համար)
-import sievingImg from '../../assets/home/category/sieving.png';
+import sievingImg from '../../assets/home/category/sieving.avif';
 import screeningImg from '../../assets/home/category/screening.avif';
 import sampleSplittingImg from '../../assets/home/category/sample-splitting.avif';
 import aggregatesImg from '../../assets/home/category/aggregates.avif';
 import asphaltImg from '../../assets/home/category/asphalt.avif';
-import concreteImg from '../../assets/home/category/concrete.png';
-import soilsImg from '../../assets/home/category/soils.png';
+import concreteImg from '../../assets/home/category/concrete.avif';
+import soilsImg from '../../assets/home/category/soils.avif';
 import ovensImg from '../../assets/home/category/ovens.avif';
-import scalesImg from '../../assets/home/category/scales-balances.png';
-import generalLabImg from '../../assets/home/category/general-lab.png';
+import scalesImg from '../../assets/home/category/scales-balances.avif';
+import generalLabImg from '../../assets/home/category/general-lab.avif';
 
 const categories = [
   {
