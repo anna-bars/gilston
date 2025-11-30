@@ -8,7 +8,7 @@ import irenasImg from '../../assets/home/who-area/irenas.avif';
 import testSievesImg from '../../assets/home/who-area/test-sieves.avif';
 import sieveShakersImg from '../../assets/home/who-area/sieve-shakers.avif';
 import screenShakersImg from '../../assets/home/who-area/screen-shakers.avif';
-import whoImg from '../../assets/home/who-area/who1-bg.avif';
+import whoImg from '../../assets/home/who-area/who-gen-bg.avif';
 import who1Bg from '../../assets/home/who-area/who1-bg.avif';
 import who1BgMob from '../../assets/home/who-area/who1-bg-mob.avif';
  
@@ -72,7 +72,7 @@ const WhoArea: React.FC = () => {
         backgroundSize: 'cover',
         width: '100%',
         margin: 0,
-        padding: 0
+        padding: 0,
       }}
     >
       {/* Main container with full width */}
@@ -156,7 +156,7 @@ const WhoArea: React.FC = () => {
             {whyUsData.map((item, index) => (
               <div className="col-md-4 mb-4 mb-md-0" key={item.id}>
                 <div 
-                  className={`d-flex align-items-center why-us-item ${index !== whyUsData.length - 1 ? 'border-bottom border-secondary pb-4' : ''}`}
+                  className={`d-flex align-items-center why-us-item `}
                   style={{ 
                     minHeight: '200px',
                     borderColor: '#d3d8dc !important'
