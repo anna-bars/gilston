@@ -50,10 +50,11 @@
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;
-    --warning: #ffc107;
+    --warning: #f59a1f;
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --bs-warning-rgb: #f59a1f;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -193,6 +194,13 @@ textarea{ font-size: 16px;}
 .custom-footer-next:focus {
   outline: 2px solid #005fcc;
   outline-offset: 2px;
+}
+.custom-bg-warning {
+    background-color: #f59a1f !important;
+}
+.custom-text-primary {
+    color: #002c58 !important;
+    font-size: 20px;
 }
 /* WhoArea.css */
 .gilson-about {
