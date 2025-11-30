@@ -194,5 +194,25 @@ textarea{ font-size: 16px;}
   outline: 2px solid #005fcc;
   outline-offset: 2px;
 }
+/* WhoArea.css */
+.gilson-about {
+    background: url('../../assets/home/who-area/who1-bg.avif') no-repeat center center;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 25px 20px;
+    margin-bottom: 50px;
+}
 
+.who-area-container {
+    /* Հիմնական կոնտեյների ստիլեր */
+}
+
+/* Mobile styles */
+@media (max-width: 992px) {
+    .gilson-about {
+        background-size: cover !important;
+        background-position: top !important;
+        background-image: url('../../assets/home/who-area/who1-bg-mob.avif') !important;
+    }
+}
 /* 🍀🍀🍀🍀🍀 */

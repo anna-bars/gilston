@@ -8,8 +8,8 @@ import irenasImg from '../../assets/home/who-area/irenas.avif';
 import testSievesImg from '../../assets/home/who-area/test-sieves.avif';
 import sieveShakersImg from '../../assets/home/who-area/sieve-shakers.avif';
 import screenShakersImg from '../../assets/home/who-area/screen-shakers.avif';
-import whoImg from '../../assets/home/who-area/who-bg.avif';
-import who1Bg from '../../assets/home/who-area/who-bg.avif';
+import whoImg from '../../assets/home/who-area/who1-bg.avif';
+import who1Bg from '../../assets/home/who-area/who1-bg.avif';
 import who1BgMob from '../../assets/home/who-area/who1-bg-mob.avif';
  
 const whyUsData = [
@@ -69,10 +69,14 @@ const WhoArea: React.FC = () => {
       className="py-5"
       style={{
         background: `url(${whoImg}) no-repeat center center`,
-        backgroundSize: 'cover'
+        backgroundSize: 'cover',
+        width: '100%',
+        margin: 0,
+        padding: 0
       }}
     >
-      <div className="container" style={{maxWidth: '98%'}}>
+      {/* Main container with full width */}
+      <div className="container-fluid" style={{padding: '0 15px'}}>
         
         {/* --- HEADER --- */}
         <div className="row">
@@ -83,14 +87,16 @@ const WhoArea: React.FC = () => {
               </h3>
             </div>
           </div>
-        </div>
+        </div> 
 
         {/* --- ABOUT SECTION --- */}
         <div 
           className="rounded p-4 mb-5 gilson-about-bg"
           style={{
             background: `url(${who1Bg}) no-repeat center center`,
-            backgroundSize: '100% 100%'
+            backgroundSize: 'cover',
+            margin: '20px 15px',
+            boxShadow: '0px 0px 5px 2px #eff1f1ba'
           }}
         >
           <div className="row align-items-center">
@@ -145,7 +151,7 @@ const WhoArea: React.FC = () => {
         </div>
 
         {/* --- WHY US SECTION --- */}
-        <div className="mb-5">
+        <div className="mb-5" style={{padding: '0 15px'}}>
           <div className="row">
             {whyUsData.map((item, index) => (
               <div className="col-md-4 mb-4 mb-md-0" key={item.id}>
@@ -187,7 +193,7 @@ const WhoArea: React.FC = () => {
         </div>
 
         {/* --- TOP CATEGORY SECTION --- */}
-        <div>
+        <div style={{padding: '0 15px'}}>
           <div className="row">
             {topCategories.map((cat) => (
               <div className="col-md-4 mb-4" key={cat.id}>
@@ -307,6 +313,8 @@ const WhoArea: React.FC = () => {
         @media (max-width: 767px) {
           .gilson-about-bg {
             margin-bottom: 15px !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
           }
           
           .why-us-item {
