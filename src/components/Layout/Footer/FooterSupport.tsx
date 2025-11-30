@@ -96,7 +96,7 @@ const FooterSupport: React.FC = () => {
                 <div className="position-relative d-flex align-items-center justify-content-center">
                   <hr className="flex-grow-1 text-dark m-0" />
                   <h4 className="text-center text-dark mb-0 mx-3 small">
-                    or check out our <a href="#" className="text-primary fw-bold text-decoration-underline">Support Center</a>
+                    or check out our <a href="#" className="custom-text-primary fw-bold text-decoration-underline">Support Center</a>
                   </h4>
                   <hr className="flex-grow-1 text-dark m-0" />
                 </div>
