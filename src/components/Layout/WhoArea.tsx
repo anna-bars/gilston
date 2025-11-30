@@ -153,7 +153,7 @@ const WhoArea: React.FC = () => {
         {/* --- WHY US SECTION --- */}
         <div className="mb-5" style={{padding: '0 15px'}}>
           <div className="row">
-            {whyUsData.map((item, index) => (
+            {whyUsData.map((item) => (
               <div className="col-md-4 mb-4 mb-md-0" key={item.id}>
                 <div 
                   className={`d-flex align-items-center why-us-item `}
