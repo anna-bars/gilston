@@ -185,6 +185,14 @@ input[type='text'],
 input[type='number'],
 textarea{ font-size: 16px;}
 
-
+.custom-insight-prev:focus,
+.custom-insight-next:focus,
+.custom-video-prev:focus,
+.custom-video-next:focus,
+.custom-footer-prev:focus,
+.custom-footer-next:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
 
 /* 🍀🍀🍀🍀🍀 */

@@ -84,16 +84,24 @@ const FooterBanner: React.FC = () => {
               </Swiper>
 
               {/* Custom Navigation Buttons */}
-              <button className="custom-footer-prev position-absolute top-50 start-0 translate-middle-y z-3 bg-white border-0 rounded-circle ms-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 18L9 12L15 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              <button className="custom-footer-next position-absolute top-50 end-0 translate-middle-y z-3 bg-white border-0 rounded-circle me-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 18L15 12L9 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+              {/* Custom Navigation Buttons */}
+<button 
+  className="custom-footer-prev position-absolute top-50 start-0 translate-middle-y z-3 bg-white border-0 rounded-circle ms-3"
+  aria-label="Previous banner"
+>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 18L9 12L15 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</button>
+
+<button 
+  className="custom-footer-next position-absolute top-50 end-0 translate-middle-y z-3 bg-white border-0 rounded-circle me-3"
+  aria-label="Next banner"
+>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 18L15 12L9 6" stroke="#333" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+</button>
             </div>
           </div>
         </div>
